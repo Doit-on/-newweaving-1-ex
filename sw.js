@@ -1,4 +1,4 @@
-const CACHE_NAME = 'new-weaving-1-v2';
+const CACHE_NAME = 'new-weaving-1-v3';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -22,14 +22,14 @@ const MEDIA_ASSETS = [
   './assets/images/ex6.jpg',
   './assets/images/ex7.jpg',
   './assets/images/ex8.jpg',
-  './assets/audio/ex1_oktoberfest.wav',
-  './assets/audio/ex2_colosseum.wav',
-  './assets/audio/ex3_healthy_living.wav',
-  './assets/audio/ex4_firewalking.wav',
-  './assets/audio/ex5_croissant.wav',
-  './assets/audio/ex6_printing_press.wav',
-  './assets/audio/ex7_stephen_hawking.wav',
-  './assets/audio/ex8_doctors_without_borders.wav'
+  './assets/audio/ex1_oktoberfest.mp3',
+  './assets/audio/ex2_colosseum.mp3',
+  './assets/audio/ex3_healthy_living.mp3',
+  './assets/audio/ex4_firewalking.mp3',
+  './assets/audio/ex5_croissant.mp3',
+  './assets/audio/ex6_printing_press.mp3',
+  './assets/audio/ex7_stephen_hawking.mp3',
+  './assets/audio/ex8_doctors_without_borders.mp3'
 ];
 
 self.addEventListener('install', (event) => {
