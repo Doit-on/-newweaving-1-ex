@@ -584,7 +584,7 @@ const App = {
     const scrollArea = document.getElementById('passageScrollArea');
     if (scrollArea) {
       scrollArea.innerHTML = ex.paragraphs.map((p, idx) => `
-        <p data-p-idx="${idx}"><span class="para-badge">¶${idx + 1}</span>${p}</p>
+        <p data-p-idx="${idx}">${p}</p>
       `).join('');
     }
 
@@ -805,11 +805,8 @@ const App = {
             </span>
             ${q.suffix}
           </div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:6px;">
-            💡 คำใบ้: ${q.hint}
-          </div>
           <div class="answer-key-reveal-box" id="key_box_B_${idx}">
-            <strong>เฉลย:</strong> ${q.answer} <span style="color:#047857; margin-left:8px;">(${q.hint})</span>
+            <strong>เฉลย:</strong> ${q.answer}
           </div>
         </div>
       `).join('');
@@ -905,21 +902,21 @@ const App = {
             score++;
             slot.classList.add('correct');
             if (keyBox) {
-              keyBox.innerHTML = `<span>✅ <strong>ถูกต้อง!</strong> คำตอบคือ: <em>${q.answer}</em> (${q.hint})</span>`;
+              keyBox.innerHTML = `<span>✅ <strong>ถูกต้อง!</strong> คำตอบคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           } else {
             // หากตอบผิด ให้แสดงสีแดง และเฉลยคำตอบที่ถูกด้วย
             slot.classList.add('wrong');
             if (keyBox) {
-              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ คุณตอบ: "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong> (${q.hint})</span>`;
+              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ คุณตอบ: "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           }
         } else {
           // ยังไม่ได้ตอบ เติมเฉลยคำตอบที่ถูก
           if (keyBox) {
-            keyBox.innerHTML = `<span>💡 คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong> (${q.hint})</span>`;
+            keyBox.innerHTML = `<span>💡 คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
             keyBox.classList.add('active');
           }
         }
@@ -974,11 +971,31 @@ const App = {
           </div>
 
           <div class="unscramble-bank" id="token_bank_${qIdx}">
-            ${q.tokens.map((token, tIdx) => `
-              <span class="token-bank-pill" id="token_pill_${qIdx}_${tIdx}" onclick="App.addTokenToLine(${qIdx}, '${token.replace(/'/g, "\\'")}', ${tIdx})">
-                ${token}
-              </span>
-            `).join('')}
+            ${(() => {
+              // Create scrambled token order that is guaranteed NOT to be in correct order
+              if (!q._scrambledTokens || q._scrambledTokens.length !== q.tokens.length) {
+                let items = q.tokens.map((t, idx) => ({ token: t, origIdx: idx }));
+                let attempts = 0;
+                let isSame = true;
+                while (isSame && attempts < 15) {
+                  for (let i = items.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [items[i], items[j]] = [items[j], items[i]];
+                  }
+                  isSame = items.every((it, i) => it.origIdx === i);
+                  attempts++;
+                }
+                if (isSame && items.length > 1) {
+                  [items[0], items[items.length - 1]] = [items[items.length - 1], items[0]];
+                }
+                q._scrambledTokens = items;
+              }
+              return q._scrambledTokens.map(it => `
+                <span class="token-bank-pill" id="token_pill_${qIdx}_${it.origIdx}" onclick="App.addTokenToLine(${qIdx}, '${it.token.replace(/'/g, "\\'")}', ${it.origIdx})">
+                  ${it.token}
+                </span>
+              `).join('');
+            })()}
           </div>
 
           <div class="unscramble-actions">
@@ -1204,8 +1221,8 @@ const App = {
     const grammarCard = document.getElementById('reviewGrammarCard');
     if (grammarCard && ex.review && ex.review.grammarTip) {
       grammarCard.innerHTML = `
-        <p><strong>🇬🇧 Grammar Rule:</strong> ${ex.review.grammarTip.en}</p>
-        <p><strong>🇹🇭 คำอธิบายภาษาไทย:</strong> ${ex.review.grammarTip.th}</p>
+        <p><strong>Grammar Rule:</strong> ${ex.review.grammarTip.en}</p>
+        <p><strong>คำอธิบาย:</strong> ${ex.review.grammarTip.th}</p>
       `;
     }
   },
@@ -1251,6 +1268,56 @@ const App = {
 
     const scoreC = document.getElementById('sumScorePartC');
     if (scoreC) scoreC.innerText = `${AppState.scores.partC} / 5`;
+
+    // Dynamic Score Feedback Display:
+    // ไม่ถึง 50% ต้องฝึกอีกหน่อย | ไม่ถึง 70% ทำได้ดี | ไม่ถึง 80% ดีมาก | 80% ถึง 100% ยอดเยี่ยมมาก รักษามาตรฐานต่อไป
+    const pct = (total / 15) * 100;
+    let evalTextTh = '';
+    let evalTextEn = '';
+    let evalColor = '#10b981';
+    let evalIcon = '🏆';
+
+    if (pct < 50) {
+      evalTextTh = 'ต้องฝึกอีกหน่อย';
+      evalTextEn = 'Needs more practice';
+      evalColor = '#f59e0b';
+      evalIcon = '💪';
+    } else if (pct < 70) {
+      evalTextTh = 'ทำได้ดี';
+      evalTextEn = 'Good job';
+      evalColor = '#0284c7';
+      evalIcon = '👍';
+    } else if (pct < 80) {
+      evalTextTh = 'ดีมาก';
+      evalTextEn = 'Very good';
+      evalColor = '#0d9488';
+      evalIcon = '👏';
+    } else {
+      evalTextTh = 'ยอดเยี่ยมมาก รักษามาตรฐานต่อไป';
+      evalTextEn = 'Excellent! Keep up the good work';
+      evalColor = '#10b981';
+      evalIcon = '🏆';
+    }
+
+    const feedbackEl = document.getElementById('summaryFeedbackText');
+    if (feedbackEl) {
+      feedbackEl.innerText = (typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? evalTextEn : evalTextTh;
+      feedbackEl.style.borderColor = evalColor;
+      feedbackEl.style.color = evalColor;
+    }
+
+    const iconEl = document.getElementById('summaryBadgeIcon');
+    if (iconEl) iconEl.innerText = evalIcon;
+
+    // เมื่อทำจบครบทุก exercise (หรืออยู่บทสุดท้าย Unit 8) ไม่ต้องมีปุ่ม next unit
+    const btnNext = document.getElementById('btnSummaryNext');
+    if (btnNext) {
+      if (ex.id >= 8) {
+        btnNext.style.display = 'none';
+      } else {
+        btnNext.style.display = 'inline-flex';
+      }
+    }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 

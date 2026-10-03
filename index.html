@@ -2192,6 +2192,19 @@ button {
 }
 
 
+.summary-eval-pill {
+  display: inline-block;
+  padding: 8px 22px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-radius: 30px;
+  border: 2px solid #10b981;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 12px auto 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-fast);
+}
+
 </style>
   <link rel="stylesheet" href="css/style.css">
   <link rel="manifest" href="manifest.json">
@@ -2220,8 +2233,8 @@ button {
       <button class="btn-nav-link" id="btnNavUnits" onclick="App.showDashboard()" title="บทเรียนทั้งหมด">
         <span>📚</span> <span class="nav-link-text" data-i18n="nav_units">รวมบทเรียน</span>
       </button>
-      <button class="btn-lang-toggle" id="btnLangToggle" title="เปลี่ยนภาษา (TH / EN)">
-        <span>🌐</span> EN
+      <button class="btn-lang-toggle" id="btnLangToggle" title="เปลี่ยนภาษา">
+        <span>🌐</span> English
       </button>
       <button class="btn-icon" id="btnSystemCheck" title="ตรวจเช็คระบบ">
         <span>🩺</span>
@@ -2253,19 +2266,15 @@ button {
               <span class="hero-badge badge-yellow" data-i18n="hero_badge_series">
                 มัธยมศึกษาปีที่ 4 • CEF: A2
               </span>
-              <span class="hero-badge badge-teal">8 Units Complete</span>
+              
             </div>
 
-            <h1 class="hero-title">
-              NEW Weaving It <span class="highlight-yellow">Together 1</span>
+            <h1 class="hero-title" style="font-size:2.2rem; line-height:1.35; margin-bottom:14px;">
+              บทอ่านเพื่อเสริมการเรียนรู้<br><span class="highlight-yellow">จากชุด Weaving It Together</span>
             </h1>
 
-            <p class="hero-subtitle" data-i18n="hero_subtitle">
-              เชื่อมโยงทักษะการอ่านและการเขียนภาษาอังกฤษอย่างมั่นใจ
-            </p>
-
-            <p class="hero-desc" data-i18n="hero_desc">
-              เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.mp3) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์
+            <p class="hero-subtitle" data-i18n="hero_subtitle" style="font-size:1.2rem; font-weight:500; color:#e0f2fe; margin-bottom:24px; line-height:1.6;">
+              พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ
             </p>
 
             <div class="hero-cta-group">
@@ -2351,7 +2360,7 @@ button {
             <span>🏠</span> <span data-i18n="btn_back_home">← กลับหน้าแรก (Home)</span>
           </button>
           <div class="dashboard-badge-info">
-            <span>มัธยมศึกษาปีที่ 4 • CEF: A2</span> • <span>8 Units Complete (Native Audio .wav)</span>
+            <span>มัธยมศึกษาปีที่ 4 • CEF: A2</span> • <span>แบบฝึกหัด 8 บทเรียน (ระบบเสียงจริง Native Audio)</span>
           </div>
         </div>
 
@@ -2628,8 +2637,8 @@ button {
     <div id="viewSummary" class="app-view">
       <div class="summary-wrapper">
         <div class="summary-card">
-          <div class="summary-badge-icon">🏆</div>
-          <h2 data-i18n="summary_title_success">ยอดเยี่ยมมาก! คุณทำแบบฝึกหัดเสร็จสมบูรณ์</h2>
+          <div class="summary-badge-icon" id="summaryBadgeIcon">🏆</div>
+          <div class="summary-eval-pill" id="summaryFeedbackText">ยอดเยี่ยมมาก รักษามาตรฐานต่อไป</div>
           <div class="summary-unit-title" id="summaryUnitTitle">Unit 1: Oktoberfest</div>
 
           <div class="score-display-ring">
@@ -2656,7 +2665,7 @@ button {
             <button class="btn-secondary-hero" style="color:var(--ocean-deep); border-color:var(--ocean-primary);" onclick="App.openExercise(AppState.currentExercise.id)">
               <span data-i18n="btn_retry_unit">ทำบทนี้อีกครั้ง ↺</span>
             </button>
-            <button class="btn-primary-hero" onclick="App.nextExercise()">
+            <button class="btn-primary-hero" id="btnSummaryNext" onclick="App.nextExercise()">
               <span data-i18n="btn_choose_next">ไปยังบทถัดไป ➔</span>
             </button>
             <button class="btn-back-units" onclick="App.showDashboard()">
@@ -4791,7 +4800,7 @@ if (typeof module !== 'undefined' && module.exports) {
 
 /* === I18N === */
 /**
- * NEW Weaving It Together 1 (ม.4) - Bilingual i18n Engine (TH / EN)
+ * NEW Weaving It Together 1 (ม.4) - Bilingual i18n Engine (เปลี่ยนภาษา)
  * Complete real-time language switcher
  */
 
@@ -4812,8 +4821,8 @@ const I18N = {
     // Landing Page
     hero_badge_series: { th: 'มัธยมศึกษาปีที่ 4 • ระดับ CEF: A2', en: 'Grade 10 (M.4) • CEF: A2 Level' },
     hero_badge_twp: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช', en: 'Thai Watana Panich Publisher' },
-    hero_title: { th: 'NEW Weaving It Together 1', en: 'NEW Weaving It Together 1' },
-    hero_subtitle: { th: 'เชื่อมโยงทักษะการอ่านและการเขียนภาษาอังกฤษอย่างมั่นใจ', en: 'Connecting Reading and Writing with Confidence' },
+    hero_title: { th: 'บทอ่านเพื่อเสริมการเรียนรู้จากชุด Weaving It Together', en: 'Supplementary Reading from Weaving It Together' },
+    hero_subtitle: { th: 'พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ', en: 'Developing Reading Comprehension and Main Idea Skills' },
     hero_desc: {
       th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.wav) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
       en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.wav), 3 rigorous learning parts, and automatic scoring across all devices.'
@@ -4867,7 +4876,7 @@ const I18N = {
     btn_check_answers: { th: 'ตรวจคำตอบ', en: 'Check Answers' },
     btn_show_key: { th: '🔑 ดูเฉลยพร้อมคำอธิบาย', en: '🔑 Show Answer Key & Notes' },
     btn_hide_key: { th: '🔒 ซ่อนเฉลย', en: '🔒 Hide Answer Key' },
-    btn_summary_part: { th: '📊 ตรวจ & สรุปคะแนนพาร์ทนี้', en: '📊 Check & Summarize Part' },
+    btn_summary_part: { th: '📊 ตรวจ & สรุปคะแนนพาร์ทนี้', en: '📊 Check & summarize this part' },
     btn_check_and_key: { th: 'ตรวจคะแนน & ดูเฉลยพร้อมคำอธิบาย', en: 'Check Score & View Solutions' },
     alert_incomplete: { th: '⚠️ ทำไม่ครบ 5 ข้อในพาร์ทนี้ ได้รับ 0 คะแนน (ต้องทำครบทุกข้อจึงจะได้คะแนน)', en: '⚠️ Incomplete: You must answer all 5 questions to receive points (Score is 0).' },
     zoom_hint: { th: '🔍 แตะเพื่อขยายภาพ', en: '🔍 Tap to zoom image' },
@@ -4926,7 +4935,7 @@ const I18N = {
     // Update Language toggle button
     const btn = document.getElementById('btnLangToggle');
     if (btn) {
-      btn.innerHTML = lang === 'th' ? '<span>🌐</span> EN' : '<span>🌐</span> ไทย';
+      btn.innerHTML = lang === 'th' ? '<span>🌐</span> English' : '<span>🌐</span> ภาษาไทย';
     }
 
     if (typeof showToast === 'function') {
@@ -5716,7 +5725,7 @@ const App = {
     const scrollArea = document.getElementById('passageScrollArea');
     if (scrollArea) {
       scrollArea.innerHTML = ex.paragraphs.map((p, idx) => `
-        <p data-p-idx="${idx}"><span class="para-badge">¶${idx + 1}</span>${p}</p>
+        <p data-p-idx="${idx}">${p}</p>
       `).join('');
     }
 
@@ -5937,11 +5946,8 @@ const App = {
             </span>
             ${q.suffix}
           </div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:6px;">
-            💡 คำใบ้: ${q.hint}
-          </div>
           <div class="answer-key-reveal-box" id="key_box_B_${idx}">
-            <strong>เฉลย:</strong> ${q.answer} <span style="color:#047857; margin-left:8px;">(${q.hint})</span>
+            <strong>เฉลย:</strong> ${q.answer}
           </div>
         </div>
       `).join('');
@@ -6037,21 +6043,21 @@ const App = {
             score++;
             slot.classList.add('correct');
             if (keyBox) {
-              keyBox.innerHTML = `<span>✅ <strong>ถูกต้อง!</strong> คำตอบคือ: <em>${q.answer}</em> (${q.hint})</span>`;
+              keyBox.innerHTML = `<span>✅ <strong>ถูกต้อง!</strong> คำตอบคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           } else {
             // หากตอบผิด ให้แสดงสีแดง และเฉลยคำตอบที่ถูกด้วย
             slot.classList.add('wrong');
             if (keyBox) {
-              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ คุณตอบ: "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong> (${q.hint})</span>`;
+              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ คุณตอบ: "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           }
         } else {
           // ยังไม่ได้ตอบ เติมเฉลยคำตอบที่ถูก
           if (keyBox) {
-            keyBox.innerHTML = `<span>💡 คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong> (${q.hint})</span>`;
+            keyBox.innerHTML = `<span>💡 คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
             keyBox.classList.add('active');
           }
         }
@@ -6106,11 +6112,31 @@ const App = {
           </div>
 
           <div class="unscramble-bank" id="token_bank_${qIdx}">
-            ${q.tokens.map((token, tIdx) => `
-              <span class="token-bank-pill" id="token_pill_${qIdx}_${tIdx}" onclick="App.addTokenToLine(${qIdx}, '${token.replace(/'/g, "\\'")}', ${tIdx})">
-                ${token}
-              </span>
-            `).join('')}
+            ${(() => {
+              // Create scrambled token order that is guaranteed NOT to be in correct order
+              if (!q._scrambledTokens || q._scrambledTokens.length !== q.tokens.length) {
+                let items = q.tokens.map((t, idx) => ({ token: t, origIdx: idx }));
+                let attempts = 0;
+                let isSame = true;
+                while (isSame && attempts < 15) {
+                  for (let i = items.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [items[i], items[j]] = [items[j], items[i]];
+                  }
+                  isSame = items.every((it, i) => it.origIdx === i);
+                  attempts++;
+                }
+                if (isSame && items.length > 1) {
+                  [items[0], items[items.length - 1]] = [items[items.length - 1], items[0]];
+                }
+                q._scrambledTokens = items;
+              }
+              return q._scrambledTokens.map(it => `
+                <span class="token-bank-pill" id="token_pill_${qIdx}_${it.origIdx}" onclick="App.addTokenToLine(${qIdx}, '${it.token.replace(/'/g, "\\'")}', ${it.origIdx})">
+                  ${it.token}
+                </span>
+              `).join('');
+            })()}
           </div>
 
           <div class="unscramble-actions">
@@ -6336,8 +6362,8 @@ const App = {
     const grammarCard = document.getElementById('reviewGrammarCard');
     if (grammarCard && ex.review && ex.review.grammarTip) {
       grammarCard.innerHTML = `
-        <p><strong>🇬🇧 Grammar Rule:</strong> ${ex.review.grammarTip.en}</p>
-        <p><strong>🇹🇭 คำอธิบายภาษาไทย:</strong> ${ex.review.grammarTip.th}</p>
+        <p><strong>Grammar Rule:</strong> ${ex.review.grammarTip.en}</p>
+        <p><strong>คำอธิบาย:</strong> ${ex.review.grammarTip.th}</p>
       `;
     }
   },
@@ -6383,6 +6409,56 @@ const App = {
 
     const scoreC = document.getElementById('sumScorePartC');
     if (scoreC) scoreC.innerText = `${AppState.scores.partC} / 5`;
+
+    // Dynamic Score Feedback Display:
+    // ไม่ถึง 50% ต้องฝึกอีกหน่อย | ไม่ถึง 70% ทำได้ดี | ไม่ถึง 80% ดีมาก | 80% ถึง 100% ยอดเยี่ยมมาก รักษามาตรฐานต่อไป
+    const pct = (total / 15) * 100;
+    let evalTextTh = '';
+    let evalTextEn = '';
+    let evalColor = '#10b981';
+    let evalIcon = '🏆';
+
+    if (pct < 50) {
+      evalTextTh = 'ต้องฝึกอีกหน่อย';
+      evalTextEn = 'Needs more practice';
+      evalColor = '#f59e0b';
+      evalIcon = '💪';
+    } else if (pct < 70) {
+      evalTextTh = 'ทำได้ดี';
+      evalTextEn = 'Good job';
+      evalColor = '#0284c7';
+      evalIcon = '👍';
+    } else if (pct < 80) {
+      evalTextTh = 'ดีมาก';
+      evalTextEn = 'Very good';
+      evalColor = '#0d9488';
+      evalIcon = '👏';
+    } else {
+      evalTextTh = 'ยอดเยี่ยมมาก รักษามาตรฐานต่อไป';
+      evalTextEn = 'Excellent! Keep up the good work';
+      evalColor = '#10b981';
+      evalIcon = '🏆';
+    }
+
+    const feedbackEl = document.getElementById('summaryFeedbackText');
+    if (feedbackEl) {
+      feedbackEl.innerText = (typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? evalTextEn : evalTextTh;
+      feedbackEl.style.borderColor = evalColor;
+      feedbackEl.style.color = evalColor;
+    }
+
+    const iconEl = document.getElementById('summaryBadgeIcon');
+    if (iconEl) iconEl.innerText = evalIcon;
+
+    // เมื่อทำจบครบทุก exercise (หรืออยู่บทสุดท้าย Unit 8) ไม่ต้องมีปุ่ม next unit
+    const btnNext = document.getElementById('btnSummaryNext');
+    if (btnNext) {
+      if (ex.id >= 8) {
+        btnNext.style.display = 'none';
+      } else {
+        btnNext.style.display = 'inline-flex';
+      }
+    }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 

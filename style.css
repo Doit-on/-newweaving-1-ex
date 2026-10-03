@@ -2171,3 +2171,16 @@ button {
   font-size: 0.85rem;
 }
 
+
+.summary-eval-pill {
+  display: inline-block;
+  padding: 8px 22px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-radius: 30px;
+  border: 2px solid #10b981;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 12px auto 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-fast);
+}

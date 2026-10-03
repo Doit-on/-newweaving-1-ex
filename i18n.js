@@ -1,5 +1,5 @@
 /**
- * NEW Weaving It Together 1 (ม.4) - Bilingual i18n Engine (TH / EN)
+ * NEW Weaving It Together 1 (ม.4) - Bilingual i18n Engine (เปลี่ยนภาษา)
  * Complete real-time language switcher
  */
 
@@ -20,8 +20,8 @@ const I18N = {
     // Landing Page
     hero_badge_series: { th: 'มัธยมศึกษาปีที่ 4 • ระดับ CEF: A2', en: 'Grade 10 (M.4) • CEF: A2 Level' },
     hero_badge_twp: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช', en: 'Thai Watana Panich Publisher' },
-    hero_title: { th: 'NEW Weaving It Together 1', en: 'NEW Weaving It Together 1' },
-    hero_subtitle: { th: 'เชื่อมโยงทักษะการอ่านและการเขียนภาษาอังกฤษอย่างมั่นใจ', en: 'Connecting Reading and Writing with Confidence' },
+    hero_title: { th: 'บทอ่านเพื่อเสริมการเรียนรู้จากชุด Weaving It Together', en: 'Supplementary Reading from Weaving It Together' },
+    hero_subtitle: { th: 'พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ', en: 'Developing Reading Comprehension and Main Idea Skills' },
     hero_desc: {
       th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.wav) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
       en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.wav), 3 rigorous learning parts, and automatic scoring across all devices.'
@@ -75,7 +75,7 @@ const I18N = {
     btn_check_answers: { th: 'ตรวจคำตอบ', en: 'Check Answers' },
     btn_show_key: { th: '🔑 ดูเฉลยพร้อมคำอธิบาย', en: '🔑 Show Answer Key & Notes' },
     btn_hide_key: { th: '🔒 ซ่อนเฉลย', en: '🔒 Hide Answer Key' },
-    btn_summary_part: { th: '📊 ตรวจ & สรุปคะแนนพาร์ทนี้', en: '📊 Check & Summarize Part' },
+    btn_summary_part: { th: '📊 ตรวจ & สรุปคะแนนพาร์ทนี้', en: '📊 Check & summarize this part' },
     btn_check_and_key: { th: 'ตรวจคะแนน & ดูเฉลยพร้อมคำอธิบาย', en: 'Check Score & View Solutions' },
     alert_incomplete: { th: '⚠️ ทำไม่ครบ 5 ข้อในพาร์ทนี้ ได้รับ 0 คะแนน (ต้องทำครบทุกข้อจึงจะได้คะแนน)', en: '⚠️ Incomplete: You must answer all 5 questions to receive points (Score is 0).' },
     zoom_hint: { th: '🔍 แตะเพื่อขยายภาพ', en: '🔍 Tap to zoom image' },
@@ -134,7 +134,7 @@ const I18N = {
     // Update Language toggle button
     const btn = document.getElementById('btnLangToggle');
     if (btn) {
-      btn.innerHTML = lang === 'th' ? '<span>🌐</span> EN' : '<span>🌐</span> ไทย';
+      btn.innerHTML = lang === 'th' ? '<span>🌐</span> English' : '<span>🌐</span> ภาษาไทย';
     }
 
     if (typeof showToast === 'function') {
