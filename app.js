@@ -475,6 +475,8 @@ const App = {
     const container = document.getElementById('exercisesGrid');
     if (!container) return;
 
+    const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
+
     container.innerHTML = this.exercises.map((ex) => {
       const savedScore = localStorage.getItem(`nw1_ex_${ex.id}_score`);
       const isCompleted = localStorage.getItem(`nw1_ex_${ex.id}_completed`) === 'true';
@@ -485,7 +487,7 @@ const App = {
             <img class="card-img" src="${ex.image}" alt="${ex.title}" loading="lazy">
             <span class="card-unit-badge">${ex.unit} • CEF: ${ex.cefr}</span>
             <span class="card-audio-badge">
-              🔊 Native WAV
+              🔊 Native MP3
             </span>
           </div>
           <div class="card-body">
@@ -493,13 +495,13 @@ const App = {
             <p class="card-thai-title" style="display:${isEn ? 'none' : 'block'};">${ex.thaiTitle}</p>
             
             <div class="card-parts-indicator">
-              <span class="part-pill ${isCompleted ? 'completed' : ''}">Part 1: อ่าน</span>
-              <span class="part-pill ${isCompleted ? 'completed' : ''}">Part 2: ศัพท์</span>
-              <span class="part-pill ${isCompleted ? 'completed' : ''}">Part 3: เรียงประโยค</span>
+              <span class="part-pill ${isCompleted ? 'completed' : ''}">${isEn ? 'Part 1: Reading' : 'Part 1: อ่าน'}</span>
+              <span class="part-pill ${isCompleted ? 'completed' : ''}">${isEn ? 'Part 2: Word Bank' : 'Part 2: ศัพท์'}</span>
+              <span class="part-pill ${isCompleted ? 'completed' : ''}">${isEn ? 'Part 3: Unscramble' : 'Part 3: เรียงประโยค'}</span>
             </div>
 
             <button class="card-action-btn">
-              <span>${isCompleted ? 'ทบทวนบทเรียน (คะแนน: ' + savedScore + '/15)' : 'เข้าสู่บทเรียน ➔'}</span>
+              <span>${isCompleted ? (isEn ? 'Review Unit (Score: ' + savedScore + '/15)' : 'ทบทวนบทเรียน (คะแนน: ' + savedScore + '/15)') : (isEn ? 'Start Exercise ➔' : 'เข้าสู่บทเรียน ➔')}</span>
             </button>
           </div>
         </div>
@@ -776,7 +778,6 @@ const App = {
     AppState.answerKeyRevealed.partA = true;
 
     this.updateKeyButtonUI('partA');
-    }
 
     const scoreBadge = document.getElementById('partAScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
@@ -970,7 +971,6 @@ const App = {
     AppState.answerKeyRevealed.partB = true;
 
     this.updateKeyButtonUI('partB');
-    }
 
     const scoreBadge = document.getElementById('partBScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
@@ -1163,7 +1163,6 @@ const App = {
     AppState.answerKeyRevealed.partC = true;
 
     this.updateKeyButtonUI('partC');
-    }
 
     const scoreBadge = document.getElementById('partCScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
