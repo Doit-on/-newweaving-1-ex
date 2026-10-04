@@ -124,11 +124,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "Munich",
         "royal wedding",
-        "dirndls",
+        "Bavarian",
         "parades",
-        "Bavarian"
+        "Munich",
+        "dirndls"
       ],
       "questions": [
         {
@@ -376,11 +376,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "ancient",
         "spectators",
         "battles",
         "damaged",
-        "tourists"
+        "tourists",
+        "ancient"
       ],
       "questions": [
         {
@@ -626,11 +626,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "active",
         "mental health",
-        "balanced diet",
         "screen time",
-        "hydrated"
+        "active",
+        "hydrated",
+        "balanced diet"
       ],
       "questions": [
         {
@@ -874,11 +874,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "resilience",
         "embers",
+        "devotees",
+        "resilience",
         "ceremonies",
-        "obstacles",
-        "devotees"
+        "obstacles"
       ],
       "questions": [
         {
@@ -1122,10 +1122,10 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "inspired",
         "layers",
-        "delicate",
         "symbol",
+        "inspired",
+        "delicate",
         "ingredients"
       ],
       "questions": [
@@ -1371,11 +1371,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "readers",
+        "movable",
         "invention",
         "communication",
         "afford",
-        "movable"
+        "readers"
       ],
       "questions": [
         {
@@ -1620,10 +1620,10 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "contributions",
-        "determination",
         "radiation",
         "communicate",
+        "determination",
+        "contributions",
         "mysteries"
       ],
       "questions": [
@@ -1868,11 +1868,11 @@ const DEFAULT_EXERCISES = [
     ],
     "partB": {
       "wordBank": [
-        "ethics",
+        "background",
         "humanitarian",
-        "outbreaks",
+        "ethics",
         "emergency",
-        "background"
+        "outbreaks"
       ],
       "questions": [
         {

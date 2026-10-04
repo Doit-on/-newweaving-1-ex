@@ -99,7 +99,7 @@ const I18N = {
     summary_part_a: { th: 'Part 1: การอ่าน', en: 'Part 1: Reading' },
     summary_part_b: { th: 'Part 2: ศัพท์', en: 'Part 2: Word Bank' },
     summary_part_c: { th: 'Part 3: เรียงประโยค', en: 'Part 3: Unscramble' },
-    btn_retry_unit: { th: 'ทำบทนี้อีกครั้ง ↺', en: 'Retry Unit ↺' },
+    btn_retry_unit: { th: 'ทำบทนี้อีกครั้ง ↺', en: 'Retry This Unit ↺' },
     btn_choose_next: { th: 'ไปยังบทถัดไป ➔', en: 'Next Unit ➔' },
 
     // Footer
@@ -135,6 +135,25 @@ const I18N = {
     const btn = document.getElementById('btnLangToggle');
     if (btn) {
       btn.innerHTML = lang === 'th' ? '<span>🌐</span> English' : '<span>🌐</span> ภาษาไทย';
+    }
+
+    // Reactive re-render of currently active views
+    if (window.App && typeof AppState !== 'undefined') {
+      if (AppState.currentView === 'landing' || AppState.currentView === 'dashboard') {
+        if (typeof App.renderLandingGrid === 'function') App.renderLandingGrid();
+      } else if (AppState.currentView === 'player' && AppState.currentExercise) {
+        if (typeof App.renderPlayerHeader === 'function') App.renderPlayerHeader(AppState.currentExercise);
+        if (AppState.activeTab === 'partA') App.renderPartA(AppState.currentExercise);
+        else if (AppState.activeTab === 'partB') App.renderPartB(AppState.currentExercise);
+        else if (AppState.activeTab === 'partC') App.renderPartC(AppState.currentExercise);
+        else if (AppState.activeTab === 'review') App.renderReviewTab(AppState.currentExercise);
+      } else if (AppState.currentView === 'summary' && AppState.currentExercise) {
+        if (typeof App.renderSummary === 'function') App.renderSummary();
+      }
+    }
+
+    if (window.AudioManager && typeof AudioManager.updateAudioButton === 'function') {
+      AudioManager.updateAudioButton(AudioManager.isPlaying || (window.SpeechEngine && SpeechEngine.isSpeaking));
     }
 
     if (typeof showToast === 'function') {

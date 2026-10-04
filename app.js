@@ -529,6 +529,10 @@ const App = {
     const ex = this.exercises.find(e => e.id === id);
     if (!ex) return;
 
+    // Reset runtime scramble caches on open or retry for fresh non-predictable order
+    delete ex.partB._scrambledWordBank;
+    if (ex.partC) ex.partC.forEach(q => delete q._scrambledTokens);
+
     AppState.currentExercise = ex;
     AppState.currentView = 'player';
     AppState.activeTab = 'partA';
@@ -569,10 +573,11 @@ const App = {
 
   renderPlayerHeader(ex) {
     const metaBox = document.getElementById('playerUnitMeta');
+    const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
     if (metaBox) {
       metaBox.innerHTML = `
         <h3>${ex.unit}: ${ex.title}</h3>
-        <p>${ex.thaiTitle}</p>
+        <p style="display:${isEn ? 'none' : 'block'};">${ex.thaiTitle}</p>
       `;
     }
   },
@@ -764,12 +769,15 @@ const App = {
     const scoreBadge = document.getElementById('partAScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
 
+    const isEnA = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
     if (banner) {
       banner.innerHTML = `
         <div class="part-summary-toast-box">
-          <div style="font-weight:700; font-size:1rem;">📊 สรุปคะแนน Part 1 (การอ่าน): <span style="color:#047857;">${score} / 5 คะแนน</span></div>
+          <div style="font-weight:700; font-size:1rem;">📊 ${isEnA ? 'Part 1 Score Summary (Reading):' : 'สรุปคะแนน Part 1 (การอ่าน):'} <span style="color:#047857;">${score} / 5 ${isEnA ? 'Points' : 'คะแนน'}</span></div>
           <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
-            ${answeredCount === 5 ? 'ทำครบทั้ง 5 ข้อ ตอบถูกต้อง ' + score + ' ข้อ' : 'ทำไป ' + answeredCount + '/5 ข้อ (ตอบถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)'}
+            ${isEnA 
+              ? (answeredCount === 5 ? `All 5 questions answered, ${score} correct.` : `Answered ${answeredCount}/5 questions (${score} correct, ${score} points).`)
+              : (answeredCount === 5 ? 'ทำครบทั้ง 5 ข้อ ตอบถูกต้อง ' + score + ' ข้อ' : 'ทำไป ' + answeredCount + '/5 ข้อ (ตอบถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)')}
           </div>
         </div>
       `;
@@ -784,10 +792,31 @@ const App = {
   // Part B: Word Bank Cloze Test
   // ============================================================
   renderPartB(ex) {
+    // Guaranteed derangement scramble: no word sits at the same index as its question
+    if (!ex.partB._scrambledWordBank || ex.partB._scrambledWordBank.length !== ex.partB.wordBank.length) {
+      const answers = ex.partB.questions.map(q => q.answer.trim().toLowerCase());
+      let bank = [...ex.partB.wordBank];
+      let attempts = 0;
+      let valid = false;
+      while (!valid && attempts < 100) {
+        for (let i = bank.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [bank[i], bank[j]] = [bank[j], bank[i]];
+        }
+        valid = bank.every((w, idx) => w.trim().toLowerCase() !== (answers[idx] || ''));
+        attempts++;
+      }
+      if (!valid && bank.length > 1) {
+        bank = [...ex.partB.wordBank.slice(1), ex.partB.wordBank[0]];
+      }
+      ex.partB._scrambledWordBank = bank;
+    }
+
+    const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
     const chipsContainer = document.getElementById('wordBankChips');
     if (chipsContainer) {
-      chipsContainer.innerHTML = ex.partB.wordBank.map(w => `
-        <span class="wordbank-chip" id="wb_chip_${w.replace(/\s+/g, '_')}" onclick="App.clickWordBankChip('${w}')">
+      chipsContainer.innerHTML = ex.partB._scrambledWordBank.map(w => `
+        <span class="wordbank-chip" id="wb_chip_${w.replace(/\s+/g, '_')}" onclick="App.clickWordBankChip('${w.replace(/'/g, "\\'")}')">
           ${w}
         </span>
       `).join('');
@@ -800,20 +829,21 @@ const App = {
           <div class="cloze-sentence-line">
             <strong>${idx + 1}.</strong> ${q.prefix}
             <span class="cloze-blank-slot empty" id="cloze_slot_${idx}" onclick="App.focusPartBSlot(${idx})">
-              <span id="cloze_val_${idx}">(แตะคำศัพท์ด้านบน)</span>
-              <button class="btn-clear-slot" onclick="event.stopPropagation(); App.clearPartBSlot(${idx})" title="ลบ">✕</button>
+              <span id="cloze_val_${idx}">${isEn ? '(Tap word from bank above)' : '(แตะคำศัพท์ด้านบน)'}</span>
+              <button class="btn-clear-slot" onclick="event.stopPropagation(); App.clearPartBSlot(${idx})" title="${isEn ? 'Clear' : 'ลบ'}">✕</button>
             </span>
             ${q.suffix}
           </div>
           <div class="answer-key-reveal-box" id="key_box_B_${idx}">
-            <strong>เฉลย:</strong> ${q.answer}
+            <strong>${isEn ? 'Answer Key:' : 'เฉลย:'}</strong> ${q.answer}
           </div>
         </div>
       `).join('');
     }
 
     const scoreBadge = document.getElementById('partBScoreBadge');
-    if (scoreBadge) scoreBadge.innerText = '0 / 5';
+    if (scoreBadge) scoreBadge.innerText = `${AppState.scores.partB || 0} / 5`;
+    this.updatePartBUI();
   },
 
   focusPartBSlot(idx) {
@@ -875,7 +905,7 @@ const App = {
           val.innerText = needsCapital ? (chosenWord.charAt(0).toUpperCase() + chosenWord.slice(1)) : chosenWord;
         } else {
           slot.classList.add('empty');
-          val.innerText = '(แตะคำศัพท์ด้านบน)';
+          val.innerText = (typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? '(Tap word from bank above)' : '(แตะคำศัพท์ด้านบน)';
         }
       }
     });
@@ -936,12 +966,15 @@ const App = {
     const scoreBadge = document.getElementById('partBScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
 
+    const isEnB = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
     if (banner) {
       banner.innerHTML = `
         <div class="part-summary-toast-box">
-          <div style="font-weight:700; font-size:1rem;">📊 สรุปคะแนน Part 2 (คำศัพท์): <span style="color:#047857;">${score} / 5 คะแนน</span></div>
+          <div style="font-weight:700; font-size:1rem;">📊 ${isEnB ? 'Part 2 Score Summary (Word Bank):' : 'สรุปคะแนน Part 2 (คำศัพท์):'} <span style="color:#047857;">${score} / 5 ${isEnB ? 'Points' : 'คะแนน'}</span></div>
           <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
-            ${filledCount === 5 ? 'เติมครบทั้ง 5 ข้อ ตอบถูกต้อง ' + score + ' ข้อ' : 'เติมไป ' + filledCount + '/5 ข้อ (ตอบถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)'}
+            ${isEnB
+              ? (filledCount === 5 ? `All 5 blanks filled, ${score} correct.` : `Filled ${filledCount}/5 blanks (${score} correct, ${score} points).`)
+              : (filledCount === 5 ? 'เติมครบทั้ง 5 ข้อ ตอบถูกต้อง ' + score + ' ข้อ' : 'เติมไป ' + filledCount + '/5 ข้อ (ตอบถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)')}
           </div>
         </div>
       `;
@@ -964,10 +997,10 @@ const App = {
 
       return `
         <div class="unscramble-card" id="unscramble_block_${qIdx}">
-          <div class="unscramble-q-num">ข้อที่ ${qIdx + 1}</div>
+          <div class="unscramble-q-num">${(typeof I18N !== "undefined" && I18N.currentLang === "en") ? "Sentence " + (qIdx + 1) : "ข้อที่ " + (qIdx + 1)}</div>
           
           <div class="unscramble-dropzone" id="dropzone_${qIdx}">
-            <span style="color:var(--text-muted); font-size:0.85rem;" id="dropzone_hint_${qIdx}">แตะกลุ่มคำด้านล่างเพื่อเรียงประโยค</span>
+            <span style="color:var(--text-muted); font-size:0.85rem;" id="dropzone_hint_${qIdx}">${(typeof I18N !== "undefined" && I18N.currentLang === "en") ? "Tap token chunks below to build sentence" : "แตะกลุ่มคำด้านล่างเพื่อเรียงประโยค"}</span>
           </div>
 
           <div class="unscramble-bank" id="token_bank_${qIdx}">
@@ -999,11 +1032,11 @@ const App = {
           </div>
 
           <div class="unscramble-actions">
-            <button class="btn-sm-action btn-reset-tokens" onclick="App.resetTokensLine(${qIdx})">ล้างแถวนี้ ↺</button>
+            <button class="btn-sm-action btn-reset-tokens" onclick="App.resetTokensLine(${qIdx})">${(typeof I18N !== "undefined" && I18N.currentLang === "en") ? "Reset line ↺" : "ล้างแถวนี้ ↺"}</button>
           </div>
 
           <div class="answer-key-reveal-box" id="key_box_C_${qIdx}">
-            <strong>เฉลยประโยคที่ถูกต้อง:</strong> ${q.correct}
+            <strong>${(typeof I18N !== "undefined" && I18N.currentLang === "en") ? "Correct Sentence:" : "เฉลยประโยคที่ถูกต้อง:"}</strong> ${q.correct}
           </div>
         </div>
       `;
@@ -1129,12 +1162,15 @@ const App = {
     const scoreBadge = document.getElementById('partCScoreBadge');
     if (scoreBadge) scoreBadge.innerText = `${score} / 5`;
 
+    const isEnC = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
     if (banner) {
       banner.innerHTML = `
         <div class="part-summary-toast-box">
-          <div style="font-weight:700; font-size:1rem;">📊 สรุปคะแนน Part 3 (เรียงประโยค): <span style="color:#047857;">${score} / 5 คะแนน</span></div>
+          <div style="font-weight:700; font-size:1rem;">📊 ${isEnC ? 'Part 3 Score Summary (Unscramble):' : 'สรุปคะแนน Part 3 (เรียงประโยค):'} <span style="color:#047857;">${score} / 5 ${isEnC ? 'Points' : 'คะแนน'}</span></div>
           <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
-            ${attemptedCount === 5 ? 'เรียงครบทั้ง 5 ข้อ ถูกต้อง ' + score + ' ข้อ' : 'ทำไป ' + attemptedCount + '/5 ข้อ (ถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)'}
+            ${isEnC
+              ? (attemptedCount === 5 ? `All 5 sentences built, ${score} correct.` : `Attempted ${attemptedCount}/5 sentences (${score} correct, ${score} points).`)
+              : (attemptedCount === 5 ? 'เรียงครบทั้ง 5 ข้อ ถูกต้อง ' + score + ' ข้อ' : 'ทำไป ' + attemptedCount + '/5 ข้อ (ถูกต้อง ' + score + ' ข้อ ได้ ' + score + ' คะแนน)')}
           </div>
         </div>
       `;
@@ -1222,7 +1258,7 @@ const App = {
     if (grammarCard && ex.review && ex.review.grammarTip) {
       grammarCard.innerHTML = `
         <p><strong>Grammar Rule:</strong> ${ex.review.grammarTip.en}</p>
-        <p><strong>คำอธิบาย:</strong> ${ex.review.grammarTip.th}</p>
+        <p><strong>${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Grammar Focus:' : 'คำอธิบาย:'}</strong> ${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? (ex.review.grammarTip.en || ex.review.grammarTip.th) : ex.review.grammarTip.th}</p>
       `;
     }
   },
