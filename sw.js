@@ -1,4 +1,4 @@
-const CACHE_NAME = 'new-weaving-1-v3';
+const CACHE_NAME = 'new-weaving-2-v1';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -22,21 +22,21 @@ const MEDIA_ASSETS = [
   './assets/images/ex6.jpg',
   './assets/images/ex7.jpg',
   './assets/images/ex8.jpg',
-  './assets/audio/ex1_oktoberfest.mp3',
-  './assets/audio/ex2_colosseum.mp3',
-  './assets/audio/ex3_healthy_living.mp3',
-  './assets/audio/ex4_firewalking.mp3',
-  './assets/audio/ex5_croissant.mp3',
-  './assets/audio/ex6_printing_press.mp3',
-  './assets/audio/ex7_stephen_hawking.mp3',
-  './assets/audio/ex8_doctors_without_borders.mp3'
+  './assets/audio/ex1_colors_of_humanity.mp3',
+  './assets/audio/ex2_superfood_rice.mp3',
+  './assets/audio/ex3_chinese_new_year.mp3',
+  './assets/audio/ex4_amelia_earhart.mp3',
+  './assets/audio/ex5_tsunamis.mp3',
+  './assets/audio/ex6_food_technology.mp3',
+  './assets/audio/ex7_languages_of_the_world.mp3',
+  './assets/audio/ex8_robin_hood.mp3'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       await cache.addAll(CORE_ASSETS);
-      // Cache media assets non-blocking so install succeeds even on slower networks
+      // Cache media assets non-blocking
       await Promise.allSettled(MEDIA_ASSETS.map(url => cache.add(url)));
     }).then(() => self.skipWaiting())
   );

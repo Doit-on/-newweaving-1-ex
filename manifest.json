@@ -1,11 +1,11 @@
 {
-  "name": "NEW Weaving It Together 1 - สำนักพิมพ์ไทยวัฒนาพานิช",
-  "short_name": "Weaving 1",
-  "description": "Connecting Reading and Writing (ม.4) - TWP & Cengage Learning",
+  "name": "NEW Weaving It Together 2 - สำนักพิมพ์ไทยวัฒนาพานิช",
+  "short_name": "Weaving 2",
+  "description": "Connecting Reading and Writing (ม.5) - TWP & Cengage Learning",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#004d56",
-  "theme_color": "#004d56",
+  "background_color": "#fffaf5",
+  "theme_color": "#991b1b",
   "orientation": "any",
   "icons": [
     {
