@@ -424,6 +424,10 @@ const App = {
     SpeechEngine.initVoices();
     SettingsController.init();
     I18N.applyTranslations();
+    const btnLangOnLoad = document.getElementById('btnLangToggle');
+    if (btnLangOnLoad) {
+      btnLangOnLoad.innerHTML = I18N.currentLang === 'th' ? '<span>🌐</span> English' : '<span>🌐</span> ภาษาไทย';
+    }
 
     this.renderLandingGrid();
     this.bindEvents();
@@ -486,7 +490,7 @@ const App = {
           </div>
           <div class="card-body">
             <h3 class="card-title">${ex.title}</h3>
-            <p class="card-thai-title">${ex.thaiTitle}</p>
+            <p class="card-thai-title" style="display:${isEn ? 'none' : 'block'};">${ex.thaiTitle}</p>
             
             <div class="card-parts-indicator">
               <span class="part-pill ${isCompleted ? 'completed' : ''}">Part 1: อ่าน</span>
@@ -524,6 +528,21 @@ const App = {
     this.renderLandingGrid();
   },
 
+    updateKeyButtonUI(partKey) {
+    const pUpper = partKey.charAt(0).toUpperCase() + partKey.slice(1);
+    const btn = document.getElementById('btnKeyPart' + pUpper);
+    if (!btn) return;
+    const isRevealed = AppState.answerKeyRevealed[partKey];
+    const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
+    if (isRevealed) {
+      btn.className = 'btn-answer-key active-key';
+      btn.innerHTML = '<span>🔒</span> <span>' + (isEn ? 'Hide Solutions' : (partKey === 'partA' ? 'ซ่อนเฉลย & คำอธิบาย' : 'ซ่อนเฉลย')) + '</span>';
+    } else {
+      btn.className = 'btn-answer-key';
+      btn.innerHTML = '<span>🔑</span> <span>' + (isEn ? 'Show Solutions & Explanation' : 'ดูเฉลยพร้อมคำอธิบาย & สรุปคะแนน') + '</span>';
+    }
+  },
+
   openExercise(id) {
     AudioManager.stop();
     const ex = this.exercises.find(e => e.id === id);
@@ -544,13 +563,9 @@ const App = {
 
     // Clear Part Summary Banners & Key Button Styles
     ['A', 'B', 'C'].forEach(p => {
-      const banner = document.getElementById(`partSummaryBanner${p}`);
+      const banner = document.getElementById('partSummaryBanner' + p);
       if (banner) banner.innerHTML = '';
-      const btnKey = document.getElementById(`btnKeyPart${p}`);
-      if (btnKey) {
-        btnKey.className = 'btn-answer-key';
-        btnKey.innerHTML = '<span>🔑</span> <span>ดูเฉลยพร้อมคำอธิบาย & สรุปคะแนน</span>';
-      }
+      this.updateKeyButtonUI('part' + p);
     });
 
     // View Switching
@@ -760,10 +775,7 @@ const App = {
     AppState.submitted.partA = true;
     AppState.answerKeyRevealed.partA = true;
 
-    const btnKey = document.getElementById('btnKeyPartA');
-    if (btnKey) {
-      btnKey.classList.add('active-key');
-      btnKey.innerHTML = '<span>🔒</span> <span>ซ่อนเฉลย & คำอธิบาย</span>';
+    this.updateKeyButtonUI('partA');
     }
 
     const scoreBadge = document.getElementById('partAScoreBadge');
@@ -957,10 +969,7 @@ const App = {
     AppState.submitted.partB = true;
     AppState.answerKeyRevealed.partB = true;
 
-    const btnKey = document.getElementById('btnKeyPartB');
-    if (btnKey) {
-      btnKey.classList.add('active-key');
-      btnKey.innerHTML = '<span>🔒</span> <span>ซ่อนเฉลย & คำใบ้</span>';
+    this.updateKeyButtonUI('partB');
     }
 
     const scoreBadge = document.getElementById('partBScoreBadge');
@@ -1153,10 +1162,7 @@ const App = {
     AppState.submitted.partC = true;
     AppState.answerKeyRevealed.partC = true;
 
-    const btnKey = document.getElementById('btnKeyPartC');
-    if (btnKey) {
-      btnKey.classList.add('active-key');
-      btnKey.innerHTML = '<span>🔒</span> <span>ซ่อนเฉลย</span>';
+    this.updateKeyButtonUI('partC');
     }
 
     const scoreBadge = document.getElementById('partCScoreBadge');
@@ -1239,8 +1245,8 @@ const App = {
   // ============================================================
   renderReviewTab(ex) {
     const vocabBody = document.getElementById('reviewVocabBody');
-    if (vocabBody && ex.review && ex.review.keyVocab) {
-      vocabBody.innerHTML = ex.review.keyVocab.map(v => `
+    if (vocabBody && ex.review && (ex.review.vocab || ex.review.keyVocab)) {
+      vocabBody.innerHTML = (ex.review.vocab || ex.review.keyVocab).map(v => `
         <tr>
           <td class="vocab-word">${v.word}</td>
           <td class="vocab-pos">${v.pos}</td>

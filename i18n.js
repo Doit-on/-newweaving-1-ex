@@ -20,7 +20,10 @@ const I18N = {
     // Landing Page
     hero_badge_series: { th: 'มัธยมศึกษาปีที่ 4 • ระดับ CEF: A2', en: 'Grade 10 (M.4) • CEF: A2 Level' },
     hero_badge_twp: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช', en: 'Thai Watana Panich Publisher' },
-    hero_title: { th: 'บทอ่านเพื่อเสริมการเรียนรู้จากชุด Weaving It Together', en: 'Supplementary Reading from Weaving It Together' },
+    hero_title: {
+      th: 'บทอ่านเพื่อเสริมการเรียนรู้<br><span class="highlight-yellow">จากชุด Weaving It Together</span>',
+      en: 'Supplementary Reading<br><span class="highlight-yellow">from Weaving It Together</span>'
+    },
     hero_subtitle: { th: 'พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ', en: 'Developing Reading Comprehension and Main Idea Skills' },
     hero_desc: {
       th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.wav) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
@@ -73,8 +76,8 @@ const I18N = {
 
     // Action Buttons
     btn_check_answers: { th: 'ตรวจคำตอบ', en: 'Check Answers' },
-    btn_show_key: { th: '🔑 ดูเฉลยพร้อมคำอธิบาย', en: '🔑 Show Answer Key & Notes' },
-    btn_hide_key: { th: '🔒 ซ่อนเฉลย', en: '🔒 Hide Answer Key' },
+    btn_show_key: { th: 'ดูเฉลยพร้อมคำอธิบาย & สรุปคะแนน', en: 'Show Solutions & Explanation' },
+    btn_hide_key: { th: 'ซ่อนเฉลย', en: 'Hide Solutions' },
     btn_summary_part: { th: '📊 ตรวจ & สรุปคะแนนพาร์ทนี้', en: '📊 Check & summarize this part' },
     btn_check_and_key: { th: 'ตรวจคะแนน & ดูเฉลยพร้อมคำอธิบาย', en: 'Check Score & View Solutions' },
     alert_incomplete: { th: '⚠️ ทำไม่ครบ 5 ข้อในพาร์ทนี้ ได้รับ 0 คะแนน (ต้องทำครบทุกข้อจึงจะได้คะแนน)', en: '⚠️ Incomplete: You must answer all 5 questions to receive points (Score is 0).' },
@@ -87,8 +90,8 @@ const I18N = {
     // Review Tab
     review_vocab_title: { th: '📚 คำศัพท์สำคัญประจำบท (Key Vocabulary)', en: '📚 Key Vocabulary' },
     review_grammar_title: { th: '💡 สรุปหลักไวยากรณ์ (Grammar Focus)', en: '💡 Grammar Focus' },
-    col_word: { th: 'คำศัพท์', en: 'Word' },
-    col_pos: { th: 'ชนิดคำ', en: 'Type' },
+    col_word: { th: 'คำศัพท์', en: 'Vocabulary' },
+    col_pos: { th: 'ชนิดคำ', en: 'Part of Speech' },
     col_meaning: { th: 'ความหมายภาษาไทย', en: 'Meaning' },
     col_pronounce: { th: 'การออกเสียง', en: 'Pronounce' },
 
@@ -125,10 +128,10 @@ const I18N = {
     return fallback || key;
   },
 
-  setLanguage(lang) {
+    setLanguage(lang) {
     if (lang !== 'th' && lang !== 'en') return;
     this.currentLang = lang;
-    localStorage.setItem('nw1_lang', lang);
+    if (typeof localStorage !== 'undefined') localStorage.setItem('nw1_lang', lang);
     this.applyTranslations();
 
     // Update Language toggle button
@@ -137,16 +140,20 @@ const I18N = {
       btn.innerHTML = lang === 'th' ? '<span>🌐</span> English' : '<span>🌐</span> ภาษาไทย';
     }
 
-    // Reactive re-render of currently active views
+    // Reactive re-render of whichever view is currently active
     if (window.App && typeof AppState !== 'undefined') {
       if (AppState.currentView === 'landing' || AppState.currentView === 'dashboard') {
         if (typeof App.renderLandingGrid === 'function') App.renderLandingGrid();
       } else if (AppState.currentView === 'player' && AppState.currentExercise) {
         if (typeof App.renderPlayerHeader === 'function') App.renderPlayerHeader(AppState.currentExercise);
-        if (AppState.activeTab === 'partA') App.renderPartA(AppState.currentExercise);
-        else if (AppState.activeTab === 'partB') App.renderPartB(AppState.currentExercise);
-        else if (AppState.activeTab === 'partC') App.renderPartC(AppState.currentExercise);
-        else if (AppState.activeTab === 'review') App.renderReviewTab(AppState.currentExercise);
+        if (typeof App.renderPassagePanel === 'function') App.renderPassagePanel(AppState.currentExercise);
+        if (AppState.activeTab === 'partA' && typeof App.renderPartA === 'function') App.renderPartA(AppState.currentExercise);
+        else if (AppState.activeTab === 'partB' && typeof App.renderPartB === 'function') App.renderPartB(AppState.currentExercise);
+        else if (AppState.activeTab === 'partC' && typeof App.renderPartC === 'function') App.renderPartC(AppState.currentExercise);
+        else if (AppState.activeTab === 'review' && typeof App.renderReviewTab === 'function') App.renderReviewTab(AppState.currentExercise);
+        if (typeof App.updateKeyButtonUI === 'function') {
+          ['partA', 'partB', 'partC'].forEach(p => App.updateKeyButtonUI(p));
+        }
       } else if (AppState.currentView === 'summary' && AppState.currentExercise) {
         if (typeof App.renderSummary === 'function') App.renderSummary();
       }
