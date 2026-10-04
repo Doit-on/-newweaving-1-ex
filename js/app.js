@@ -1,5 +1,5 @@
 /**
- * NEW Weaving It Together 2 (ม.5) - Main Application Controller
+ * NEW Weaving It Together 1 (ม.4) - Main Application Controller
  * Thai Watana Panich (TWP) & Cengage Learning
  * Dual Audio Engine, Procedural Web Audio FX, Multi-Part Interactive Quizzes
  * Features: Lightbox Image Zoom, Part Answer Keys, Incomplete=0 Scoring Rule
@@ -139,13 +139,13 @@ const SpeechEngine = {
   },
 
   phoneticMap: [
-    { pattern: /\bAmelia\b/gi, spoken: 'Uh-meel-yah' },
-    { pattern: /\bEarhart\b/gi, spoken: 'Air-hart' },
-    { pattern: /\bTsunamis?\b/gi, spoken: 'Soo-nah-mee' },
-    { pattern: /\bSherwood\b/gi, spoken: 'Sher-wood' },
-    { pattern: /\bNottingham\b/gi, spoken: 'Not-ting-um' },
-    { pattern: /\bHydroponics\b/gi, spoken: 'Hy-druh-pon-iks' },
-    { pattern: /\bMelanin\b/gi, spoken: 'Mel-uh-nin' }
+    { pattern: /\bOktoberfest\b/gi, spoken: 'Ok-toe-ber-fest' },
+    { pattern: /\bVespasian\b/gi, spoken: 'Ves-pay-zhee-un' },
+    { pattern: /\bAnastenaria\b/gi, spoken: 'Ah-nah-sten-ah-ree-ah' },
+    { pattern: /\bHiwatari\b/gi, spoken: 'Hee-wah-tah-ree' },
+    { pattern: /\bKipferl\b/gi, spoken: 'Kip-ferl' },
+    { pattern: /\bGutenberg\b/gi, spoken: 'Goo-ten-berg' },
+    { pattern: /\bMédecins Sans Frontières\b/gi, spoken: 'Med-sahn Sahn Fron-tyair' }
   ],
 
   prepareSpokenText(text) {
@@ -239,7 +239,7 @@ const SpeechEngine = {
 
   testVoice() {
     this.stop();
-    const utterance = new SpeechSynthesisUtterance("Hello! Welcome to NEW Weaving It Together 2. Let's build your reading and writing confidence!");
+    const utterance = new SpeechSynthesisUtterance("Hello! Welcome to NEW Weaving It Together 1. Let's build your reading and writing confidence!");
     if (this.selectedVoice) utterance.voice = this.selectedVoice;
     utterance.lang = 'en-US';
     utterance.rate = 0.90;
@@ -264,7 +264,7 @@ const SpeechEngine = {
 };
 
 // ============================================================
-// Dual Audio Manager: Native .mp3 Audio + SpeechEngine Fallback
+// Dual Audio Manager: Native .wav Audio + SpeechEngine Fallback
 // ============================================================
 const AudioManager = {
   currentAudio: null,
@@ -475,10 +475,11 @@ const App = {
     const container = document.getElementById('exercisesGrid');
     if (!container) return;
 
+    const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
+
     container.innerHTML = this.exercises.map((ex) => {
-      const savedScore = localStorage.getItem(`nw2_ex_${ex.id}_score`);
-      const isCompleted = localStorage.getItem(`nw2_ex_${ex.id}_completed`) === 'true';
-      const isEn = typeof I18N !== 'undefined' && I18N.currentLang === 'en';
+      const savedScore = localStorage.getItem(`nw1_ex_${ex.id}_score`);
+      const isCompleted = localStorage.getItem(`nw1_ex_${ex.id}_completed`) === 'true';
 
       return `
         <div class="exercise-card" onclick="App.openExercise(${ex.id})">
@@ -616,7 +617,7 @@ const App = {
 
     const engineBadge = document.getElementById('audioEngineBadge');
     if (engineBadge) {
-      engineBadge.innerHTML = '🔊 Native MP3 เสียงจริง (เจ้าของภาษา)';
+      engineBadge.innerHTML = '🔊 Native WAV เสียงจริง (เจ้าของภาษา)';
     }
   },
 
@@ -632,7 +633,7 @@ const App = {
     const ex = AppState.currentExercise;
     img.src = src || (ex ? ex.image : 'assets/images/cover.jpg');
     if (caption) {
-      caption.innerText = title || (ex ? `${ex.unit}: ${ex.title} (${ex.thaiTitle})` : 'NEW Weaving It Together 2');
+      caption.innerText = title || (ex ? `${ex.unit}: ${ex.title} (${ex.thaiTitle})` : 'NEW Weaving It Together 1');
     }
 
     AppState.lightboxZoom = 1;
@@ -944,21 +945,21 @@ const App = {
             score++;
             slot.classList.add('correct');
             if (keyBox) {
-              keyBox.innerHTML = `<span>✅ <strong>${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Correct!' : 'ถูกต้อง!'}</strong> ${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Answer is:' : 'คำตอบคือ:'} <strong>${q.answer}</strong></span>`;
+              keyBox.innerHTML = `<span>✅ <strong>ถูกต้อง!</strong> คำตอบคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           } else {
             // หากตอบผิด ให้แสดงสีแดง และเฉลยคำตอบที่ถูกด้วย
             slot.classList.add('wrong');
             if (keyBox) {
-              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ ${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Your answer:' : 'คุณตอบ:'} "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Correct answer is:' : 'คำตอบที่ถูกต้องคือ:'} <strong>${q.answer}</strong></span>`;
+              keyBox.innerHTML = `<span style="color:#b91c1c;">❌ คุณตอบ: "<strong>${AppState.answers.partB[idx]}</strong>"</span> ➔ <span style="color:#047857; margin-left:8px;">คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
               keyBox.classList.add('active');
             }
           }
         } else {
           // ยังไม่ได้ตอบ เติมเฉลยคำตอบที่ถูก
           if (keyBox) {
-            keyBox.innerHTML = `<span>${(typeof I18N !== 'undefined' && I18N.currentLang === 'en') ? 'Correct answer is:' : 'คำตอบที่ถูกต้องคือ:'} <strong>${q.answer}</strong></span>`;
+            keyBox.innerHTML = `<span>💡 คำตอบที่ถูกต้องคือ: <strong>${q.answer}</strong></span>`;
             keyBox.classList.add('active');
           }
         }
@@ -1284,8 +1285,8 @@ const App = {
     AppState.scores.total = total;
 
     // Save to LocalStorage
-    localStorage.setItem(`nw2_ex_${ex.id}_score`, total);
-    localStorage.setItem(`nw2_ex_${ex.id}_completed`, 'true');
+    localStorage.setItem(`nw1_ex_${ex.id}_score`, total);
+    localStorage.setItem(`nw1_ex_${ex.id}_completed`, 'true');
 
     AppState.currentView = 'summary';
     document.getElementById('viewLanding').classList.remove('active');

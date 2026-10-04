@@ -1,5 +1,5 @@
 /**
- * NEW Weaving It Together 2 (ม.5) - System Diagnostic Check
+ * NEW Weaving It Together 1 (ม.4) - System Diagnostic Check
  */
 
 const SystemCheck = {
@@ -39,15 +39,15 @@ const SystemCheck = {
       results.push({
         title: 'Web Speech API (ระบบอ่านออกเสียงอัตโนมัติ)',
         status: hasSpeech ? 'pass' : 'warn',
-        desc: hasSpeech ? `พร้อมใช้งาน (${voicesCount} เสียงในระบบ)` : 'ไม่รองรับ (จะใช้ Native Audio .mp3 แทน)'
+        desc: hasSpeech ? `พร้อมใช้งาน (${voicesCount} เสียงในระบบ)` : 'ไม่รองรับ (จะใช้ Native Audio .wav แทน)'
       });
 
       // 3. LocalStorage
       let storageOk = false;
       try {
-        localStorage.setItem('nw2_test', '1');
-        storageOk = localStorage.getItem('nw2_test') === '1';
-        localStorage.removeItem('nw2_test');
+        localStorage.setItem('nw1_test', '1');
+        storageOk = localStorage.getItem('nw1_test') === '1';
+        localStorage.removeItem('nw1_test');
       } catch (e) {
         storageOk = false;
       }

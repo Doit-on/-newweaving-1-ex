@@ -1,31 +1,22 @@
 /* ============================================================
-   NEW WEAVING IT TOGETHER 2 (ม.5) - STYLESHEET
+   NEW WEAVING IT TOGETHER 1 (ม.4) - STYLESHEET
    สำนักพิมพ์ไทยวัฒนาพานิช (TWP) & Cengage Learning
-   Antelope Canyon Terracotta & Solar Gold Palette (Book 2 Edition)
+   Ocean Teal & Solar Yellow Palette (Inspired by Cover Art)
    ============================================================ */
 
 :root {
-  /* Brand Antelope Canyon & Crimson Terracotta Palette (Book 2 Edition) */
-  --canyon-deep: #7f1d1d;
-  --canyon-primary: #991b1b;
-  --canyon-light: #c2410c;
-  --canyon-orange: #ea580c;
-  --canyon-amber: #f59e0b;
-  --canyon-sky: #ffedd5;
-  --canyon-surface: #fffaf5;
-  
-  /* Backward-compatible Theme Mappings */
-  --ocean-deep: #7f1d1d;
-  --ocean-primary: #991b1b;
-  --ocean-light: #c2410c;
-  --ocean-cyan: #ea580c;
-  --ocean-sky: #ffedd5;
-  --ocean-surface: #fffaf5;
+  /* Brand Ocean & Cover Palette */
+  --ocean-deep: #004d56;
+  --ocean-primary: #007a87;
+  --ocean-light: #0d9488;
+  --ocean-cyan: #06b6d4;
+  --ocean-sky: #e0f2fe;
+  --ocean-surface: #f0fdfa;
   
   /* Accent Colors */
-  --accent-yellow: #f59e0b;
-  --accent-yellow-hover: #d97706;
-  --accent-amber: #b45309;
+  --accent-yellow: #ffcc00;
+  --accent-yellow-hover: #e6b800;
+  --accent-amber: #f59e0b;
   --twp-indigo: #253b95;
   
   /* Status Colors */
@@ -37,17 +28,17 @@
   --warning-bg: #fef3c7;
   
   /* Neutral / Text */
-  --text-primary: #1c1917;
-  --text-secondary: #44403c;
-  --text-muted: #78716c;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
   --text-light: #ffffff;
   
-  --bg-body: #fafaf9;
+  --bg-body: #f8fafc;
   --bg-card: #ffffff;
-  --bg-subtle: #f5f5f4;
+  --bg-subtle: #f1f5f9;
   
-  --border-color: #e7e5e4;
-  --border-focus: #991b1b;
+  --border-color: #e2e8f0;
+  --border-focus: #007a87;
   
   /* Radius & Shadows */
   --radius-sm: 8px;
@@ -56,9 +47,9 @@
   --radius-xl: 28px;
   
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 6px 16px rgba(127, 29, 29, 0.08);
-  --shadow-lg: 0 12px 32px rgba(127, 29, 29, 0.12);
-  --shadow-glow: 0 0 20px rgba(153, 27, 27, 0.25);
+  --shadow-md: 0 6px 16px rgba(0, 77, 86, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 77, 86, 0.12);
+  --shadow-glow: 0 0 20px rgba(0, 122, 135, 0.25);
   
   /* Typography */
   --font-main: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -272,7 +263,7 @@ button {
    LANDING PAGE VIEW
    ============================================================ */
 .landing-hero {
-  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 35%, #c2410c 70%, #ea580c 100%);
+  background: linear-gradient(135deg, #00363d 0%, #005b66 40%, #007a87 75%, #0d9488 100%);
   color: var(--text-light);
   padding: 48px 24px 64px;
   position: relative;
@@ -547,7 +538,7 @@ button {
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #450a0a;
+  background: #002e33;
 }
 
 .card-img {
@@ -781,7 +772,7 @@ button {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  background: #450a0a;
+  background: #001f22;
 }
 
 .passage-banner-img {
@@ -1482,7 +1473,7 @@ button {
 }
 
 .grammar-tip-card {
-  background: linear-gradient(135deg, #fffaf5, #ffedd5);
+  background: linear-gradient(135deg, #f0fdfa, #e0f2fe);
   border-left: 6px solid var(--ocean-cyan);
   padding: 20px;
   border-radius: var(--radius-sm);
@@ -2083,9 +2074,9 @@ button {
   margin-top: 36px;
   margin-bottom: 20px;
   padding: 20px 28px;
-  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #00363d 0%, #004d56 100%);
   border-radius: var(--radius-md);
-  box-shadow: 0 6px 20px rgba(127, 29, 29, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 77, 86, 0.15);
   border: 1px solid rgba(255, 204, 0, 0.3);
 }
 
@@ -2155,7 +2146,7 @@ button {
    ============================================================ */
 .option-btn.selected {
   border-color: var(--ocean-primary);
-  background: #ffedd5;
+  background: #e0f2fe;
   box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.25);
 }
 

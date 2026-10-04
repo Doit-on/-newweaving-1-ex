@@ -1,15 +1,15 @@
 /**
- * NEW Weaving It Together 2 (ม.5) - Bilingual i18n Engine (เปลี่ยนภาษา)
+ * NEW Weaving It Together 1 (ม.4) - Bilingual i18n Engine (เปลี่ยนภาษา)
  * Complete real-time language switcher
  */
 
 const I18N = {
-  currentLang: (typeof localStorage !== 'undefined' ? localStorage.getItem('nw2_lang') : null) || 'th',
+  currentLang: localStorage.getItem('nw1_lang') || 'th',
 
   dict: {
     // Top Navigation
-    nav_title: { th: 'NEW Weaving It Together 2', en: 'NEW Weaving It Together 2' },
-    nav_subtitle: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช (ม.5)', en: 'Thai Watana Panich (Grade 11 / M.5)' },
+    nav_title: { th: 'NEW Weaving It Together 1', en: 'NEW Weaving It Together 1' },
+    nav_subtitle: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช (ม.4)', en: 'Thai Watana Panich (Grade 10 / M.4)' },
     nav_btn_settings: { th: 'ตั้งค่า', en: 'Settings' },
     nav_btn_system: { th: 'ตรวจระบบ', en: 'Diagnostics' },
     nav_btn_lang: { th: 'EN', en: 'ไทย' },
@@ -18,7 +18,7 @@ const I18N = {
     btn_back_home: { th: '← กลับหน้าแรก (Home)', en: '← Back to Home' },
 
     // Landing Page
-    hero_badge_series: { th: 'มัธยมศึกษาปีที่ 5 • ระดับ CEF: A2/B1', en: 'Grade 11 (M.5) • CEF: A2/B1 Level' },
+    hero_badge_series: { th: 'มัธยมศึกษาปีที่ 4 • ระดับ CEF: A2', en: 'Grade 10 (M.4) • CEF: A2 Level' },
     hero_badge_twp: { th: 'สำนักพิมพ์ไทยวัฒนาพานิช', en: 'Thai Watana Panich Publisher' },
     hero_title: {
       th: 'บทอ่านเพื่อเสริมการเรียนรู้<br><span class="highlight-yellow">จากชุด Weaving It Together</span>',
@@ -26,8 +26,8 @@ const I18N = {
     },
     hero_subtitle: { th: 'พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ', en: 'Developing Reading Comprehension and Main Idea Skills' },
     hero_desc: {
-      th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.mp3) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
-      en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.mp3), 3 rigorous learning parts, and automatic scoring across all devices.'
+      th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.wav) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
+      en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.wav), 3 rigorous learning parts, and automatic scoring across all devices.'
     },
     hero_btn_enter: { th: 'เข้าสู่ระบบเพื่อทำแบบฝึกหัด ➔', en: 'Enter Exercises ➔' },
     hero_btn_start: { th: 'เริ่มเรียนรู้ Unit 1', en: 'Start Unit 1' },
@@ -39,7 +39,7 @@ const I18N = {
     stat_parts: { th: '3 พาร์ท / บท', en: '3 Parts / Unit' },
     stat_parts_sub: { th: 'อ่าน • ศัพท์ • โครงสร้าง', en: 'Reading • Vocab • Syntax' },
     stat_audio: { th: 'ระบบเสียงคู่', en: 'Dual Audio' },
-    stat_audio_sub: { th: 'Native MP3 + TTS ธรรมชาติ', en: 'Native MP3 + Natural TTS' },
+    stat_audio_sub: { th: 'Native WAV + TTS ธรรมชาติ', en: 'Native WAV + Natural TTS' },
     stat_offline: { th: 'ออฟไลน์ 100%', en: '100% Offline' },
     stat_offline_sub: { th: 'พร้อมใช้งานทุกเบราว์เซอร์', en: 'Ready on any browser' },
 
@@ -47,7 +47,7 @@ const I18N = {
     section_units_title: { th: 'บทเรียนและแบบฝึกหัด (Exercises 1–8)', en: 'Units & Exercises (1–8)' },
     section_units_sub: { th: 'เลือกบทเรียนที่ต้องการเพื่อฝึกทักษะการอ่าน คำศัพท์ และการเรียงประโยค', en: 'Select a unit to practice reading, vocabulary, and sentence structure' },
     btn_start_unit: { th: 'เข้าสู่บทเรียน ➔', en: 'Start Exercise ➔' },
-    badge_native_audio: { th: '🔊 เสียงจริง .mp3', en: '🔊 Native .mp3' },
+    badge_native_audio: { th: '🔊 เสียงจริง .wav', en: '🔊 Native .wav' },
     badge_tts_audio: { th: '🎙️ เสียงอ่าน TTS', en: '🎙️ Natural TTS' },
 
     // Player Bar
@@ -131,7 +131,7 @@ const I18N = {
     setLanguage(lang) {
     if (lang !== 'th' && lang !== 'en') return;
     this.currentLang = lang;
-    if (typeof localStorage !== 'undefined') localStorage.setItem('nw2_lang', lang);
+    if (typeof localStorage !== 'undefined') localStorage.setItem('nw1_lang', lang);
     this.applyTranslations();
 
     // Update Language toggle button

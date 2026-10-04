@@ -1,5 +1,5 @@
 /**
- * NEW Weaving It Together 2 (ม.5) - Curriculum & Exercise Dataset
+ * NEW Weaving It Together 1 (ม.4) - Curriculum & Exercise Dataset
  * สำนักพิมพ์ไทยวัฒนาพานิช (TWP) & Cengage Learning / National Geographic Learning
  * Validated 100% against Curriculum PDF
  */
@@ -7,158 +7,164 @@
 const DEFAULT_EXERCISES = [
   {
     "id": 1,
-    "title": "The Colors of Humanity",
-    "thaiTitle": "สีสันแห่งมนุษยชาติ: ความหลากหลายและความเท่าเทียม",
-    "cefr": "A2/B1",
+    "title": "Oktoberfest: Germany's Famous Festival",
+    "thaiTitle": "เทศกาลอ็อกโทเบอร์เฟสต์: เทศกาลชื่อดังแห่งเยอรมนี",
+    "cefr": "A2",
     "unit": "Unit 1",
     "image": "assets/images/ex1.jpg",
-    "audio": "assets/audio/ex1_colors_of_humanity.mp3",
-    "passage": "People around the world have different skin tones, ranging from very light to very dark. These differences are mainly caused by melanin, a natural pigment that determines skin color. People with more melanin usually have darker skin. Genetics and the environment also influence skin color. For example, darker skin can provide more protection from strong UV rays in sunny regions.\n\nAlthough our skin tones are different, we all belong to the same human race. However, skin color has sometimes led to discrimination and unfair treatment. In some societies, lighter skin has historically been associated with higher social status, while people with darker skin have faced fewer opportunities. Today, many communities promote equality, inclusion, and self-acceptance.\n\nThe media also influences how people view skin color. In the past, people with darker skin were often underrepresented in movies, television, and advertisements. Today, the media is becoming more diverse and includes people with many different skin tones and backgrounds. By respecting these differences, we can create a fairer and more accepting society.",
+    "audio": "assets/audio/ex1_oktoberfest.mp3",
+    "passage": "Imagine walking into a huge festival filled with music, delicious food, colorful clothes, and thousands of happy people. This is Oktoberfest, one of the world's biggest and most famous festivals. It takes place every year in Munich, Germany, for about two weeks, from late September to early October. The festival began in 1810 as a celebration of a royal wedding. Today, millions of people from Germany and around the world visit Munich to enjoy it.\n\nAt Oktoberfest, you can easily spot people wearing traditional Bavarian clothing. Men wear lederhosen, which are leather shorts with suspenders, while women wear dirndls, colorful dresses with aprons. Large festival tents are filled with people enjoying traditional food, drinks, and live music. Popular foods include pretzels, sausages, roast chicken, and potato dishes.\n\nThere is plenty to do besides eating and drinking. Visitors can watch parades and traditional performances, enjoy folk dancing, play games, and ride exciting carnival rides. The festival is full of music, laughter, and energy, creating a fun atmosphere for people of different ages.\n\nOktoberfest is more than just a festival. It is an important part of German culture and Bavarian tradition. It brings people together to enjoy food, music, and time with family and friends. Today, Oktoberfest is famous around the world, and many countries even hold their own versions of the festival.",
     "paragraphs": [
-      "People around the world have different skin tones, ranging from very light to very dark. These differences are mainly caused by melanin, a natural pigment that determines skin color. People with more melanin usually have darker skin. Genetics and the environment also influence skin color. For example, darker skin can provide more protection from strong UV rays in sunny regions.",
-      "Although our skin tones are different, we all belong to the same human race. However, skin color has sometimes led to discrimination and unfair treatment. In some societies, lighter skin has historically been associated with higher social status, while people with darker skin have faced fewer opportunities. Today, many communities promote equality, inclusion, and self-acceptance.",
-      "The media also influences how people view skin color. In the past, people with darker skin were often underrepresented in movies, television, and advertisements. Today, the media is becoming more diverse and includes people with many different skin tones and backgrounds. By respecting these differences, we can create a fairer and more accepting society."
+      "Imagine walking into a huge festival filled with music, delicious food, colorful clothes, and thousands of happy people. This is Oktoberfest, one of the world's biggest and most famous festivals. It takes place every year in Munich, Germany, for about two weeks, from late September to early October. The festival began in 1810 as a celebration of a royal wedding. Today, millions of people from Germany and around the world visit Munich to enjoy it.",
+      "At Oktoberfest, you can easily spot people wearing traditional Bavarian clothing. Men wear lederhosen, which are leather shorts with suspenders, while women wear dirndls, colorful dresses with aprons. Large festival tents are filled with people enjoying traditional food, drinks, and live music. Popular foods include pretzels, sausages, roast chicken, and potato dishes.",
+      "There is plenty to do besides eating and drinking. Visitors can watch parades and traditional performances, enjoy folk dancing, play games, and ride exciting carnival rides. The festival is full of music, laughter, and energy, creating a fun atmosphere for people of different ages.",
+      "Oktoberfest is more than just a festival. It is an important part of German culture and Bavarian tradition. It brings people together to enjoy food, music, and time with family and friends. Today, Oktoberfest is famous around the world, and many countries even hold their own versions of the festival."
     ],
     "partA": [
       {
-        "question": "What mainly determines a person's skin color?",
+        "question": "Where does Oktoberfest take place every year?",
         "options": [
           {
             "key": "a",
-            "text": "Melanin"
+            "text": "Berlin"
           },
           {
             "key": "b",
-            "text": "Age"
+            "text": "Munich"
           },
           {
             "key": "c",
-            "text": "Food"
+            "text": "Hamburg"
+          }
+        ],
+        "answer": "b",
+        "explanation": "จากเนื้อเรื่อง: 'It takes place every year in Munich, Germany, for about two weeks...' (เทศกาลจัดขึ้นทุกปีที่เมืองมิวนิก ประเทศเยอรมนี)",
+        "ref": "Paragraph 1: 'takes place every year in Munich, Germany'"
+      },
+      {
+        "question": "Why did Oktoberfest begin in 1810?",
+        "options": [
+          {
+            "key": "a",
+            "text": "To celebrate a royal wedding"
+          },
+          {
+            "key": "b",
+            "text": "To celebrate German independence"
+          },
+          {
+            "key": "c",
+            "text": "To celebrate the harvest"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'These differences are mainly caused by melanin, a natural pigment that determines skin color.' (เมลานินคือเม็ดสีธรรมชาติที่เป็นปัจจัยหลักในการกำหนดสีผิว)",
-        "ref": "Paragraph 1: 'mainly caused by melanin, a natural pigment'"
+        "explanation": "จากเนื้อเรื่อง: 'The festival began in 1810 as a celebration of a royal wedding.' (เริ่มต้นขึ้นในปี 1810 เพื่อเฉลิมฉลองพิธีอภิเษกสมรสของราชวงศ์)",
+        "ref": "Paragraph 1: 'celebration of a royal wedding'"
       },
       {
-        "question": "Why can darker skin be helpful in sunny regions?",
+        "question": "What do women traditionally wear at Oktoberfest?",
         "options": [
           {
             "key": "a",
-            "text": "It keeps the body cool."
+            "text": "Lederhosen"
           },
           {
             "key": "b",
-            "text": "It changes with the weather."
+            "text": "Kimonos"
           },
           {
             "key": "c",
-            "text": "It protects against strong UV rays."
+            "text": "Dirndls"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: '...darker skin can provide more protection from strong UV rays in sunny regions.' (ผิวสีเข้มช่วยปกป้องผิวจากรังสียูวีที่รุนแรงในแถบที่มีแดดจัด)",
-        "ref": "Paragraph 1: 'provide more protection from strong UV rays'"
+        "explanation": "จากเนื้อเรื่อง: '...while women wear dirndls, colorful dresses with aprons.' (ผู้หญิงสวมชุดเดิร์นเดิล ซึ่งเป็นชุดกระโปรงพื้นเมืองมีผ้ากันเปื้อน)",
+        "ref": "Paragraph 2: 'women wear dirndls, colorful dresses'"
       },
       {
-        "question": "What problem have some people faced because of their skin color?",
+        "question": "Which activity can visitors enjoy at Oktoberfest?",
         "options": [
           {
             "key": "a",
-            "text": "Pollution"
+            "text": "Watching traditional performances"
           },
           {
             "key": "b",
-            "text": "Discrimination"
+            "text": "Swimming in the festival tents"
           },
           {
             "key": "c",
-            "text": "Illness"
-          }
-        ],
-        "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'However, skin color has sometimes led to discrimination and unfair treatment.' (สีผิวมักเคยนำไปสู่การเลือกปฏิบัติและการปฏิบัติที่ไม่เป็นธรรม)",
-        "ref": "Paragraph 2: 'led to discrimination and unfair treatment'"
-      },
-      {
-        "question": "What does \"underrepresented\" mean in the passage?",
-        "options": [
-          {
-            "key": "a",
-            "text": "Shown less often than others"
-          },
-          {
-            "key": "b",
-            "text": "Shown more often than others"
-          },
-          {
-            "key": "c",
-            "text": "Treated equally everywhere"
+            "text": "Climbing mountains"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: คำว่า 'underrepresented' หมายถึงการถูกนำเสนอหรือปรากฏในสื่อน้อยกว่าความเป็นจริงเมื่อเทียบกับกลุ่มอื่น",
-        "ref": "Paragraph 3: 'underrepresented in movies, television'"
+        "explanation": "จากเนื้อเรื่อง: 'Visitors can watch parades and traditional performances...' (นักท่องเที่ยวสามารถชมขบวนพาเหรดและการแสดงพื้นเมืองได้)",
+        "ref": "Paragraph 3: 'watch parades and traditional performances'"
       },
       {
-        "question": "What is the main idea of the passage?",
+        "question": "Why is Oktoberfest important to German culture?",
         "options": [
           {
             "key": "a",
-            "text": "Everyone should have the same appearance."
+            "text": "It teaches people how to cook German food."
           },
           {
             "key": "b",
-            "text": "People should respect and celebrate diversity."
+            "text": "It celebrates Bavarian traditions and brings people together."
           },
           {
             "key": "c",
-            "text": "Skin color is determined by culture."
+            "text": "It is only for people from Munich."
           }
         ],
         "answer": "b",
-        "explanation": "ใจความสำคัญของบทอ่านคือมนุษย์ทุกคนควรเคารพและยอมรับความหลากหลายทางสีผิวและชาติพันธุ์เพื่อสังคมที่เท่าเทียม",
-        "ref": "Paragraph 2 & 3: 'respecting these differences, we can create a fairer and more accepting society'"
+        "explanation": "จากเนื้อเรื่อง: 'It is an important part of German culture and Bavarian tradition. It brings people together...' (เป็นส่วนสำคัญของวัฒนธรรมบาวาเรียและนำผู้คนมารวมตัวกัน)",
+        "ref": "Paragraph 4: 'Bavarian tradition. It brings people together'"
       }
     ],
     "partB": {
       "wordBank": [
-        "inclusion",
-        "appearance",
-        "pigment",
-        "respect",
-        "influence"
+        "royal wedding",
+        "Bavarian",
+        "parades",
+        "Munich",
+        "dirndls"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Melanin is a natural ",
-          "suffix": " found in the skin.",
-          "answer": "pigment"
+          "prefix": "Oktoberfest takes place every year in ",
+          "suffix": ", Germany.",
+          "answer": "Munich",
+          "hint": "เมืองหลวงของรัฐบาวาเรีย"
         },
         {
           "id": 2,
-          "prefix": "Genetics and the environment can ",
-          "suffix": " a person's skin color.",
-          "answer": "influence"
+          "prefix": "The festival began in 1810 to celebrate a ",
+          "suffix": ".",
+          "answer": "royal wedding",
+          "hint": "งานอภิเษกสมรสของราชวงศ์"
         },
         {
           "id": 3,
-          "prefix": "Many communities promote ",
-          "suffix": " so that everyone feels accepted.",
-          "answer": "inclusion"
+          "prefix": "Women traditionally wear colorful dresses called ",
+          "suffix": ".",
+          "answer": "dirndls",
+          "hint": "ชุดกระโปรงพื้นเมืองของสตรีบาวาเรีย"
         },
         {
           "id": 4,
-          "prefix": "People should be proud of their natural ",
-          "suffix": ".",
-          "answer": "appearance"
+          "prefix": "Visitors can watch ",
+          "suffix": " and traditional performances at the festival.",
+          "answer": "parades",
+          "hint": "ขบวนพาเหรด"
         },
         {
           "id": 5,
-          "prefix": "Everyone deserves to be treated with fairness and ",
-          "suffix": ".",
-          "answer": "respect"
+          "prefix": "Oktoberfest celebrates ",
+          "suffix": " culture and traditions.",
+          "answer": "Bavarian",
+          "hint": "วัฒนธรรมและประเพณีชาวบาวาเรีย"
         }
       ]
     },
@@ -166,254 +172,251 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Human skin",
-          "comes in",
-          "many",
-          "different",
-          "shades and colors."
+          "Oktoberfest",
+          "is held",
+          "annually",
+          "in",
+          "Munich,",
+          "Germany."
         ],
-        "correct": "Human skin comes in many different shades and colors."
+        "correct": "Oktoberfest is held annually in Munich, Germany."
       },
       {
         "id": 2,
         "tokens": [
-          "Melanin",
-          "affects",
-          "how",
-          "light",
-          "or dark",
-          "our skin",
-          "is."
+          "The festival",
+          "first started",
+          "as a celebration of",
+          "a royal marriage."
         ],
-        "correct": "Melanin affects how light or dark our skin is."
+        "correct": "The festival first started as a celebration of a royal marriage."
       },
       {
         "id": 3,
         "tokens": [
-          "Everyone",
-          "deserves",
-          "equal",
-          "treatment",
-          "and respect."
+          "Many visitors",
+          "dress in",
+          "traditional",
+          "Bavarian clothes."
         ],
-        "correct": "Everyone deserves equal treatment and respect."
+        "correct": "Many visitors dress in traditional Bavarian clothes."
       },
       {
         "id": 4,
         "tokens": [
-          "The media",
-          "can influence",
-          "ideas",
-          "about",
-          "beauty."
+          "The festival",
+          "offers",
+          "entertainment",
+          "such as",
+          "parades and carnival rides."
         ],
-        "correct": "The media can influence ideas about beauty."
+        "correct": "The festival offers entertainment such as parades and carnival rides."
       },
       {
         "id": 5,
         "tokens": [
-          "We",
-          "should respect",
-          "people",
-          "from",
-          "all backgrounds."
+          "Oktoberfest",
+          "is celebrated",
+          "in many countries",
+          "around",
+          "the world."
         ],
-        "correct": "We should respect people from all backgrounds."
+        "correct": "Oktoberfest is celebrated in many countries around the world."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Melanin",
+          "word": "festival",
           "pos": "n.",
-          "meaning": "เมลานิน (เม็ดสีในผิวหนัง เส้นผม และตา)",
-          "phonetic": "/ˈmel.ə.nɪn/"
+          "meaning": "เทศกาล, งานเฉลิมฉลอง"
         },
         {
-          "word": "Pigment",
-          "pos": "n.",
-          "meaning": "เม็ดสี สารสีธรรมชาติ",
-          "phonetic": "/ˈpɪɡ.mənt/"
+          "word": "traditional",
+          "pos": "adj.",
+          "meaning": "ตามธรรมเนียมดั้งเดิม"
         },
         {
-          "word": "Discrimination",
+          "word": "parades",
           "pos": "n.",
-          "meaning": "การเลือกปฏิบัติ การแบ่งแยก",
-          "phonetic": "/dɪˌskrɪm.əˈneɪ.ʃən/"
+          "meaning": "ขบวนพาเหรด"
         },
         {
-          "word": "Inclusion",
+          "word": "performances",
           "pos": "n.",
-          "meaning": "การยอมรับและนับรวมทุกคน",
-          "phonetic": "/ɪnˈkluː.ʒən/"
+          "meaning": "การแสดง"
         },
         {
-          "word": "Diversity",
+          "word": "celebration",
           "pos": "n.",
-          "meaning": "ความหลากหลายทางชีวภาพและวัฒนธรรม",
-          "phonetic": "/daɪˈvɜː.sə.ti/"
+          "meaning": "การฉลอง"
         }
       ],
       "grammarTip": {
-        "en": "Connectors of Contrast: Use 'Although' at the beginning of dependent clauses to show unexpected contrast, and 'However' to connect two distinct sentences.",
-        "th": "คำเชื่อมแสดงความขัดแย้ง: 'Although' (แม้ว่า) ใช้นำหน้าอนุประโยคตามด้วยจุลภาค ส่วน 'However' (อย่างไรก็ตาม) มักขึ้นต้นประโยคใหม่ตามด้วยจุลภาค"
+        "en": "Passive Voice in Present Simple: 'Oktoberfest is held annually in Munich.' (Subject + is/are + V.3).",
+        "th": "Present Simple Passive Voice: is/am/are + V.3 ใช้บอกเหตุการณ์ที่ถูกจัดขึ้นอย่างสม่ำเสมอเป็นประจำทุกปี"
       }
     }
   },
   {
     "id": 2,
-    "title": "The Superfood That Feeds the World",
-    "thaiTitle": "ซูเปอร์ฟู้ดหล่อเลี้ยงโลก: ข้าวกับวิถีชีวิตผู้คน",
-    "cefr": "A2/B1",
+    "title": "The Colosseum: A Wonder of Ancient Rome",
+    "thaiTitle": "โคลอสเซียม: สิ่งมหัศจรรย์แห่งกรุงโรมโบราณ",
+    "cefr": "A2",
     "unit": "Unit 2",
     "image": "assets/images/ex2.jpg",
-    "audio": "assets/audio/ex2_superfood_rice.mp3",
-    "passage": "Imagine a food eaten by billions of people every day. That food is rice! From bowls of fragrant rice in Thailand to sushi in Japan, rice is a daily staple in many cultures. One reason for its popularity is its ability to adapt to different environments. Countries such as China, India, and Thailand produce enormous amounts each year, making rice an essential food source for more than half of the world's population.\n\nRice may look simple, but it provides important nutrients and carbohydrates that give our bodies energy. It also comes in many varieties, from soft white rice and nutritious brown rice to aromatic basmati and sticky rice. Surprisingly, rice has uses beyond the dinner table. It can be made into drinks such as Japanese sake, while rice water is sometimes used in beauty and hair-care products.\n\nRice also has deep cultural significance. In many traditions, it represents happiness, good luck, and prosperity. But rice may become even more important in the future. Scientists are developing varieties that can withstand floods, droughts, and other extreme conditions. As the global population grows, this small grain could play a major role in feeding the world.",
+    "audio": "assets/audio/ex2_colosseum.mp3",
+    "passage": "Imagine standing in front of a huge stone building that was built more than 2,000 years ago. This is the Colosseum, one of the most famous landmarks in Rome, Italy. It was built during the Roman Empire. Roman Emperor Vespasian began its construction in 72 AD, and his son Titus completed it in 80 AD. Made mainly of stone and concrete, the Colosseum was the largest amphitheater in the ancient world and could hold around 50,000 spectators.\n\nPeople came to the Colosseum to watch exciting events such as gladiator fights, wild animal battles, and mock sea battles. Gladiators were trained fighters who sometimes fought each other or dangerous animals such as lions, tigers, and bears. Roman emperors organized these events to entertain the crowds.\n\nOver the centuries, the Colosseum suffered damage from earthquakes and fires, and some of its stones were removed. However, much of the building is still standing today. It is now a UNESCO World Heritage Site and one of the most visited places in Italy. Tourists from around the world come to see its ancient ruins and learn about Roman history. Although it is no longer used for battles, the Colosseum remains a symbol of Rome and a reminder of the ancient world.",
     "paragraphs": [
-      "Imagine a food eaten by billions of people every day. That food is rice! From bowls of fragrant rice in Thailand to sushi in Japan, rice is a daily staple in many cultures. One reason for its popularity is its ability to adapt to different environments. Countries such as China, India, and Thailand produce enormous amounts each year, making rice an essential food source for more than half of the world's population.",
-      "Rice may look simple, but it provides important nutrients and carbohydrates that give our bodies energy. It also comes in many varieties, from soft white rice and nutritious brown rice to aromatic basmati and sticky rice. Surprisingly, rice has uses beyond the dinner table. It can be made into drinks such as Japanese sake, while rice water is sometimes used in beauty and hair-care products.",
-      "Rice also has deep cultural significance. In many traditions, it represents happiness, good luck, and prosperity. But rice may become even more important in the future. Scientists are developing varieties that can withstand floods, droughts, and other extreme conditions. As the global population grows, this small grain could play a major role in feeding the world."
+      "Imagine standing in front of a huge stone building that was built more than 2,000 years ago. This is the Colosseum, one of the most famous landmarks in Rome, Italy. It was built during the Roman Empire. Roman Emperor Vespasian began its construction in 72 AD, and his son Titus completed it in 80 AD. Made mainly of stone and concrete, the Colosseum was the largest amphitheater in the ancient world and could hold around 50,000 spectators.",
+      "People came to the Colosseum to watch exciting events such as gladiator fights, wild animal battles, and mock sea battles. Gladiators were trained fighters who sometimes fought each other or dangerous animals such as lions, tigers, and bears. Roman emperors organized these events to entertain the crowds.",
+      "Over the centuries, the Colosseum suffered damage from earthquakes and fires, and some of its stones were removed. However, much of the building is still standing today. It is now a UNESCO World Heritage Site and one of the most visited places in Italy. Tourists from around the world come to see its ancient ruins and learn about Roman history. Although it is no longer used for battles, the Colosseum remains a symbol of Rome and a reminder of the ancient world."
     ],
     "partA": [
       {
-        "question": "Why is rice an important food around the world?",
+        "question": "Why did Roman emperors organize events at the Colosseum?",
         "options": [
           {
             "key": "a",
-            "text": "It is only grown in Asia."
+            "text": "To entertain the people"
           },
           {
             "key": "b",
-            "text": "It feeds billions of people."
+            "text": "To train Roman soldiers"
           },
           {
             "key": "c",
-            "text": "It is expensive to produce."
-          }
-        ],
-        "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'making rice an essential food source for more than half of the world's population.' (ข้าวเลี้ยงดูผู้คนมากกว่าครึ่งหนึ่งของประชากรโลก)",
-        "ref": "Paragraph 1: 'essential food source for more than half of the world's population'"
-      },
-      {
-        "question": "What does rice mainly provide to our bodies?",
-        "options": [
-          {
-            "key": "a",
-            "text": "Energy"
-          },
-          {
-            "key": "b",
-            "text": "Water"
-          },
-          {
-            "key": "c",
-            "text": "Medicine"
+            "text": "To teach people about history"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: '...provides important nutrients and carbohydrates that give our bodies energy.' (ข้าวให้สารอาหารและคาร์โบไฮเดรตที่ให้พลังงานแก่ร่างกาย)",
-        "ref": "Paragraph 2: 'carbohydrates that give our bodies energy'"
+        "explanation": "จากเนื้อเรื่อง: 'Roman emperors organized these events to entertain the crowds.' (จักรพรรดิโรมันจัดงานเพื่อสร้างความบันเทิงแก่ฝูงชน)",
+        "ref": "Paragraph 2: 'organized these events to entertain the crowds'"
       },
       {
-        "question": "Which is an example of how rice is used beyond food?",
+        "question": "What made the Colosseum special in the ancient world?",
         "options": [
           {
             "key": "a",
-            "text": "Making clothes"
+            "text": "It was the oldest building in Rome."
           },
           {
             "key": "b",
-            "text": "Building houses"
+            "text": "It was the largest amphitheater."
           },
           {
             "key": "c",
-            "text": "Making beauty products"
+            "text": "It was the emperor's home."
+          }
+        ],
+        "answer": "b",
+        "explanation": "จากเนื้อเรื่อง: '...the Colosseum was the largest amphitheater in the ancient world and could hold around 50,000 spectators.' (เป็นอัฒจันทร์กลางแจ้งที่ใหญ่ที่สุดในโลกยุคโบราณ จุผู้ชมได้ราว 50,000 คน)",
+        "ref": "Paragraph 1: 'the largest amphitheater in the ancient world'"
+      },
+      {
+        "question": "What could spectators see at the Colosseum?",
+        "options": [
+          {
+            "key": "a",
+            "text": "Different kinds of exciting battles and shows"
+          },
+          {
+            "key": "b",
+            "text": "Traditional Italian dances"
+          },
+          {
+            "key": "c",
+            "text": "Modern sports competitions"
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: '...watch exciting events such as gladiator fights, wild animal battles, and mock sea battles.' (การต่อสู้ของกลาดิเอเตอร์ สัตว์ร้าย และการจำลองยุทธนาวี)",
+        "ref": "Paragraph 2: 'gladiator fights, wild animal battles, and mock sea battles'"
+      },
+      {
+        "question": "Why are only parts of the Colosseum still standing today?",
+        "options": [
+          {
+            "key": "a",
+            "text": "It was never finished."
+          },
+          {
+            "key": "b",
+            "text": "People stopped visiting it."
+          },
+          {
+            "key": "c",
+            "text": "It was damaged over many years."
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: '...while rice water is sometimes used in beauty and hair-care products.' (น้ำซาวข้าวถูกนำมาใช้ในผลิตภัณฑ์ดูแลความงามและเส้นผม)",
-        "ref": "Paragraph 2: 'rice water is sometimes used in beauty and hair-care products'"
+        "explanation": "จากเนื้อเรื่อง: 'Over the centuries, the Colosseum suffered damage from earthquakes and fires...' (ได้รับความเสียหายจากแผ่นดินไหวและไฟไหม้ตลอดหลายศตวรรษ)",
+        "ref": "Paragraph 3: 'suffered damage from earthquakes and fires'"
       },
       {
-        "question": "What can rice represent in some cultures?",
+        "question": "What is the Colosseum mainly used for today?",
         "options": [
           {
             "key": "a",
-            "text": "Prosperity and good luck"
+            "text": "A place for tourists to learn about Roman history"
           },
           {
             "key": "b",
-            "text": "Strength and power"
+            "text": "A place for people to watch animal battles"
           },
           {
             "key": "c",
-            "text": "Sadness and loss"
+            "text": "A place for Roman emperors to hold events"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'In many traditions, it represents happiness, good luck, and prosperity.' (ในหลายวัฒนธรรม ข้าวเป็นสัญลักษณ์ของความสุข โชคดี และความเจริญรุ่งเรือง)",
-        "ref": "Paragraph 3: 'represents happiness, good luck, and prosperity'"
-      },
-      {
-        "question": "Why are scientists developing new varieties of rice?",
-        "options": [
-          {
-            "key": "a",
-            "text": "To make rice more colorful"
-          },
-          {
-            "key": "b",
-            "text": "To help it survive extreme conditions"
-          },
-          {
-            "key": "c",
-            "text": "To make it taste sweeter"
-          }
-        ],
-        "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'Scientists are developing varieties that can withstand floods, droughts, and other extreme conditions.' (นักวิทยาศาสตร์กำลังพัฒนาพันธุ์ข้าวที่ทนทานต่อน้ำท่วมและความแห้งแล้ง)",
-        "ref": "Paragraph 3: 'withstand floods, droughts, and other extreme conditions'"
+        "explanation": "จากเนื้อเรื่อง: 'Tourists from around the world come to see its ancient ruins and learn about Roman history.' (เป็นสถานที่ให้นักท่องเที่ยวเรียนรู้ประวัติศาสตร์โรมัน)",
+        "ref": "Paragraph 3: 'see its ancient ruins and learn about Roman history'"
       }
     ],
     "partB": {
       "wordBank": [
-        "prosperity",
-        "staple",
-        "withstand",
-        "varieties",
-        "nutrients"
+        "spectators",
+        "battles",
+        "damaged",
+        "tourists",
+        "ancient"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Rice is a daily ",
-          "suffix": " for billions of people around the world.",
-          "answer": "staple"
+          "prefix": "The Colosseum is an ",
+          "suffix": " building that is more than 2,000 years old.",
+          "answer": "ancient",
+          "hint": "เก่าแก่ โบราณ"
         },
         {
           "id": 2,
-          "prefix": "Brown rice contains important ",
-          "suffix": " that help keep the body healthy.",
-          "answer": "nutrients"
+          "prefix": "Around 50,000 ",
+          "suffix": " could watch events at the Colosseum.",
+          "answer": "spectators",
+          "hint": "ผู้ชม ผู้เข้าชม"
         },
         {
           "id": 3,
-          "prefix": "There are many ",
-          "suffix": " of rice with different tastes and textures.",
-          "answer": "varieties"
+          "prefix": "People came to watch gladiator fights and wild animal ",
+          "suffix": ".",
+          "answer": "battles",
+          "hint": "การต่อสู้ การประจัญบาน"
         },
         {
           "id": 4,
-          "prefix": "In some cultures, rice represents good luck and ",
-          "suffix": ".",
-          "answer": "prosperity"
+          "prefix": "The Colosseum was ",
+          "suffix": " by earthquakes and fires over the years.",
+          "answer": "damaged",
+          "hint": "ได้รับความเสียหาย"
         },
         {
           "id": 5,
-          "prefix": "Scientists are developing rice that can ",
-          "suffix": " extreme weather conditions.",
-          "answer": "withstand"
+          "prefix": "Today, ",
+          "suffix": " from around the world visit the Colosseum.",
+          "answer": "tourists",
+          "hint": "นักท่องเที่ยว"
         }
       ]
     },
@@ -421,255 +424,249 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Many countries",
-          "depend on",
-          "rice",
-          "as a major",
-          "food source."
+          "The Colosseum",
+          "is",
+          "a famous",
+          "historical landmark",
+          "in Rome."
         ],
-        "correct": "Many countries depend on rice as a major food source."
+        "correct": "The Colosseum is a famous historical landmark in Rome."
       },
       {
         "id": 2,
         "tokens": [
-          "Brown rice",
-          "provides",
-          "important",
-          "nutrients",
-          "and fiber."
+          "It",
+          "was constructed",
+          "during",
+          "the Roman Empire."
         ],
-        "correct": "Brown rice provides important nutrients and fiber."
+        "correct": "It was constructed during the Roman Empire."
       },
       {
         "id": 3,
         "tokens": [
-          "Different",
-          "types of rice",
-          "have",
-          "unique",
-          "flavors",
-          "and textures."
+          "Gladiators",
+          "sometimes fought",
+          "dangerous",
+          "creatures."
         ],
-        "correct": "Different types of rice have unique flavors and textures."
+        "correct": "Gladiators sometimes fought dangerous creatures."
       },
       {
         "id": 4,
         "tokens": [
-          "Some cultures",
-          "connect",
-          "rice",
-          "with",
-          "good luck",
-          "and prosperity."
+          "The building",
+          "was badly damaged",
+          "over",
+          "the centuries."
         ],
-        "correct": "Some cultures connect rice with good luck and prosperity."
+        "correct": "The building was badly damaged over the centuries."
       },
       {
         "id": 5,
         "tokens": [
-          "Scientists",
-          "are developing",
-          "rice",
-          "that",
-          "can grow",
-          "in extreme weather."
+          "Today,",
+          "it is recognized",
+          "as",
+          "a UNESCO World Heritage Site."
         ],
-        "correct": "Scientists are developing rice that can grow in extreme weather."
+        "correct": "Today, it is recognized as a UNESCO World Heritage Site."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Staple",
+          "word": "amphitheater",
           "pos": "n.",
-          "meaning": "อาหารหลัก สินค้าหลัก",
-          "phonetic": "/ˈsteɪ.pəl/"
+          "meaning": "อัฒจันทร์กลางแจ้งทรงกลม"
         },
         {
-          "word": "Nutrients",
+          "word": "spectators",
           "pos": "n.",
-          "meaning": "สารอาหาร สารบำรุงร่างกาย",
-          "phonetic": "/ˈnjuː.tri.ənts/"
+          "meaning": "ผู้ชม"
         },
         {
-          "word": "Varieties",
+          "word": "gladiators",
           "pos": "n.",
-          "meaning": "ความหลากหลาย สายพันธุ์ต่างๆ",
-          "phonetic": "/vəˈraɪ.ə.tiz/"
+          "meaning": "นักสู้กลาดิเอเตอร์"
         },
         {
-          "word": "Prosperity",
+          "word": "ruins",
           "pos": "n.",
-          "meaning": "ความเจริญรุ่งเรือง ความมั่งคั่ง",
-          "phonetic": "/prɒsˈper.ə.ti/"
+          "meaning": "ซากโบราณสถาน"
         },
         {
-          "word": "Withstand",
-          "pos": "v.",
-          "meaning": "ทนทาน ต้านทาน ไม่พังทลาย",
-          "phonetic": "/wɪðˈstænd/"
+          "word": "landmark",
+          "pos": "n.",
+          "meaning": "จุดสังเกตสำคัญ สถานที่สำคัญ"
         }
       ],
       "grammarTip": {
-        "en": "Relative Clauses with 'That' and 'Which': Use 'that' to define essential information about things or foods (e.g., 'rice that can withstand floods').",
-        "th": "ประโยคคุณานุประโยค (Relative Clause): ใช้ 'that' หรือ 'which' เชื่อมขยายคำนามที่เป็นสิ่งของหรือพืชพันธุ์ เช่น 'varieties that can withstand floods'"
+        "en": "Past Passive Voice: 'It was built', 'was constructed', 'was damaged'. Structure: was/were + V.3.",
+        "th": "Past Passive Voice: was/were + V.3 บรรยายสิ่งที่ถูกสร้างหรือถูกกระทำในอดีต"
       }
     }
   },
   {
     "id": 3,
-    "title": "Chinese New Year",
-    "thaiTitle": "ตรุษจีน: เทศกาลแห่งความอบอุ่นและการเริ่มต้นใหม่",
-    "cefr": "A2/B1",
+    "title": "Healthy Living: Simple Ways to Stay Healthy",
+    "thaiTitle": "วิถีชีวิตสุขภาพดี: วิธีง่ายๆ สู่การมีสุขภาพแข็งแรง",
+    "cefr": "A2",
     "unit": "Unit 3",
     "image": "assets/images/ex3.jpg",
-    "audio": "assets/audio/ex3_chinese_new_year.mp3",
-    "passage": "Chinese New Year, also known as the Spring Festival, is one of the most important traditional celebrations in China. It marks the beginning of the lunar new year and usually takes place between late January and February. The festival lasts for 15 days and focuses on family, traditions, and good fortune. During this time, millions of people travel to reunite with their families and celebrate together.\n\nMany Chinese New Year traditions have existed for thousands of years. According to an ancient legend, a monster called Nian was afraid of loud noises, bright lights, and the color red. This story inspired traditions such as lighting firecrackers, hanging red lanterns, and decorating homes in red. Families also clean their houses to sweep away bad luck and welcome good fortune. Children often receive red envelopes containing money, which symbolize luck and prosperity.\n\nThe celebration ends on the 15th day with the Lantern Festival. People display colorful lanterns, solve riddles, watch dragon dances, and enjoy firework shows. Today, Chinese New Year is celebrated not only in China but also by millions of people around the world. More than just a holiday, it is a celebration of family, cultural traditions, and hope for a happy and prosperous year ahead.",
+    "audio": "assets/audio/ex3_healthy_living.mp3",
+    "passage": "What can you do today to feel healthier tomorrow? You don't need to make big changes. Simple habits, such as eating healthy food, staying active, getting enough sleep, and taking care of your mind, can help you feel stronger and happier.\n\nFirst, eat a balanced diet. Try to include fruits, vegetables, whole grains, and protein in your meals. Drinking enough water is important too because your body needs it to work properly. You should also limit foods and drinks that contain too much sugar, salt, or unhealthy fat.\n\nNext, keep your body active. Try to exercise for at least 30 minutes a day. You can walk, run, cycle, swim, or even dance. You don't have to spend hours at the gym—small activities can help. Sleep is just as important. Adults generally need 7–9 hours each night. Good sleep helps your body rest and gives you energy for the next day.\n\nDon't forget your mental health! Spending time with family and friends, enjoying hobbies, and taking time to relax can reduce stress. Taking breaks from school or work and limiting screen time can also help your mind. With a few simple habits every day, you can build a healthier and happier life.",
     "paragraphs": [
-      "Chinese New Year, also known as the Spring Festival, is one of the most important traditional celebrations in China. It marks the beginning of the lunar new year and usually takes place between late January and February. The festival lasts for 15 days and focuses on family, traditions, and good fortune. During this time, millions of people travel to reunite with their families and celebrate together.",
-      "Many Chinese New Year traditions have existed for thousands of years. According to an ancient legend, a monster called Nian was afraid of loud noises, bright lights, and the color red. This story inspired traditions such as lighting firecrackers, hanging red lanterns, and decorating homes in red. Families also clean their houses to sweep away bad luck and welcome good fortune. Children often receive red envelopes containing money, which symbolize luck and prosperity.",
-      "The celebration ends on the 15th day with the Lantern Festival. People display colorful lanterns, solve riddles, watch dragon dances, and enjoy firework shows. Today, Chinese New Year is celebrated not only in China but also by millions of people around the world. More than just a holiday, it is a celebration of family, cultural traditions, and hope for a happy and prosperous year ahead."
+      "What can you do today to feel healthier tomorrow? You don't need to make big changes. Simple habits, such as eating healthy food, staying active, getting enough sleep, and taking care of your mind, can help you feel stronger and happier.",
+      "First, eat a balanced diet. Try to include fruits, vegetables, whole grains, and protein in your meals. Drinking enough water is important too because your body needs it to work properly. You should also limit foods and drinks that contain too much sugar, salt, or unhealthy fat.",
+      "Next, keep your body active. Try to exercise for at least 30 minutes a day. You can walk, run, cycle, swim, or even dance. You don't have to spend hours at the gym—small activities can help. Sleep is just as important. Adults generally need 7–9 hours each night. Good sleep helps your body rest and gives you energy for the next day.",
+      "Don't forget your mental health! Spending time with family and friends, enjoying hobbies, and taking time to relax can reduce stress. Taking breaks from school or work and limiting screen time can also help your mind. With a few simple habits every day, you can build a healthier and happier life."
     ],
     "partA": [
       {
-        "question": "What does Chinese New Year celebrate?",
+        "question": "What is the main idea of the passage?",
         "options": [
           {
             "key": "a",
-            "text": "The beginning of the lunar new year"
+            "text": "People need to exercise at the gym every day."
           },
           {
             "key": "b",
-            "text": "The beginning of summer"
+            "text": "Simple daily habits can help people live healthier lives."
           },
           {
             "key": "c",
-            "text": "The end of winter"
-          }
-        ],
-        "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'It marks the beginning of the lunar new year and usually takes place between late January and February.'",
-        "ref": "Paragraph 1: 'marks the beginning of the lunar new year'"
-      },
-      {
-        "question": "Why are red decorations used during Chinese New Year?",
-        "options": [
-          {
-            "key": "a",
-            "text": "Red is easy to find."
-          },
-          {
-            "key": "b",
-            "text": "Red represents good fortune."
-          },
-          {
-            "key": "c",
-            "text": "Red represents the moon."
+            "text": "Healthy food is more important than sleep."
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: สีแดงช่วยขับไล่สิ่งชั่วร้ายและเป็นสัญลักษณ์นำพาความโชคดีและความเจริญรุ่งเรือง",
-        "ref": "Paragraph 2: 'monster called Nian was afraid of... the color red'"
+        "explanation": "จากเนื้อเรื่อง: 'With a few simple habits every day, you can build a healthier and happier life.' (นิสัยง่ายๆ ในชีวิตประจำวันช่วยให้มีสุขภาพดีขึ้นได้)",
+        "ref": "Paragraph 1 & 4: 'Simple habits... build a healthier and happier life'"
       },
       {
-        "question": "According to the legend, what was Nian afraid of?",
+        "question": "Why is drinking enough water important?",
         "options": [
           {
             "key": "a",
-            "text": "Water and cold weather"
+            "text": "It helps the body work properly."
           },
           {
             "key": "b",
-            "text": "Animals and crowds"
+            "text": "It gives people more time to exercise."
           },
           {
             "key": "c",
-            "text": "Loud noises, bright lights, and red"
+            "text": "It helps people sleep for longer."
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: 'Drinking enough water is important too because your body needs it to work properly.' (ช่วยให้ร่างกายทำงานได้อย่างมีประสิทธิภาพ)",
+        "ref": "Paragraph 2: 'because your body needs it to work properly'"
+      },
+      {
+        "question": "What does the passage suggest about exercise?",
+        "options": [
+          {
+            "key": "a",
+            "text": "People should only exercise at a gym."
+          },
+          {
+            "key": "b",
+            "text": "Exercise is useful only for losing weight."
+          },
+          {
+            "key": "c",
+            "text": "Simple activities such as walking and dancing can help."
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: '...a monster called Nian was afraid of loud noises, bright lights, and the color red.'",
-        "ref": "Paragraph 2: 'afraid of loud noises, bright lights, and the color red'"
+        "explanation": "จากเนื้อเรื่อง: 'You can walk, run, cycle, swim, or even dance. You don't have to spend hours at the gym...' (กิจกรรมง่ายๆ เช่น เดิน หรือ เต้น ก็ช่วยได้)",
+        "ref": "Paragraph 3: 'walk, run, cycle, swim, or even dance'"
       },
       {
-        "question": "What do red envelopes symbolize?",
+        "question": "What can happen when people do not get enough sleep?",
         "options": [
           {
             "key": "a",
-            "text": "Luck and prosperity"
+            "text": "They may feel tired and have less energy."
           },
           {
             "key": "b",
-            "text": "Friendship and travel"
+            "text": "They may become more active."
           },
           {
             "key": "c",
-            "text": "Health and education"
+            "text": "They may eat more vegetables."
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'Children often receive red envelopes containing money, which symbolize luck and prosperity.'",
-        "ref": "Paragraph 2: 'symbolize luck and prosperity'"
+        "explanation": "จากเนื้อเรื่อง: 'Good sleep helps your body rest and gives you energy for the next day.' (หากนอนไม่พอจะรู้สึกเหนื่อยและหมดพลังงาน)",
+        "ref": "Paragraph 3: 'gives you energy for the next day'"
       },
       {
-        "question": "What happens on the final day of Chinese New Year?",
+        "question": "Which activity can help people take care of their mental health?",
         "options": [
           {
             "key": "a",
-            "text": "Families clean their homes."
+            "text": "Spending more time on screens"
           },
           {
             "key": "b",
-            "text": "The Lantern Festival is celebrated."
+            "text": "Taking time to relax"
           },
           {
             "key": "c",
-            "text": "People begin the lunar new year."
+            "text": "Skipping meals"
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'The celebration ends on the 15th day with the Lantern Festival.' (งานฉลองสิ้นสุดลงในวันที่ 15 ด้วยเทศกาลโคมไฟ)",
-        "ref": "Paragraph 3: 'ends on the 15th day with the Lantern Festival'"
+        "explanation": "จากเนื้อเรื่อง: 'Spending time with family and friends, enjoying hobbies, and taking time to relax can reduce stress.' (การหาเวลาพักผ่อนช่วยลดความเครียด)",
+        "ref": "Paragraph 4: 'taking time to relax can reduce stress'"
       }
     ],
     "partB": {
       "wordBank": [
-        "prosperity",
-        "reunite",
-        "ancient",
-        "symbolize",
-        "traditions"
+        "mental health",
+        "screen time",
+        "active",
+        "hydrated",
+        "balanced diet"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Millions of people travel long distances to ",
-          "suffix": " with their families.",
-          "answer": "reunite"
+          "prefix": "Eating a ",
+          "suffix": " helps give the body the nutrients it needs.",
+          "answer": "balanced diet",
+          "hint": "อาหารที่มีสัดส่วนโภชนาการสมดุล"
         },
         {
           "id": 2,
-          "prefix": "Many Chinese New Year ",
-          "suffix": " have existed for thousands of years.",
-          "answer": "traditions"
+          "prefix": "Drinking enough water helps keep the body ",
+          "suffix": ".",
+          "answer": "hydrated",
+          "hint": "ชุ่มชื้น ได้รับน้ำเพียงพอ"
         },
         {
           "id": 3,
-          "prefix": "Red decorations and lanterns ",
-          "suffix": " good luck and happiness.",
-          "answer": "symbolize"
+          "prefix": "Limiting ",
+          "suffix": " can help people take better care of their minds.",
+          "answer": "screen time",
+          "hint": "เวลาที่ใช้กับหน้าจอ"
         },
         {
           "id": 4,
-          "prefix": "Red envelopes are given to children to wish for ",
+          "prefix": "Walking, running, and cycling are good ways to stay ",
           "suffix": ".",
-          "answer": "prosperity"
+          "answer": "active",
+          "hint": "กระฉับกระเฉง เคลื่อนไหวร่างกาย"
         },
         {
           "id": 5,
-          "prefix": "The custom of lighting firecrackers comes from an ",
-          "suffix": " legend.",
-          "answer": "ancient"
+          "prefix": "Spending time with friends and relaxing can support good ",
+          "suffix": ".",
+          "answer": "mental health",
+          "hint": "สุขภาพจิตที่ดี"
         }
       ]
     },
@@ -677,250 +674,247 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Chinese New Year",
-          "is",
-          "an important",
-          "traditional",
-          "festival."
+          "A balanced diet",
+          "provides",
+          "the nutrients",
+          "our bodies need."
         ],
-        "correct": "Chinese New Year is an important traditional festival."
+        "correct": "A balanced diet provides the nutrients our bodies need."
       },
       {
         "id": 2,
         "tokens": [
-          "Families",
-          "often travel",
-          "long distances",
-          "together",
-          "to celebrate."
+          "Drinking enough water",
+          "keeps",
+          "the body",
+          "hydrated."
         ],
-        "correct": "Families often travel long distances to celebrate together."
+        "correct": "Drinking enough water keeps the body hydrated."
       },
       {
         "id": 3,
         "tokens": [
-          "Many families",
-          "decorate",
-          "their homes",
-          "with",
-          "red lanterns."
+          "Walking",
+          "is a simple way",
+          "to stay",
+          "active."
         ],
-        "correct": "Many families decorate their homes with red lanterns."
+        "correct": "Walking is a simple way to stay active."
       },
       {
         "id": 4,
         "tokens": [
-          "Firecrackers",
-          "are used",
-          "to drive away",
-          "bad luck."
+          "Taking breaks from screens",
+          "can help",
+          "you",
+          "relax."
         ],
-        "correct": "Firecrackers are used to drive away bad luck."
+        "correct": "Taking breaks from screens can help you relax."
       },
       {
         "id": 5,
         "tokens": [
-          "The Lantern Festival",
-          "marks",
-          "the end of",
-          "the celebration."
+          "Good sleep",
+          "gives you",
+          "energy",
+          "for the next day."
         ],
-        "correct": "The Lantern Festival marks the end of the celebration."
+        "correct": "Good sleep gives you energy for the next day."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Lunar",
+          "word": "balanced diet",
+          "pos": "n.",
+          "meaning": "อาหารที่ถูกหลักโภชนาการสมดุล"
+        },
+        {
+          "word": "hydrated",
           "pos": "adj.",
-          "meaning": "เกี่ยวกับดวงจันทร์ ตามจันทรคติ",
-          "phonetic": "/ˈluː.nər/"
+          "meaning": "มีน้ำในร่างกายอย่างเพียงพอ"
         },
         {
-          "word": "Reunite",
-          "pos": "v.",
-          "meaning": "รวมตัวกันใหม่ กลับมาพบกัน",
-          "phonetic": "/ˌriː.juːˈnaɪt/"
-        },
-        {
-          "word": "Firecrackers",
+          "word": "nutrients",
           "pos": "n.",
-          "meaning": "ประทัด",
-          "phonetic": "/ˈfaɪəˌkræk.əz/"
+          "meaning": "สารอาหาร"
         },
         {
-          "word": "Symbolize",
-          "pos": "v.",
-          "meaning": "เป็นสัญลักษณ์แทน แสดงถึง",
-          "phonetic": "/ˈsɪm.bə.laɪz/"
-        },
-        {
-          "word": "Riddles",
+          "word": "screen time",
           "pos": "n.",
-          "meaning": "ปริศนาคำทาย",
-          "phonetic": "/ˈrɪd.əlz/"
+          "meaning": "เวลาหน้าจอ"
+        },
+        {
+          "word": "mental health",
+          "pos": "n.",
+          "meaning": "สุขภาพจิต"
         }
       ],
       "grammarTip": {
-        "en": "Passive Voice in Traditions: Use passive voice to explain long-held customs (e.g., 'Firecrackers are used to drive away bad luck', 'Chinese New Year is celebrated worldwide').",
-        "th": "ประธานถูกกระทำ (Passive Voice): นิยมใช้บรรยายประเพณีและกิจกรรม เช่น 'is celebrated' (ได้รับการเฉลิมฉลอง), 'are used' (ถูกนำมาใช้)"
+        "en": "Gerunds as Subjects: 'Drinking enough water keeps...', 'Taking breaks helps...'. When a verb acts as a noun subject, it uses the -ing form and takes a singular verb.",
+        "th": "การใช้ Gerund (V-ing) เป็นประธาน: กริยาที่เติม -ing ทำหน้าที่เป็นคำนามประธานเอกพจน์ กริยาตามหลังจึงต้องสอดคล้อง เช่น keeps, is, gives"
       }
     }
   },
   {
     "id": 4,
-    "title": "Amelia Earhart: The Woman Who Conquered the Skies",
-    "thaiTitle": "อเมเลีย แอร์ฮาร์ต: สตรีผู้พิชิตท้องฟ้า",
-    "cefr": "A2/B1",
+    "title": "Firewalking: A Tradition of Strength and Faith",
+    "thaiTitle": "การลุยไฟ: ประเพณีแห่งศรัทธาและความเข้มแข็ง",
+    "cefr": "A2",
     "unit": "Unit 4",
     "image": "assets/images/ex4.jpg",
-    "audio": "assets/audio/ex4_amelia_earhart.mp3",
-    "passage": "Amelia Earhart was a brave and adventurous pilot who became a pioneer in aviation. Born in Kansas, USA, in 1897, she loved exploring and trying new things from a young age. After taking her first airplane ride in 1920, she immediately knew she wanted to become a pilot. She took flying lessons, saved money, and eventually bought her own yellow airplane, which she named \"The Canary.\"\n\nAmelia was determined to prove that women could be as skilled as men in aviation. In 1932, she became the first woman to fly solo across the Atlantic Ocean. During the nearly 15-hour flight, she faced strong winds, bad weather, and technical problems but refused to give up. Her remarkable achievement made her internationally famous. She continued breaking aviation records and encouraged other women to follow their dreams and challenge traditional gender roles.\n\nIn 1937, Amelia attempted her greatest adventure: flying around the world with her navigator, Fred Noonan. During the journey, their plane mysteriously disappeared over the Pacific Ocean, and neither of them was ever found. Although the mystery remains unsolved, Amelia's legacy continues today. She is remembered for her courage, determination, and willingness to break barriers, inspiring generations of people to achieve what once seemed impossible.",
+    "audio": "assets/audio/ex4_firewalking.mp3",
+    "passage": "Imagine walking barefoot across hot, glowing embers. This is firewalking, an ancient tradition practiced in many cultures. People walk on fire as a test of courage, faith, and strength. It is often part of religious ceremonies, and some believe it brings good luck, protection, or inner strength.\n\nIn China, Greece, and Japan, firewalking is connected to religious festivals. In China, it is used to ward off evil spirits. In Greece, people walk on fire during the Anastenaria festival to honor Saint Constantine and Saint Helen. In Japan, Buddhist monks firewalk during the Hiwatari Matsuri Festival as a symbol of overcoming obstacles.\n\nIn India and Sri Lanka, firewalking is part of Hindu religious practices. Devotees walk across fire to show their faith and ask for blessings and protection. Some African communities also use firewalking in coming-of-age and healing ceremonies. Although it looks dangerous, the embers do not transfer heat quickly, so moving lightly and quickly can help prevent burns. Today, firewalking remains a powerful symbol of faith, courage, and resilience.",
     "paragraphs": [
-      "Amelia Earhart was a brave and adventurous pilot who became a pioneer in aviation. Born in Kansas, USA, in 1897, she loved exploring and trying new things from a young age. After taking her first airplane ride in 1920, she immediately knew she wanted to become a pilot. She took flying lessons, saved money, and eventually bought her own yellow airplane, which she named \"The Canary.\"",
-      "Amelia was determined to prove that women could be as skilled as men in aviation. In 1932, she became the first woman to fly solo across the Atlantic Ocean. During the nearly 15-hour flight, she faced strong winds, bad weather, and technical problems but refused to give up. Her remarkable achievement made her internationally famous. She continued breaking aviation records and encouraged other women to follow their dreams and challenge traditional gender roles.",
-      "In 1937, Amelia attempted her greatest adventure: flying around the world with her navigator, Fred Noonan. During the journey, their plane mysteriously disappeared over the Pacific Ocean, and neither of them was ever found. Although the mystery remains unsolved, Amelia's legacy continues today. She is remembered for her courage, determination, and willingness to break barriers, inspiring generations of people to achieve what once seemed impossible."
+      "Imagine walking barefoot across hot, glowing embers. This is firewalking, an ancient tradition practiced in many cultures. People walk on fire as a test of courage, faith, and strength. It is often part of religious ceremonies, and some believe it brings good luck, protection, or inner strength.",
+      "In China, Greece, and Japan, firewalking is connected to religious festivals. In China, it is used to ward off evil spirits. In Greece, people walk on fire during the Anastenaria festival to honor Saint Constantine and Saint Helen. In Japan, Buddhist monks firewalk during the Hiwatari Matsuri Festival as a symbol of overcoming obstacles.",
+      "In India and Sri Lanka, firewalking is part of Hindu religious practices. Devotees walk across fire to show their faith and ask for blessings and protection. Some African communities also use firewalking in coming-of-age and healing ceremonies. Although it looks dangerous, the embers do not transfer heat quickly, so moving lightly and quickly can help prevent burns. Today, firewalking remains a powerful symbol of faith, courage, and resilience."
     ],
     "partA": [
       {
-        "question": "What inspired Amelia Earhart to become a pilot?",
+        "question": "What is firewalking mainly used as a test of?",
         "options": [
           {
             "key": "a",
-            "text": "Her first airplane ride"
+            "text": "Speed and balance"
           },
           {
             "key": "b",
-            "text": "A famous book"
+            "text": "Courage, faith, and strength"
           },
           {
             "key": "c",
-            "text": "Her family"
-          }
-        ],
-        "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'After taking her first airplane ride in 1920, she immediately knew she wanted to become a pilot.'",
-        "ref": "Paragraph 1: 'After taking her first airplane ride in 1920'"
-      },
-      {
-        "question": "What did Amelia achieve in 1932?",
-        "options": [
-          {
-            "key": "a",
-            "text": "She flew around the world."
-          },
-          {
-            "key": "b",
-            "text": "She flew solo across the Atlantic Ocean."
-          },
-          {
-            "key": "c",
-            "text": "She built her own airplane."
+            "text": "Health and fitness"
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'In 1932, she became the first woman to fly solo across the Atlantic Ocean.'",
-        "ref": "Paragraph 2: 'first woman to fly solo across the Atlantic Ocean'"
+        "explanation": "จากเนื้อเรื่อง: 'People walk on fire as a test of courage, faith, and strength.' (การทดสอบความกล้าหาญ ศรัทธา และความเข้มแข็ง)",
+        "ref": "Paragraph 1: 'test of courage, faith, and strength'"
       },
       {
-        "question": "What difficulties did Amelia face during her Atlantic flight?",
+        "question": "Why do people in China practice firewalking?",
         "options": [
           {
             "key": "a",
-            "text": "Strong winds and technical problems"
+            "text": "To ward off evil spirits"
           },
           {
             "key": "b",
-            "text": "Heavy traffic and crowds"
+            "text": "To celebrate the harvest"
           },
           {
             "key": "c",
-            "text": "A lack of food and water"
+            "text": "To train for competitions"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: '...she faced strong winds, bad weather, and technical problems but refused to give up.'",
-        "ref": "Paragraph 2: 'faced strong winds, bad weather, and technical problems'"
+        "explanation": "จากเนื้อเรื่อง: 'In China, it is used to ward off evil spirits.' (เพื่อปัดเป่าสิ่งชั่วร้ายและวิญญาณร้าย)",
+        "ref": "Paragraph 2: 'ward off evil spirits'"
       },
       {
-        "question": "What happened during Amelia's journey in 1937?",
+        "question": "What do Greek firewalkers honor during the Anastenaria festival?",
         "options": [
           {
             "key": "a",
-            "text": "She successfully flew around the world."
+            "text": "Buddhist monks"
           },
           {
             "key": "b",
-            "text": "She decided to stop flying."
+            "text": "Hindu gods"
           },
           {
             "key": "c",
-            "text": "Her plane disappeared over the Pacific Ocean."
+            "text": "Saint Constantine and Saint Helen"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: 'During the journey, their plane mysteriously disappeared over the Pacific Ocean...'",
-        "ref": "Paragraph 3: 'plane mysteriously disappeared over the Pacific Ocean'"
+        "explanation": "จากเนื้อเรื่อง: 'In Greece, people walk on fire during the Anastenaria festival to honor Saint Constantine and Saint Helen.' (เพื่อเป็นเกียรติแก่นักบุญคอนสแตนตินและนักบุญเฮเลน)",
+        "ref": "Paragraph 2: 'honor Saint Constantine and Saint Helen'"
       },
       {
-        "question": "Why is Amelia Earhart still remembered today?",
+        "question": "What does firewalking symbolize for Buddhist monks in Japan?",
         "options": [
           {
             "key": "a",
-            "text": "She invented a new type of airplane."
+            "text": "Becoming stronger physically"
           },
           {
             "key": "b",
-            "text": "She showed courage and broke barriers."
+            "text": "Overcoming obstacles"
           },
           {
             "key": "c",
-            "text": "She discovered a new island."
+            "text": "Celebrating a new year"
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'She is remembered for her courage, determination, and willingness to break barriers, inspiring generations...'",
-        "ref": "Paragraph 3: 'remembered for her courage, determination, and willingness to break barriers'"
+        "explanation": "จากเนื้อเรื่อง: '...monks firewalk during the Hiwatari Matsuri Festival as a symbol of overcoming obstacles.' (สัญลักษณ์ของการก้าวข้ามอุปสรรค)",
+        "ref": "Paragraph 2: 'symbol of overcoming obstacles'"
+      },
+      {
+        "question": "Why can some people walk across hot embers without getting badly burned?",
+        "options": [
+          {
+            "key": "a",
+            "text": "The embers do not transfer heat quickly."
+          },
+          {
+            "key": "b",
+            "text": "The embers are not actually hot."
+          },
+          {
+            "key": "c",
+            "text": "They wear special shoes."
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: 'Although it looks dangerous, the embers do not transfer heat quickly, so moving lightly and quickly can help prevent burns.' (ถ่านไฟไม่ถ่ายเทความร้อนเร็วนัก การก้าวอย่างรวดเร็วจึงช่วยป้องกันการไหม้ได้)",
+        "ref": "Paragraph 3: 'embers do not transfer heat quickly'"
       }
     ],
     "partB": {
       "wordBank": [
-        "disappeared",
-        "achievement",
-        "determined",
-        "legacy",
-        "pioneer"
+        "embers",
+        "devotees",
+        "resilience",
+        "ceremonies",
+        "obstacles"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Amelia was ",
-          "suffix": " to prove that women could become successful pilots.",
-          "answer": "determined"
+          "prefix": "Firewalking is often part of religious ",
+          "suffix": ".",
+          "answer": "ceremonies",
+          "hint": "พิธีกรรมทางศาสนา"
         },
         {
           "id": 2,
-          "prefix": "She became a ",
-          "suffix": " in aviation and inspired many other women.",
-          "answer": "pioneer"
+          "prefix": "People walk across hot ",
+          "suffix": " during a firewalking ceremony.",
+          "answer": "embers",
+          "hint": "เถ้าถ่านไฟที่ยังคุแดง"
         },
         {
           "id": 3,
-          "prefix": "Flying solo across the Atlantic was a remarkable ",
+          "prefix": "Buddhist monks in Japan firewalk as a symbol of overcoming ",
           "suffix": ".",
-          "answer": "achievement"
+          "answer": "obstacles",
+          "hint": "อุปสรรค ขวากหนาม"
         },
         {
           "id": 4,
-          "prefix": "Amelia's plane mysteriously ",
-          "suffix": " over the Pacific Ocean.",
-          "answer": "disappeared"
+          "prefix": "Hindu ",
+          "suffix": " walk across fire to show their faith.",
+          "answer": "devotees",
+          "hint": "ผู้ศรัทธา สาวก"
         },
         {
           "id": 5,
-          "prefix": "Her courage and determination are an important part of her ",
+          "prefix": "Today, firewalking is a powerful symbol of courage and ",
           "suffix": ".",
-          "answer": "legacy"
+          "answer": "resilience",
+          "hint": "ความยืดหยุ่นอดทนไม่ย่อท้อ"
         }
       ]
     },
@@ -928,254 +922,247 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "She",
-          "worked hard",
-          "to achieve",
-          "her dream",
-          "of becoming",
-          "a pilot."
+          "Firewalking",
+          "is an ancient tradition",
+          "in many",
+          "cultures."
         ],
-        "correct": "She worked hard to achieve her dream of becoming a pilot."
+        "correct": "Firewalking is an ancient tradition in many cultures."
       },
       {
         "id": 2,
         "tokens": [
-          "Amelia",
-          "proved",
-          "that",
-          "women",
-          "could succeed in",
-          "aviation."
+          "People",
+          "walk barefoot",
+          "across hot,",
+          "glowing embers."
         ],
-        "correct": "Amelia proved that women could succeed in aviation."
+        "correct": "People walk barefoot across hot, glowing embers."
       },
       {
         "id": 3,
         "tokens": [
-          "Her courage",
-          "helped her",
-          "break",
-          "several",
-          "aviation records."
+          "Greek people",
+          "honor saints",
+          "during",
+          "the Anastenaria festival."
         ],
-        "correct": "Her courage helped her break several aviation records."
+        "correct": "Greek people honor saints during the Anastenaria festival."
       },
       {
         "id": 4,
         "tokens": [
-          "Amelia",
-          "attempted",
-          "her greatest",
-          "adventure",
-          "in 1937."
+          "Hindu devotees",
+          "walk on fire",
+          "to ask",
+          "for blessings."
         ],
-        "correct": "Amelia attempted her greatest adventure in 1937."
+        "correct": "Hindu devotees walk on fire to ask for blessings."
       },
       {
         "id": 5,
         "tokens": [
-          "Her achievements",
-          "inspire",
-          "people",
-          "around",
-          "the world."
+          "Firewalking",
+          "remains a symbol of",
+          "courage",
+          "and resilience."
         ],
-        "correct": "Her achievements inspire people around the world."
+        "correct": "Firewalking remains a symbol of courage and resilience."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Aviation",
+          "word": "embers",
           "pos": "n.",
-          "meaning": "การบิน กิจการการบิน",
-          "phonetic": "/ˌeɪ.viˈeɪ.ʃən/"
+          "meaning": "เถ้าถ่านคุไฟ"
         },
         {
-          "word": "Pioneer",
+          "word": "devotees",
           "pos": "n.",
-          "meaning": "ผู้บุกเบิก ผู้ริเริ่มสิ่งใหม่",
-          "phonetic": "/ˌpaɪəˈnɪər/"
+          "meaning": "ผู้มีศรัทธาแรงกล้า"
         },
         {
-          "word": "Determined",
-          "pos": "adj.",
-          "meaning": "มีความมุ่งมั่นตั้งใจแน่วแน่",
-          "phonetic": "/dɪˈtɜː.mɪnd/"
+          "word": "ceremonies",
+          "pos": "n.",
+          "meaning": "พิธีกรรม"
         },
         {
-          "word": "Achievement",
+          "word": "obstacles",
           "pos": "n.",
-          "meaning": "ความสำเร็จ ผลงานอันยิ่งใหญ่",
-          "phonetic": "/əˈtʃiːv.mənt/"
+          "meaning": "อุปสรรค"
         },
         {
-          "word": "Legacy",
+          "word": "resilience",
           "pos": "n.",
-          "meaning": "มรดกตกทอด สิ่งที่ทิ้งไว้ให้คนรุ่นหลัง",
-          "phonetic": "/ˈleɡ.ə.si/"
+          "meaning": "ความทรหดอดทน"
         }
       ],
       "grammarTip": {
-        "en": "Past Simple vs Past Continuous: Use Past Simple for completed historical events (e.g., 'she flew solo'), and Past Continuous for ongoing background actions ('while she was flying across the ocean').",
-        "th": "ไวยากรณ์ Past Tense: เล่าชีวประวัติบุคคลสำคัญด้วย Past Simple สำหรับเหตุการณ์ที่สำเร็จลุล่วงในอดีต (เช่น 'she bought', 'she flew solo')"
+        "en": "Infinitive of Purpose: 'walk on fire to show their faith and ask for blessings' (to + Base Verb indicates the purpose).",
+        "th": "Infinitive of Purpose (to + V.inf): ใช้บอกวัตถุประสงค์ของการกระทำ เช่น 'walk across fire to show their faith'"
       }
     }
   },
   {
     "id": 5,
-    "title": "Tsunamis: Giant Waves of Destruction",
-    "thaiTitle": "สึนามิ: คลื่นยักษ์แห่งการทำลายล้าง",
-    "cefr": "A2/B1",
+    "title": "The Croissant: A Buttery French Delight",
+    "thaiTitle": "ครัวซองต์: ขนมอบเนยหอมกรุ่นแห่งฝรั่งเศส",
+    "cefr": "A2",
     "unit": "Unit 5",
     "image": "assets/images/ex5.jpg",
-    "audio": "assets/audio/ex5_tsunamis.mp3",
-    "passage": "A tsunami is a series of powerful ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides. Most tsunamis occur when tectonic plates suddenly shift beneath the ocean, pushing a huge amount of water upward. The waves then spread across the ocean and can travel at speeds of up to 800 km/h. In deep water, they may be difficult to notice, but as they approach the coast, they slow down and become much taller.\n\nWhen a tsunami reaches land, it can cause serious destruction, flooding coastal areas and damaging buildings. Some waves can reach more than 30 meters high. One of the deadliest tsunamis in history occurred on December 26, 2004, after a powerful 9.1-magnitude earthquake near Indonesia. Huge waves struck several countries, including Thailand, Sri Lanka, and India, killing more than 230,000 people and leaving millions homeless.\n\nToday, scientists use advanced warning systems to detect earthquakes and unusual movements under the ocean. However, tsunamis can sometimes arrive too quickly for people to receive a warning. Natural warning signs may include strong earthquakes near the coast or the sea suddenly moving far away from the shore. Recognizing these signs and moving quickly to higher ground can help people stay safe during a tsunami.",
+    "audio": "assets/audio/ex5_croissant.mp3",
+    "passage": "This famous pastry is loved around the world and has become a symbol of French baking. But here's a surprising twist: its story actually began in Austria! In the 17th century, Austrian bakers made a crescent-shaped pastry called the kipferl. Years later, French bakers were inspired by it and changed the recipe, adding more butter and creating lighter, flakier layers. Over time, the croissant became a beloved part of French baking.\n\nSo, how is a croissant made? First, bakers mix flour, water, yeast, and other ingredients to make the dough. They place butter inside the dough and carefully fold and roll it several times. The dough must rest and become cool between each round. This process, called lamination, creates many thin layers of dough and butter. Finally, the dough is cut into triangles, rolled into a crescent shape, and baked until golden brown and crispy.\n\nToday, people enjoy croissants in many different ways. Some are plain, while others are filled with chocolate, almonds, ham, or cheese. They are often eaten for breakfast or as a snack with coffee or tea. Their buttery taste and delicate layers make them popular in bakeries, cafés, and supermarkets around the world.",
     "paragraphs": [
-      "A tsunami is a series of powerful ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides. Most tsunamis occur when tectonic plates suddenly shift beneath the ocean, pushing a huge amount of water upward. The waves then spread across the ocean and can travel at speeds of up to 800 km/h. In deep water, they may be difficult to notice, but as they approach the coast, they slow down and become much taller.",
-      "When a tsunami reaches land, it can cause serious destruction, flooding coastal areas and damaging buildings. Some waves can reach more than 30 meters high. One of the deadliest tsunamis in history occurred on December 26, 2004, after a powerful 9.1-magnitude earthquake near Indonesia. Huge waves struck several countries, including Thailand, Sri Lanka, and India, killing more than 230,000 people and leaving millions homeless.",
-      "Today, scientists use advanced warning systems to detect earthquakes and unusual movements under the ocean. However, tsunamis can sometimes arrive too quickly for people to receive a warning. Natural warning signs may include strong earthquakes near the coast or the sea suddenly moving far away from the shore. Recognizing these signs and moving quickly to higher ground can help people stay safe during a tsunami."
+      "This famous pastry is loved around the world and has become a symbol of French baking. But here's a surprising twist: its story actually began in Austria! In the 17th century, Austrian bakers made a crescent-shaped pastry called the kipferl. Years later, French bakers were inspired by it and changed the recipe, adding more butter and creating lighter, flakier layers. Over time, the croissant became a beloved part of French baking.",
+      "So, how is a croissant made? First, bakers mix flour, water, yeast, and other ingredients to make the dough. They place butter inside the dough and carefully fold and roll it several times. The dough must rest and become cool between each round. This process, called lamination, creates many thin layers of dough and butter. Finally, the dough is cut into triangles, rolled into a crescent shape, and baked until golden brown and crispy.",
+      "Today, people enjoy croissants in many different ways. Some are plain, while others are filled with chocolate, almonds, ham, or cheese. They are often eaten for breakfast or as a snack with coffee or tea. Their buttery taste and delicate layers make them popular in bakeries, cafés, and supermarkets around the world."
     ],
     "partA": [
       {
-        "question": "What happens to tsunami waves as they approach the coast?",
+        "question": "What pastry inspired the modern croissant?",
         "options": [
           {
             "key": "a",
-            "text": "They disappear completely."
+            "text": "The baguette"
           },
           {
             "key": "b",
-            "text": "They become taller."
+            "text": "The kipferl"
           },
           {
             "key": "c",
-            "text": "They become warmer."
+            "text": "The brioche"
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: '...as they approach the coast, they slow down and become much taller.' (เมื่อเคลื่อนเข้าใกล้ชายฝั่ง คลื่นจะชะลอความเร็วและยกตัวสูงขึ้นมาก)",
-        "ref": "Paragraph 1: 'they slow down and become much taller'"
+        "explanation": "จากเนื้อเรื่อง: '...Austrian bakers made a crescent-shaped pastry called the kipferl. Years later, French bakers were inspired by it...' (ขนมคิพเฟิร์ลทรงจันทร์เสี้ยวของชาวออสเตรีย)",
+        "ref": "Paragraph 1: 'crescent-shaped pastry called the kipferl'"
       },
       {
-        "question": "What causes water to move upward during an underwater earthquake?",
+        "question": "Why do bakers fold and roll the dough several times?",
         "options": [
           {
             "key": "a",
-            "text": "Shifting tectonic plates"
+            "text": "To create thin, buttery layers"
           },
           {
             "key": "b",
-            "text": "Strong ocean winds"
+            "text": "To make the dough sweeter"
           },
           {
             "key": "c",
-            "text": "Heavy rainfall"
+            "text": "To give the pastry a darker color"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'Most tsunamis occur when tectonic plates suddenly shift beneath the ocean, pushing a huge amount of water upward.'",
-        "ref": "Paragraph 1: 'tectonic plates suddenly shift beneath the ocean'"
+        "explanation": "จากเนื้อเรื่อง: 'This process, called lamination, creates many thin layers of dough and butter.' (เพื่อสร้างชั้นแป้งและเนยบางๆ หลายชั้น)",
+        "ref": "Paragraph 2: 'creates many thin layers of dough and butter'"
       },
       {
-        "question": "Why might people on boats not notice a tsunami in deep water?",
+        "question": "What is the process of folding and rolling the dough called?",
         "options": [
           {
             "key": "a",
-            "text": "The waves move very slowly."
+            "text": "Fermentation"
           },
           {
             "key": "b",
-            "text": "The water becomes very calm."
+            "text": "Baking"
           },
           {
             "key": "c",
-            "text": "The waves are usually not very high."
+            "text": "Lamination"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: ในทะเลลึกคลื่นสึนามิจะมีความสูงของยอดคลื่นไม่มากและสังเกตได้ยาก แต่จะยกตัวสูงขึ้นเมื่อถึงชายฝั่ง",
-        "ref": "Paragraph 1: 'In deep water, they may be difficult to notice'"
+        "explanation": "จากเนื้อเรื่อง: 'This process, called lamination, creates many thin layers...' (กระบวนการนี้เรียกว่า ลามิเนชั่น)",
+        "ref": "Paragraph 2: 'This process, called lamination'"
       },
       {
-        "question": "Which countries were affected by the 2004 tsunami?",
+        "question": "What happens after the dough is cut into triangles?",
         "options": [
           {
             "key": "a",
-            "text": "Thailand, Sri Lanka, and India"
+            "text": "It is filled with chocolate."
           },
           {
             "key": "b",
-            "text": "China, Japan, and Korea"
+            "text": "It is rolled into a crescent shape."
           },
           {
             "key": "c",
-            "text": "Australia, Canada, and Mexico"
-          }
-        ],
-        "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'Huge waves struck several countries, including Thailand, Sri Lanka, and India...'",
-        "ref": "Paragraph 2: 'including Thailand, Sri Lanka, and India'"
-      },
-      {
-        "question": "Which could be a natural warning sign of a tsunami?",
-        "options": [
-          {
-            "key": "a",
-            "text": "The weather becomes colder."
-          },
-          {
-            "key": "b",
-            "text": "The sea suddenly moves away from the shore."
-          },
-          {
-            "key": "c",
-            "text": "The wind suddenly stops."
+            "text": "It is mixed with more flour."
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'Natural warning signs may include strong earthquakes near the coast or the sea suddenly moving far away from the shore.'",
-        "ref": "Paragraph 3: 'the sea suddenly moving far away from the shore'"
+        "explanation": "จากเนื้อเรื่อง: 'Finally, the dough is cut into triangles, rolled into a crescent shape...' (ม้วนเป็นรูปพระจันทร์เสี้ยว)",
+        "ref": "Paragraph 2: 'rolled into a crescent shape'"
+      },
+      {
+        "question": "Why are croissants popular around the world?",
+        "options": [
+          {
+            "key": "a",
+            "text": "They are easy to make."
+          },
+          {
+            "key": "b",
+            "text": "They have a buttery taste and delicate layers."
+          },
+          {
+            "key": "c",
+            "text": "They are always filled with chocolate."
+          }
+        ],
+        "answer": "b",
+        "explanation": "จากเนื้อเรื่อง: 'Their buttery taste and delicate layers make them popular in bakeries, cafés, and supermarkets...' (รสชาติเนยหอมกรุ่นและชั้นแป้งที่ละเอียดนุ่ม)",
+        "ref": "Paragraph 3: 'buttery taste and delicate layers make them popular'"
       }
     ],
     "partB": {
       "wordBank": [
-        "destruction",
-        "detect",
-        "warning",
-        "coastal",
-        "tectonic"
+        "layers",
+        "symbol",
+        "inspired",
+        "delicate",
+        "ingredients"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "The Earth's ",
-          "suffix": " plates can move and cause underwater earthquakes.",
-          "answer": "tectonic"
+          "prefix": "The croissant became a ",
+          "suffix": " of French baking over time.",
+          "answer": "symbol",
+          "hint": "สัญลักษณ์ ตัวแทน"
         },
         {
           "id": 2,
-          "prefix": "Tsunamis can cause serious ",
-          "suffix": " to buildings and communities.",
-          "answer": "destruction"
+          "prefix": "French bakers were ",
+          "suffix": " by a similar Austrian pastry called the kipferl.",
+          "answer": "inspired",
+          "hint": "ได้รับแรงบันดาลใจ"
         },
         {
           "id": 3,
-          "prefix": "Areas near the sea are called ",
-          "suffix": " areas.",
-          "answer": "coastal"
+          "prefix": "Flour, water, and yeast are some of the ",
+          "suffix": " used to make the dough.",
+          "answer": "ingredients",
+          "hint": "ส่วนประกอบ ส่วนผสม"
         },
         {
           "id": 4,
-          "prefix": "Scientists use special systems to ",
-          "suffix": " possible tsunamis.",
-          "answer": "detect"
+          "prefix": "The folding process creates many thin ",
+          "suffix": " of dough and butter.",
+          "answer": "layers",
+          "hint": "ชั้นแผ่นบางๆ"
         },
         {
           "id": 5,
-          "prefix": "A strong earthquake near the ocean can be a ",
-          "suffix": " sign of a tsunami.",
-          "answer": "warning"
+          "prefix": "The croissant is known for its soft and ",
+          "suffix": " texture.",
+          "answer": "delicate",
+          "hint": "ละเอียด ละเมียดละไม"
         }
       ]
     },
@@ -1183,251 +1170,248 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Tsunamis",
-          "can travel",
-          "across the ocean",
-          "at very",
-          "high speeds."
+          "The croissant",
+          "was inspired by",
+          "an Austrian",
+          "pastry."
         ],
-        "correct": "Tsunamis can travel across the ocean at very high speeds."
+        "correct": "The croissant was inspired by an Austrian pastry."
       },
       {
         "id": 2,
         "tokens": [
-          "Underwater earthquakes",
-          "can create",
-          "powerful",
-          "ocean waves."
+          "French bakers",
+          "developed",
+          "a lighter and flakier",
+          "version."
         ],
-        "correct": "Underwater earthquakes can create powerful ocean waves."
+        "correct": "French bakers developed a lighter and flakier version."
       },
       {
         "id": 3,
         "tokens": [
-          "Tsunami waves",
-          "become taller",
-          "as",
-          "they get closer to",
-          "the coast."
+          "Lamination",
+          "creates",
+          "many thin layers of",
+          "dough and butter."
         ],
-        "correct": "Tsunami waves become taller as they get closer to the coast."
+        "correct": "Lamination creates many thin layers of dough and butter."
       },
       {
         "id": 4,
         "tokens": [
-          "Warning systems",
-          "can help",
-          "people",
-          "prepare for",
-          "danger."
+          "Chocolate and almonds",
+          "are popular",
+          "croissant",
+          "fillings."
         ],
-        "correct": "Warning systems can help people prepare for danger."
+        "correct": "Chocolate and almonds are popular croissant fillings."
       },
       {
         "id": 5,
         "tokens": [
-          "Moving to",
-          "higher ground",
-          "can help",
-          "people",
-          "stay safe."
+          "They are sold",
+          "in bakeries",
+          "and cafés",
+          "around the world."
         ],
-        "correct": "Moving to higher ground can help people stay safe."
+        "correct": "They are sold in bakeries and cafés around the world."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Tectonic",
-          "pos": "adj.",
-          "meaning": "เกี่ยวกับโครงสร้างเปลือกโลก",
-          "phonetic": "/tekˈtɒn.ɪk/"
-        },
-        {
-          "word": "Magnitude",
+          "word": "pastry",
           "pos": "n.",
-          "meaning": "ขนาดความรุนแรงของแผ่นดินไหว",
-          "phonetic": "/ˈmæɡ.nɪ.tʃuːd/"
+          "meaning": "ขนมอบ ขนมเพสตรี"
         },
         {
-          "word": "Destruction",
+          "word": "lamination",
           "pos": "n.",
-          "meaning": "การทำลายล้าง ความพินาศ",
-          "phonetic": "/dɪˈstrʌk.ʃən/"
+          "meaning": "เทคนิคการพับทบแป้งกับเนย"
         },
         {
-          "word": "Coastal",
+          "word": "crescent",
+          "pos": "adj./n.",
+          "meaning": "ทรงเสี้ยวพระจันทร์"
+        },
+        {
+          "word": "ingredients",
+          "pos": "n.",
+          "meaning": "ส่วนผสม"
+        },
+        {
+          "word": "delicate",
           "pos": "adj.",
-          "meaning": "แถบชายฝั่งทะเล",
-          "phonetic": "/ˈkəʊ.stəl/"
-        },
-        {
-          "word": "Detect",
-          "pos": "v.",
-          "meaning": "ตรวจจับ ค้นหา สังเกตพบ",
-          "phonetic": "/dɪˈtekt/"
+          "meaning": "ละเอียด บอบบางละเมียดละไม"
         }
       ],
       "grammarTip": {
-        "en": "Cause and Effect Structures: Use 'caused by' and 'because of' to describe natural disasters (e.g., 'waves caused by underwater earthquakes').",
-        "th": "โครงสร้างบอกเหตุและผล (Cause and Effect): การใช้ 'caused by' (มีสาเหตุมาจาก) เพื่ออธิบายปรากฏการณ์ธรรมชาติ เช่น 'powerful waves caused by underwater earthquakes'"
+        "en": "Chronological Sequence Connectors: 'First, bakers mix...', 'Next...', 'Finally, the dough is cut...' to describe cooking and manufacturing steps.",
+        "th": "คำเชื่อมบอกลำดับขั้นตอนการทำ (Sequence Connectors): First (ขั้นแรก), Next (ต่อไป), Finally (สุดท้าย)"
       }
     }
   },
   {
     "id": 6,
-    "title": "Modern Inventions in Food Technology",
-    "thaiTitle": "นวัตกรรมล้ำสมัยในเทคโนโลยีอาหาร",
-    "cefr": "A2/B1",
+    "title": "The Printing Press: A Revolution in Communication",
+    "thaiTitle": "แท่นพิมพ์: การปฏิวัติแห่งการสื่อสารของมนุษยชาติ",
+    "cefr": "A2",
     "unit": "Unit 6",
     "image": "assets/images/ex6.jpg",
-    "audio": "assets/audio/ex6_food_technology.mp3",
-    "passage": "Imagine eating a steak made without raising a cow or a dessert created by a 3D printer! New innovations are changing the way we produce and eat food. 3D-printed food allows machines to create unusual shapes and personalized meals, while lab-grown meat is produced from animal cells instead of raising and slaughtering animals. These inventions could reduce waste and environmental damage, but they are still expensive, and some people are unsure about eating food made with new technology.\n\nTechnology is also changing how we store and grow food. Smart packaging can use special labels that change color when food is no longer fresh, helping prevent food waste. Meanwhile, vertical farms grow plants indoors in layers, using less land and water than traditional farms. They can even produce food all year round. However, vertical farms require large amounts of electricity, while smart packaging can be more expensive and may create additional waste.\n\nArtificial intelligence (AI) is another important development in food technology. AI can check the quality of food, sort fruits and vegetables, reduce waste, and even help create new flavors. However, increased automation could replace some human jobs. Modern food technology offers exciting possibilities, but challenges such as cost and environmental impact remain. In the future, the food on your plate might look very different from what you eat today!",
+    "audio": "assets/audio/ex6_printing_press.mp3",
+    "passage": "Imagine a world without printed books or newspapers. Before the printing press, books were copied by hand, which was slow and expensive. Only wealthy people, churches, and scholars could easily afford them, so knowledge was difficult to share.\n\nIn the 15th century, Johannes Gutenberg developed a printing press in Europe using movable metal letters. His invention made it possible to produce books much faster and more cheaply. One of the first major books printed was the Bible, allowing more people to read it themselves and learn about different beliefs.\n\nThe printing press made it much easier for new ideas to travel from one place to another. People could quickly share information about science, politics, religion, and art with large numbers of readers.\n\nToday, we use digital technology to share information quickly, but printed books, newspapers, and magazines are still common. The printing press helped begin mass communication and changed how people learned, shared ideas, and connected with information.",
     "paragraphs": [
-      "Imagine eating a steak made without raising a cow or a dessert created by a 3D printer! New innovations are changing the way we produce and eat food. 3D-printed food allows machines to create unusual shapes and personalized meals, while lab-grown meat is produced from animal cells instead of raising and slaughtering animals. These inventions could reduce waste and environmental damage, but they are still expensive, and some people are unsure about eating food made with new technology.",
-      "Technology is also changing how we store and grow food. Smart packaging can use special labels that change color when food is no longer fresh, helping prevent food waste. Meanwhile, vertical farms grow plants indoors in layers, using less land and water than traditional farms. They can even produce food all year round. However, vertical farms require large amounts of electricity, while smart packaging can be more expensive and may create additional waste.",
-      "Artificial intelligence (AI) is another important development in food technology. AI can check the quality of food, sort fruits and vegetables, reduce waste, and even help create new flavors. However, increased automation could replace some human jobs. Modern food technology offers exciting possibilities, but challenges such as cost and environmental impact remain. In the future, the food on your plate might look very different from what you eat today!"
+      "Imagine a world without printed books or newspapers. Before the printing press, books were copied by hand, which was slow and expensive. Only wealthy people, churches, and scholars could easily afford them, so knowledge was difficult to share.",
+      "In the 15th century, Johannes Gutenberg developed a printing press in Europe using movable metal letters. His invention made it possible to produce books much faster and more cheaply. One of the first major books printed was the Bible, allowing more people to read it themselves and learn about different beliefs.",
+      "The printing press made it much easier for new ideas to travel from one place to another. People could quickly share information about science, politics, religion, and art with large numbers of readers.",
+      "Today, we use digital technology to share information quickly, but printed books, newspapers, and magazines are still common. The printing press helped begin mass communication and changed how people learned, shared ideas, and connected with information."
     ],
     "partA": [
       {
-        "question": "What is special about lab-grown meat?",
+        "question": "Why were books difficult for many people to get before the printing press?",
         "options": [
           {
             "key": "a",
-            "text": "It is made only from vegetables."
+            "text": "They were written in foreign languages."
           },
           {
             "key": "b",
-            "text": "It is produced from animal cells."
+            "text": "They were slow and expensive to produce."
           },
           {
             "key": "c",
-            "text": "It is cooked by robots."
+            "text": "They were only used in schools."
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: '...lab-grown meat is produced from animal cells instead of raising and slaughtering animals.'",
-        "ref": "Paragraph 1: 'produced from animal cells instead of raising and slaughtering'"
+        "explanation": "จากเนื้อเรื่อง: 'Before the printing press, books were copied by hand, which was slow and expensive.' (การคัดลอกด้วยลายมือเชื่องช้าและมีราคาแพงมาก)",
+        "ref": "Paragraph 1: 'copied by hand, which was slow and expensive'"
       },
       {
-        "question": "How can smart packaging help people?",
+        "question": "What made Gutenberg's printing press different?",
         "options": [
           {
             "key": "a",
-            "text": "It can show when food is no longer fresh."
+            "text": "It used movable metal letters."
           },
           {
             "key": "b",
-            "text": "It can make food taste better."
+            "text": "It printed only newspapers."
           },
           {
             "key": "c",
-            "text": "It can make food cheaper."
+            "text": "It used digital technology."
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'Smart packaging can use special labels that change color when food is no longer fresh...'",
-        "ref": "Paragraph 2: 'labels that change color when food is no longer fresh'"
+        "explanation": "จากเนื้อเรื่อง: '...Johannes Gutenberg developed a printing press in Europe using movable metal letters.' (ใช้ตัวอักษรโลหะที่สามารถจัดเรียงและเคลื่อนย้ายได้)",
+        "ref": "Paragraph 2: 'using movable metal letters'"
       },
       {
-        "question": "What is one advantage of vertical farming?",
+        "question": "Why was printing the Bible important?",
         "options": [
           {
             "key": "a",
-            "text": "It needs no electricity."
+            "text": "It made the Bible shorter."
           },
           {
             "key": "b",
-            "text": "It uses more land."
+            "text": "It helped more people read it themselves."
           },
           {
             "key": "c",
-            "text": "It can grow food all year round."
+            "text": "It made books more expensive."
+          }
+        ],
+        "answer": "b",
+        "explanation": "จากเนื้อเรื่อง: 'One of the first major books printed was the Bible, allowing more people to read it themselves...' (เปิดโอกาสให้ผู้คนจำนวนมากสามารถอ่านได้ด้วยตนเอง)",
+        "ref": "Paragraph 2: 'allowing more people to read it themselves'"
+      },
+      {
+        "question": "What kinds of ideas could the printing press help people share?",
+        "options": [
+          {
+            "key": "a",
+            "text": "Only religious ideas"
+          },
+          {
+            "key": "b",
+            "text": "Only scientific ideas"
+          },
+          {
+            "key": "c",
+            "text": "Ideas about science, politics, religion, and art"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: 'They can even produce food all year round.' (ฟาร์มแนวดิ่งสามารถปลูกพืชได้ตลอดทั้งปี)",
-        "ref": "Paragraph 2: 'can even produce food all year round'"
+        "explanation": "จากเนื้อเรื่อง: 'People could quickly share information about science, politics, religion, and art...' (เผยแพร่วิทยาศาสตร์ การเมือง ศาสนา และศิลปะ)",
+        "ref": "Paragraph 3: 'science, politics, religion, and art'"
       },
       {
-        "question": "How can AI be used in food production?",
+        "question": "What is one important effect of the printing press today?",
         "options": [
           {
             "key": "a",
-            "text": "It can sort fruits and vegetables."
+            "text": "It helped begin mass communication."
           },
           {
             "key": "b",
-            "text": "It can replace all types of food."
+            "text": "It stopped people from using books."
           },
           {
             "key": "c",
-            "text": "It can grow plants without water."
+            "text": "It made digital technology unnecessary."
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'AI can check the quality of food, sort fruits and vegetables, reduce waste...'",
-        "ref": "Paragraph 3: 'sort fruits and vegetables, reduce waste'"
-      },
-      {
-        "question": "What is one challenge of modern food technology?",
-        "options": [
-          {
-            "key": "a",
-            "text": "Food cannot be produced indoors."
-          },
-          {
-            "key": "b",
-            "text": "Some technologies are expensive."
-          },
-          {
-            "key": "c",
-            "text": "People have stopped eating traditional food."
-          }
-        ],
-        "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: '...challenges such as cost and environmental impact remain.' และ 'they are still expensive'",
-        "ref": "Paragraph 1 & 3: 'challenges such as cost and environmental impact'"
+        "explanation": "จากเนื้อเรื่อง: 'The printing press helped begin mass communication and changed how people learned...' (เป็นจุดเริ่มต้นของการสื่อสารมวลชน)",
+        "ref": "Paragraph 4: 'helped begin mass communication'"
       }
     ],
     "partB": {
       "wordBank": [
-        "vertical",
-        "environmental",
-        "automation",
-        "personalized",
-        "innovations"
+        "movable",
+        "invention",
+        "communication",
+        "afford",
+        "readers"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "New ",
-          "suffix": " are changing how food is produced.",
-          "answer": "innovations"
+          "prefix": "Before the printing press, only wealthy people could ",
+          "suffix": " to buy books.",
+          "answer": "afford",
+          "hint": "มีกำลังทรัพย์พอซื้อได้"
         },
         {
           "id": 2,
-          "prefix": "3D printers can create ",
-          "suffix": " meals for different people.",
-          "answer": "personalized"
+          "prefix": "Gutenberg's machine used ",
+          "suffix": " metal letters to print words and sentences.",
+          "answer": "movable",
+          "hint": "เคลื่อนย้าย สับเปลี่ยนได้"
         },
         {
           "id": 3,
-          "prefix": " ",
-          "suffix": " farms grow plants indoors in layers.",
-          "answer": "vertical"
+          "prefix": "Gutenberg's ",
+          "suffix": " changed the way people produced and shared books.",
+          "answer": "invention",
+          "hint": "สิ่งประดิษฐ์ นวัตกรรม"
         },
         {
           "id": 4,
-          "prefix": "Lab-grown meat could help reduce ",
-          "suffix": " damage.",
-          "answer": "environmental"
+          "prefix": "Printed books allowed more ",
+          "suffix": " to learn about new ideas.",
+          "answer": "readers",
+          "hint": "ผู้อ่าน"
         },
         {
           "id": 5,
-          "prefix": "Increased ",
-          "suffix": " could replace some human jobs.",
-          "answer": "automation"
+          "prefix": "The printing press helped develop mass ",
+          "suffix": " around the world.",
+          "answer": "communication",
+          "hint": "การสื่อสารมวลชน"
         }
       ]
     },
@@ -1435,250 +1419,248 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Technology",
-          "is changing",
-          "the way",
-          "we",
-          "produce food."
+          "Gutenberg's invention",
+          "changed the way",
+          "people",
+          "produced books."
         ],
-        "correct": "Technology is changing the way we produce food."
+        "correct": "Gutenberg's invention changed the way people produced books."
       },
       {
         "id": 2,
         "tokens": [
-          "Scientists",
-          "can grow",
-          "meat",
-          "from",
-          "animal cells."
+          "Printed books",
+          "became cheaper",
+          "and easier",
+          "to produce."
         ],
-        "correct": "Scientists can grow meat from animal cells."
+        "correct": "Printed books became cheaper and easier to produce."
       },
       {
         "id": 3,
         "tokens": [
-          "Smart labels",
-          "can help",
-          "reduce",
-          "food waste."
+          "New ideas",
+          "could spread quickly",
+          "from one place",
+          "to another."
         ],
-        "correct": "Smart labels can help reduce food waste."
+        "correct": "New ideas could spread quickly from one place to another."
       },
       {
         "id": 4,
         "tokens": [
-          "Vertical farms",
-          "can produce",
-          "food",
-          "all year round."
+          "People",
+          "could share information",
+          "with a",
+          "larger audience."
         ],
-        "correct": "Vertical farms can produce food all year round."
+        "correct": "People could share information with a larger audience."
       },
       {
         "id": 5,
         "tokens": [
-          "AI",
-          "can help",
-          "companies",
-          "improve",
-          "food quality."
+          "The printing press",
+          "helped develop",
+          "mass",
+          "communication."
         ],
-        "correct": "AI can help companies improve food quality."
+        "correct": "The printing press helped develop mass communication."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Innovation",
+          "word": "printing press",
           "pos": "n.",
-          "meaning": "นวัตกรรม สิ่งประดิษฐ์สร้างสรรค์ใหม่",
-          "phonetic": "/ˌɪn.əˈveɪ.ʃən/"
+          "meaning": "แท่นพิมพ์"
         },
         {
-          "word": "Personalized",
+          "word": "movable",
           "pos": "adj.",
-          "meaning": "ปรับแต่งตามความต้องการเฉพาะบุคคล",
-          "phonetic": "/ˈpɜː.sən.əl.aɪzd/"
+          "meaning": "เคลื่อนย้ายได้ จัดวางใหม่ได้"
         },
         {
-          "word": "Hydroponic",
-          "pos": "adj.",
-          "meaning": "การปลูกพืชไร้ดินด้วยสารละลายธาตุอาหาร",
-          "phonetic": "/ˌhaɪ.drəˈpɒn.ɪk/"
-        },
-        {
-          "word": "Automation",
+          "word": "invention",
           "pos": "n.",
-          "meaning": "ระบบอัตโนมัติ การทำงานด้วยเครื่องจักร",
-          "phonetic": "/ˌɔː.təˈmeɪ.ʃən/"
+          "meaning": "สิ่งประดิษฐ์"
         },
         {
-          "word": "Packaging",
+          "word": "mass communication",
           "pos": "n.",
-          "meaning": "บรรจุภัณฑ์ การหีบห่อ",
-          "phonetic": "/ˈpæk.ɪ.dʒɪŋ/"
+          "meaning": "การสื่อสารมวลชน"
+        },
+        {
+          "word": "afford",
+          "pos": "v.",
+          "meaning": "สามารถซื้อหามาได้ มีเงินพอ"
         }
       ],
       "grammarTip": {
-        "en": "Modal Verbs of Possibility: Use 'could' and 'might' to speculate about future technological trends (e.g., 'These inventions could reduce waste', 'food might look very different').",
-        "th": "กริยาช่วยบอกความเป็นไปได้ (Modal Verbs): ใช้ 'could' หรือ 'might' คาดการณ์สิ่งที่จะเกิดขึ้นในอนาคต เช่น 'could replace some human jobs'"
+        "en": "Comparative Forms: 'much faster and more cheaply', 'cheaper and easier' to highlight historical improvements.",
+        "th": "การเปรียบเทียบขั้นกว่า (Comparatives): cheaper and easier to produce (ผลิตได้ถูกลงและง่ายขึ้น)"
       }
     }
   },
   {
     "id": 7,
-    "title": "Languages of the World",
-    "thaiTitle": "ภาษาแห่งโลก: การสื่อสารและมรดกทางวัฒนธรรม",
-    "cefr": "A2/B1",
+    "title": "Stephen Hawking: A Brilliant Mind",
+    "thaiTitle": "สตีเฟน ฮอว์คิง: อัจฉริยะผู้ไขความลับแห่งจักรวาล",
+    "cefr": "A2",
     "unit": "Unit 7",
     "image": "assets/images/ex7.jpg",
-    "audio": "assets/audio/ex7_languages_of_the_world.mp3",
-    "passage": "Language is an essential part of human communication and cultural identity. Today, more than 7,000 languages are spoken around the world. Some, such as English, Mandarin Chinese, and Spanish, are spoken by millions of people and are widely used for business, education, and international communication. Languages constantly evolve, with new expressions appearing as societies and technology develop.\n\nSome languages continue to expand because more people learn them as second languages. English, Spanish, and Mandarin are popular choices because they can improve career opportunities and make international travel easier. The internet has also accelerated the spread of major languages through films, websites, and social media. At the same time, technological and cultural changes introduce new vocabulary, including words such as \"selfie\" and \"emoji.\"\n\nHowever, many smaller languages are becoming endangered as the number of speakers decreases. If younger generations stop learning them, these languages may eventually become extinct. Organizations are making efforts to preserve them by teaching them in schools and creating written or digital records. Protecting linguistic diversity is important because every language contains unique traditions, knowledge, and ways of understanding the world.",
+    "audio": "assets/audio/ex7_stephen_hawking.mp3",
+    "passage": "How can someone explore the universe without being able to move or speak? Stephen Hawking was a world-famous scientist known for his work on black holes, time, and the universe. Born in Oxford, England, in 1942, he became interested in science and space when he was young. He later studied physics and mathematics at the University of Cambridge.\n\nWhen Hawking was in his early twenties, his life changed dramatically. He was diagnosed with ALS, a disease that gradually weakens the muscles. Although he eventually lost the ability to move and speak normally, he continued his studies and research. He used a special computer controlled by small movements of his cheek to communicate.\n\nHawking made important contributions to the study of the universe. One of his most famous ideas was that black holes can give off energy, known as Hawking radiation. He also wrote A Brief History of Time, which helped many people understand difficult ideas about time, space, and the universe.\n\nHawking died in 2018, but his ideas continue to inspire people around the world. His life shows that challenges do not always prevent people from making important contributions. His curiosity and determination encouraged millions of people to learn more about science.",
     "paragraphs": [
-      "Language is an essential part of human communication and cultural identity. Today, more than 7,000 languages are spoken around the world. Some, such as English, Mandarin Chinese, and Spanish, are spoken by millions of people and are widely used for business, education, and international communication. Languages constantly evolve, with new expressions appearing as societies and technology develop.",
-      "Some languages continue to expand because more people learn them as second languages. English, Spanish, and Mandarin are popular choices because they can improve career opportunities and make international travel easier. The internet has also accelerated the spread of major languages through films, websites, and social media. At the same time, technological and cultural changes introduce new vocabulary, including words such as \"selfie\" and \"emoji.\"",
-      "However, many smaller languages are becoming endangered as the number of speakers decreases. If younger generations stop learning them, these languages may eventually become extinct. Organizations are making efforts to preserve them by teaching them in schools and creating written or digital records. Protecting linguistic diversity is important because every language contains unique traditions, knowledge, and ways of understanding the world."
+      "How can someone explore the universe without being able to move or speak? Stephen Hawking was a world-famous scientist known for his work on black holes, time, and the universe. Born in Oxford, England, in 1942, he became interested in science and space when he was young. He later studied physics and mathematics at the University of Cambridge.",
+      "When Hawking was in his early twenties, his life changed dramatically. He was diagnosed with ALS, a disease that gradually weakens the muscles. Although he eventually lost the ability to move and speak normally, he continued his studies and research. He used a special computer controlled by small movements of his cheek to communicate.",
+      "Hawking made important contributions to the study of the universe. One of his most famous ideas was that black holes can give off energy, known as Hawking radiation. He also wrote A Brief History of Time, which helped many people understand difficult ideas about time, space, and the universe.",
+      "Hawking died in 2018, but his ideas continue to inspire people around the world. His life shows that challenges do not always prevent people from making important contributions. His curiosity and determination encouraged millions of people to learn more about science."
     ],
     "partA": [
       {
-        "question": "Approximately how many languages are spoken around the world?",
+        "question": "What first attracted Hawking to science?",
         "options": [
           {
             "key": "a",
-            "text": "More than 700"
+            "text": "His interest in space and science"
           },
           {
             "key": "b",
-            "text": "More than 70,000"
+            "text": "His family's work in medicine"
           },
           {
             "key": "c",
-            "text": "More than 7,000"
-          }
-        ],
-        "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: 'Today, more than 7,000 languages are spoken around the world.'",
-        "ref": "Paragraph 1: 'more than 7,000 languages are spoken around the world'"
-      },
-      {
-        "question": "Why do many people learn major languages as second languages?",
-        "options": [
-          {
-            "key": "a",
-            "text": "To improve career and travel opportunities"
-          },
-          {
-            "key": "b",
-            "text": "To replace their first language"
-          },
-          {
-            "key": "c",
-            "text": "To create new languages"
+            "text": "His love of writing books"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: '...they can improve career opportunities and make international travel easier.'",
-        "ref": "Paragraph 2: 'improve career opportunities and make international travel easier'"
+        "explanation": "จากเนื้อเรื่อง: '...he became interested in science and space when he was young.' (ความสนใจในวิทยาศาสตร์และอวกาศตั้งแต่วัยเด็ก)",
+        "ref": "Paragraph 1: 'interested in science and space when he was young'"
       },
       {
-        "question": "How has the internet affected major languages?",
+        "question": "What made Hawking's life especially challenging?",
         "options": [
           {
             "key": "a",
-            "text": "It has stopped them from changing."
+            "text": "He had difficulty finding a job."
           },
           {
             "key": "b",
-            "text": "It has helped them spread more quickly."
+            "text": "He could not continue his university studies."
           },
           {
             "key": "c",
-            "text": "It has made them more difficult."
+            "text": "He developed ALS at a young age."
+          }
+        ],
+        "answer": "c",
+        "explanation": "จากเนื้อเรื่อง: 'When Hawking was in his early twenties... He was diagnosed with ALS, a disease that gradually weakens the muscles.' (ได้รับการวินิจฉัยว่าเป็นโรคกล้ามเนื้ออ่อนแรง ALS ในช่วงอายุ 20 ต้นๆ)",
+        "ref": "Paragraph 2: 'diagnosed with ALS at a young age'"
+      },
+      {
+        "question": "What allowed Hawking to continue communicating with others?",
+        "options": [
+          {
+            "key": "a",
+            "text": "A special computer"
+          },
+          {
+            "key": "b",
+            "text": "A team of assistants"
+          },
+          {
+            "key": "c",
+            "text": "A writing machine"
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: 'He used a special computer controlled by small movements of his cheek to communicate.' (คอมพิวเตอร์สั่งการด้วยการขยับกล้ามเนื้อแก้ม)",
+        "ref": "Paragraph 2: 'used a special computer... to communicate'"
+      },
+      {
+        "question": "What was one important idea Hawking developed about black holes?",
+        "options": [
+          {
+            "key": "a",
+            "text": "They are made of stars."
+          },
+          {
+            "key": "b",
+            "text": "They can give off energy."
+          },
+          {
+            "key": "c",
+            "text": "They are larger than the universe."
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'The internet has also accelerated the spread of major languages through films, websites, and social media.'",
-        "ref": "Paragraph 2: 'accelerated the spread of major languages'"
+        "explanation": "จากเนื้อเรื่อง: 'One of his most famous ideas was that black holes can give off energy, known as Hawking radiation.' (หลุมดำสามารถแผ่พลังงานออกมาได้)",
+        "ref": "Paragraph 3: 'black holes can give off energy'"
       },
       {
-        "question": "When can a language become endangered?",
+        "question": "Which qualities helped Hawking achieve great things?",
         "options": [
           {
             "key": "a",
-            "text": "When too many people study it"
+            "text": "Wealth and popularity"
           },
           {
             "key": "b",
-            "text": "When new words are created"
+            "text": "Speed and physical strength"
           },
           {
             "key": "c",
-            "text": "When the number of speakers decreases"
+            "text": "Curiosity and determination"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: '...smaller languages are becoming endangered as the number of speakers decreases.'",
-        "ref": "Paragraph 3: 'endangered as the number of speakers decreases'"
-      },
-      {
-        "question": "Why is it important to preserve languages?",
-        "options": [
-          {
-            "key": "a",
-            "text": "They contain unique traditions and knowledge."
-          },
-          {
-            "key": "b",
-            "text": "Everyone should speak the same language."
-          },
-          {
-            "key": "c",
-            "text": "Older languages are easier to learn."
-          }
-        ],
-        "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: '...every language contains unique traditions, knowledge, and ways of understanding the world.'",
-        "ref": "Paragraph 3: 'contains unique traditions, knowledge, and ways of understanding'"
+        "explanation": "จากเนื้อเรื่อง: 'His curiosity and determination encouraged millions of people to learn more about science.' (ความอยากรู้อยากเห็นและความมุ่งมั่นแน่วแน่)",
+        "ref": "Paragraph 4: 'His curiosity and determination'"
       }
     ],
     "partB": {
       "wordBank": [
-        "endangered",
-        "accelerated",
-        "identity",
-        "preserve",
-        "evolve"
+        "radiation",
+        "communicate",
+        "determination",
+        "contributions",
+        "mysteries"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Languages constantly ",
-          "suffix": " as new words and expressions appear.",
-          "answer": "evolve"
+          "prefix": "Hawking used a special computer to ",
+          "suffix": " with other people.",
+          "answer": "communicate",
+          "hint": "สื่อสาร ติดต่อสื่อสาร"
         },
         {
           "id": 2,
-          "prefix": "Language is an important part of a person's cultural ",
-          "suffix": ".",
-          "answer": "identity"
+          "prefix": "Hawking studied the ",
+          "suffix": " of the universe through his scientific research.",
+          "answer": "mysteries",
+          "hint": "ความลึกลับ ปริศนา"
         },
         {
           "id": 3,
-          "prefix": "The internet has ",
-          "suffix": " the spread of major languages.",
-          "answer": "accelerated"
+          "prefix": "Hawking's research showed that black holes can give off energy called Hawking ",
+          "suffix": ".",
+          "answer": "radiation",
+          "hint": "รังสีฮอว์คิง การแผ่รังสี"
         },
         {
           "id": 4,
-          "prefix": "Some languages become ",
-          "suffix": " when fewer people speak them.",
-          "answer": "endangered"
+          "prefix": "His scientific ",
+          "suffix": " helped him continue his work despite many challenges.",
+          "answer": "determination",
+          "hint": "ความมุ่งมั่นตั้งใจ"
         },
         {
           "id": 5,
-          "prefix": "Organizations are working to ",
-          "suffix": " languages for future generations.",
-          "answer": "preserve"
+          "prefix": "Hawking made important ",
+          "suffix": " to the study of the universe.",
+          "answer": "contributions",
+          "hint": "คุณูปการ ผลงานสร้างประโยชน์"
         }
       ]
     },
@@ -1686,250 +1668,247 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Learning",
-          "another language",
-          "can improve",
-          "career opportunities."
+          "Stephen Hawking",
+          "became interested in",
+          "science and space",
+          "at a young age."
         ],
-        "correct": "Learning another language can improve career opportunities."
+        "correct": "Stephen Hawking became interested in science and space at a young age."
       },
       {
         "id": 2,
         "tokens": [
-          "Technology",
-          "has introduced",
-          "many",
-          "new words",
-          "into",
-          "our vocabulary."
+          "ALS",
+          "is a disease",
+          "that gradually weakens",
+          "the muscles."
         ],
-        "correct": "Technology has introduced many new words into our vocabulary."
+        "correct": "ALS is a disease that gradually weakens the muscles."
       },
       {
         "id": 3,
         "tokens": [
-          "Social media",
-          "helps",
-          "languages",
-          "spread",
-          "more quickly."
+          "He used",
+          "a special computer",
+          "to communicate",
+          "with other people."
         ],
-        "correct": "Social media helps languages spread more quickly."
+        "correct": "He used a special computer to communicate with other people."
       },
       {
         "id": 4,
         "tokens": [
-          "Some languages",
-          "are spoken",
-          "only by",
-          "small communities."
+          "His research",
+          "changed the way",
+          "scientists understand",
+          "black holes."
         ],
-        "correct": "Some languages are spoken only by small communities."
+        "correct": "His research changed the way scientists understand black holes."
       },
       {
         "id": 5,
         "tokens": [
-          "Learning languages",
-          "helps us",
-          "understand",
-          "different cultures."
+          "His ideas",
+          "continue to inspire",
+          "people",
+          "around the world."
         ],
-        "correct": "Learning languages helps us understand different cultures."
+        "correct": "His ideas continue to inspire people around the world."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Linguistic",
-          "pos": "adj.",
-          "meaning": "เกี่ยวกับภาษา ทางภาษาศาสตร์",
-          "phonetic": "/lɪŋˈɡwɪs.tɪk/"
-        },
-        {
-          "word": "Identity",
+          "word": "black holes",
           "pos": "n.",
-          "meaning": "อัตลักษณ์ ตัวตน คุณลักษณะเฉพาะ",
-          "phonetic": "/aɪˈden.tə.ti/"
+          "meaning": "หลุมดำ"
         },
         {
-          "word": "Evolve",
+          "word": "radiation",
+          "pos": "n.",
+          "meaning": "การแผ่รังสี"
+        },
+        {
+          "word": "determination",
+          "pos": "n.",
+          "meaning": "ความมุ่งมั่นเด็ดเดี่ยว"
+        },
+        {
+          "word": "contributions",
+          "pos": "n.",
+          "meaning": "ผลงานที่มีคุณค่าต่อสังคม"
+        },
+        {
+          "word": "inspire",
           "pos": "v.",
-          "meaning": "วิวัฒนาการ ค่อยๆ เปลี่ยนแปลงและพัฒนา",
-          "phonetic": "/ɪˈvɒlv/"
-        },
-        {
-          "word": "Accelerate",
-          "pos": "v.",
-          "meaning": "เร่งให้เร็วขึ้น เพิ่มความเร็ว",
-          "phonetic": "/əkˈsel.ə.reɪt/"
-        },
-        {
-          "word": "Endangered",
-          "pos": "adj.",
-          "meaning": "ตกอยู่ในอันตราย ใกล้สูญพันธุ์",
-          "phonetic": "/ɪnˈdeɪn.dʒəd/"
+          "meaning": "สร้างแรงบันดาลใจ"
         }
       ],
       "grammarTip": {
-        "en": "First Conditional with 'If': Use First Conditional for real possibilities and their consequences (e.g., 'If younger generations stop learning them, these languages may become extinct').",
-        "th": "ประโยคเงื่อนไขแบบที่ 1 (First Conditional): โครงสร้าง 'If + Present Simple, Future / Modal' เพื่อบอกผลลัพธ์ที่เป็นไปได้ เช่น 'If younger generations stop learning them, these languages may eventually become extinct'"
+        "en": "Subordinating Conjunction 'Although': 'Although he lost the ability to move, he continued his research.' (Contrast clause).",
+        "th": "การใช้ Although (แม้ว่า) แสดงความขัดแย้ง: แม้จะสูญเสียการเคลื่อนไหว แต่เขายังคงทำงานวิจัยต่อไป"
       }
     }
   },
   {
     "id": 8,
-    "title": "Robin Hood: The Hero of Sherwood Forest",
-    "thaiTitle": "โรบินฮูด: วีรบุรุษแห่งป่าเชอร์วูด",
-    "cefr": "A2/B1",
+    "title": "Doctors Without Borders: Helping People in Need",
+    "thaiTitle": "แพทย์ไร้พรมแดน: ผู้ช่วยเหลือเพื่อนมนุษย์ในยามวิกฤต",
+    "cefr": "A2",
     "unit": "Unit 8",
     "image": "assets/images/ex8.jpg",
-    "audio": "assets/audio/ex8_robin_hood.mp3",
-    "passage": "Long ago in medieval England, according to legend, there lived a skilled outlaw named Robin Hood. He hid in Sherwood Forest with a group of loyal companions known as the Merry Men. Robin was famous for his remarkable archery skills and fearless personality. According to the stories, he fought against corrupt officials who abused their power and treated ordinary people unfairly. He became known for taking wealth from the rich and helping the poor, making him a symbol of justice and generosity.\n\nRobin Hood's greatest opponent was the Sheriff of Nottingham, a powerful official who was determined to capture him. Robin and his companions, including Little John and Friar Tuck, often used clever strategies and disguises to escape the Sheriff's soldiers. Although the authorities considered Robin a criminal, many ordinary people admired him because he defended the powerless. His adventures were filled with dangerous battles, secret plans, and brave escapes.\n\nThe story of Robin Hood has been passed down through generations in songs, books, plays, and films. Historians are still uncertain whether Robin Hood was a real person or simply a legendary character. Either way, his story continues to fascinate people around the world. Robin Hood represents courage, generosity, and the determination to stand against injustice and protect those in need.",
+    "audio": "assets/audio/ex8_doctors_without_borders.mp3",
+    "passage": "Imagine arriving in a place where people urgently need medical help, but there are no hospitals nearby. Doctors Without Borders, also known as Médecins Sans Frontières (MSF), is an international medical organization that provides emergency care in areas affected by conflict, natural disasters, and disease outbreaks. Founded in 1971 by doctors and journalists, MSF helps people regardless of their nationality, religion, or background. Today, its teams work in more than 70 countries.\n\nMSF provides many types of medical care, including emergency surgery and treatment for diseases such as malaria and cholera. It also supports mothers and children and provides mental health care for people affected by violence or disasters. During emergencies, MSF teams can quickly set up hospitals and clinics in places where medical services are limited.\n\nMSF also speaks out about health problems and works to improve access to healthcare. During major health crises, such as the Ebola outbreak, its teams have helped save many lives. MSF follows medical ethics and provides care equally, without political influence. Its staff often work in dangerous conditions to help others. Today, MSF continues to provide lifesaving medical care to people who need it most.",
     "paragraphs": [
-      "Long ago in medieval England, according to legend, there lived a skilled outlaw named Robin Hood. He hid in Sherwood Forest with a group of loyal companions known as the Merry Men. Robin was famous for his remarkable archery skills and fearless personality. According to the stories, he fought against corrupt officials who abused their power and treated ordinary people unfairly. He became known for taking wealth from the rich and helping the poor, making him a symbol of justice and generosity.",
-      "Robin Hood's greatest opponent was the Sheriff of Nottingham, a powerful official who was determined to capture him. Robin and his companions, including Little John and Friar Tuck, often used clever strategies and disguises to escape the Sheriff's soldiers. Although the authorities considered Robin a criminal, many ordinary people admired him because he defended the powerless. His adventures were filled with dangerous battles, secret plans, and brave escapes.",
-      "The story of Robin Hood has been passed down through generations in songs, books, plays, and films. Historians are still uncertain whether Robin Hood was a real person or simply a legendary character. Either way, his story continues to fascinate people around the world. Robin Hood represents courage, generosity, and the determination to stand against injustice and protect those in need."
+      "Imagine arriving in a place where people urgently need medical help, but there are no hospitals nearby. Doctors Without Borders, also known as Médecins Sans Frontières (MSF), is an international medical organization that provides emergency care in areas affected by conflict, natural disasters, and disease outbreaks. Founded in 1971 by doctors and journalists, MSF helps people regardless of their nationality, religion, or background. Today, its teams work in more than 70 countries.",
+      "MSF provides many types of medical care, including emergency surgery and treatment for diseases such as malaria and cholera. It also supports mothers and children and provides mental health care for people affected by violence or disasters. During emergencies, MSF teams can quickly set up hospitals and clinics in places where medical services are limited.",
+      "MSF also speaks out about health problems and works to improve access to healthcare. During major health crises, such as the Ebola outbreak, its teams have helped save many lives. MSF follows medical ethics and provides care equally, without political influence. Its staff often work in dangerous conditions to help others. Today, MSF continues to provide lifesaving medical care to people who need it most."
     ],
     "partA": [
       {
-        "question": "Why did Robin Hood fight against corrupt officials?",
+        "question": "What is the main purpose of Doctors Without Borders?",
         "options": [
           {
             "key": "a",
-            "text": "They treated ordinary people unfairly."
+            "text": "To build hospitals in wealthy countries"
           },
           {
             "key": "b",
-            "text": "They wanted him to become a soldier."
+            "text": "To provide medical care to people in need"
           },
           {
             "key": "c",
-            "text": "They refused to leave the forest."
-          }
-        ],
-        "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: '...he fought against corrupt officials who abused their power and treated ordinary people unfairly.'",
-        "ref": "Paragraph 1: 'treated ordinary people unfairly'"
-      },
-      {
-        "question": "How did Robin and the Merry Men often avoid being captured?",
-        "options": [
-          {
-            "key": "a",
-            "text": "They traveled to another country."
-          },
-          {
-            "key": "b",
-            "text": "They used clever strategies and disguises."
-          },
-          {
-            "key": "c",
-            "text": "They hid inside the castle."
+            "text": "To train doctors for private hospitals"
           }
         ],
         "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: '...often used clever strategies and disguises to escape the Sheriff's soldiers.'",
-        "ref": "Paragraph 2: 'used clever strategies and disguises'"
+        "explanation": "จากเนื้อเรื่อง: '...provides emergency care in areas affected by conflict, natural disasters, and disease outbreaks. MSF helps people regardless of their nationality, religion, or background.' (ให้การรักษาพยาบาลฉุกเฉินแก่ผู้ที่ต้องการความช่วยเหลือโดยไม่แบ่งแยก)",
+        "ref": "Paragraph 1: 'provides emergency care in areas affected by conflict'"
       },
       {
-        "question": "Why did many ordinary people admire Robin Hood?",
+        "question": "Where does MSF often provide emergency care?",
         "options": [
           {
             "key": "a",
-            "text": "He was extremely wealthy."
+            "text": "Areas affected by conflict and disasters"
           },
           {
             "key": "b",
-            "text": "He worked for the authorities."
+            "text": "Only large cities"
           },
           {
             "key": "c",
-            "text": "He defended the powerless."
+            "text": "Universities and schools"
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: '...provides emergency care in areas affected by conflict, natural disasters, and disease outbreaks.' (พื้นที่ที่ได้รับผลกระทบจากความขัดแย้ง ภัยพิบัติธรรมชาติ และโรคระบาด)",
+        "ref": "Paragraph 1: 'areas affected by conflict, natural disasters'"
+      },
+      {
+        "question": "What can MSF teams do during emergencies?",
+        "options": [
+          {
+            "key": "a",
+            "text": "Set up hospitals and clinics"
+          },
+          {
+            "key": "b",
+            "text": "Build new roads"
+          },
+          {
+            "key": "c",
+            "text": "Provide financial loans"
+          }
+        ],
+        "answer": "a",
+        "explanation": "จากเนื้อเรื่อง: 'During emergencies, MSF teams can quickly set up hospitals and clinics in places where medical services are limited.' (จัดตั้งโรงพยาบาลและคลินิกชั่วคราวอย่างรวดเร็ว)",
+        "ref": "Paragraph 2: 'quickly set up hospitals and clinics'"
+      },
+      {
+        "question": "Who does MSF provide medical care to?",
+        "options": [
+          {
+            "key": "a",
+            "text": "Only local citizens"
+          },
+          {
+            "key": "b",
+            "text": "Only people with health insurance"
+          },
+          {
+            "key": "c",
+            "text": "People regardless of their background"
           }
         ],
         "answer": "c",
-        "explanation": "จากเนื้อเรื่อง: '...many ordinary people admired him because he defended the powerless.' (คนธรรมดายกย่องเขาเพราะเขาคอยปกป้องผู้ไร้อำนาจ)",
-        "ref": "Paragraph 2: 'admired him because he defended the powerless'"
+        "explanation": "จากเนื้อเรื่อง: 'MSF helps people regardless of their nationality, religion, or background.' (ช่วยเหลือผู้คนโดยไม่คำนึงถึงสัญชาติ ศาสนา หรือภูมิหลัง)",
+        "ref": "Paragraph 1: 'regardless of their nationality, religion, or background'"
       },
       {
-        "question": "How has Robin Hood's story continued through generations?",
+        "question": "Why do MSF staff sometimes work in dangerous conditions?",
         "options": [
           {
             "key": "a",
-            "text": "Through songs, books, plays, and films"
+            "text": "To help people who urgently need medical care"
           },
           {
             "key": "b",
-            "text": "Through scientific discoveries"
+            "text": "To study dangerous places"
           },
           {
             "key": "c",
-            "text": "Through official government records"
+            "text": "To build permanent hospitals"
           }
         ],
         "answer": "a",
-        "explanation": "จากเนื้อเรื่อง: 'The story of Robin Hood has been passed down through generations in songs, books, plays, and films.'",
-        "ref": "Paragraph 3: 'in songs, books, plays, and films'"
-      },
-      {
-        "question": "What does Robin Hood represent in the story?",
-        "options": [
-          {
-            "key": "a",
-            "text": "Wealth and success"
-          },
-          {
-            "key": "b",
-            "text": "Courage and justice"
-          },
-          {
-            "key": "c",
-            "text": "Power and authority"
-          }
-        ],
-        "answer": "b",
-        "explanation": "จากเนื้อเรื่อง: 'Robin Hood represents courage, generosity, and the determination to stand against injustice...'",
-        "ref": "Paragraph 3: 'represents courage, generosity, and the determination'"
+        "explanation": "จากเนื้อเรื่อง: 'Its staff often work in dangerous conditions to help others. Today, MSF continues to provide lifesaving medical care to people who need it most.' (เพื่อช่วยชีวิตผู้ที่ต้องการการรักษาอย่างเร่งด่วน)",
+        "ref": "Paragraph 3: 'work in dangerous conditions to help others'"
       }
     ],
     "partB": {
       "wordBank": [
-        "generations",
-        "admired",
-        "corrupt",
-        "injustice",
-        "strategies"
+        "background",
+        "humanitarian",
+        "ethics",
+        "emergency",
+        "outbreaks"
       ],
       "questions": [
         {
           "id": 1,
-          "prefix": "Robin Hood fought against ",
-          "suffix": " officials who abused their power.",
-          "answer": "corrupt"
+          "prefix": "MSF provides medical care during an ",
+          "suffix": " when people urgently need help.",
+          "answer": "emergency",
+          "hint": "ภาวะฉุกเฉิน"
         },
         {
           "id": 2,
-          "prefix": "He used clever ",
-          "suffix": " to escape from the Sheriff's soldiers.",
-          "answer": "strategies"
+          "prefix": "MSF helps people regardless of their nationality, religion, or ",
+          "suffix": ".",
+          "answer": "background",
+          "hint": "ภูมิหลัง เชื้อชาติ"
         },
         {
           "id": 3,
-          "prefix": "Many ordinary people ",
-          "suffix": " Robin for helping the powerless.",
-          "answer": "admired"
+          "prefix": "The organization responds to disease ",
+          "suffix": " such as Ebola.",
+          "answer": "outbreaks",
+          "hint": "การระบาดของโรค"
         },
         {
           "id": 4,
-          "prefix": "His story has been passed down through many ",
-          "suffix": ".",
-          "answer": "generations"
+          "prefix": "MSF follows strict medical ",
+          "suffix": " when providing care to patients.",
+          "answer": "ethics",
+          "hint": "จรรยาบรรณ จริยธรรมทางการแพทย์"
         },
         {
           "id": 5,
-          "prefix": "Robin Hood became a symbol of standing against ",
-          "suffix": ".",
-          "answer": "injustice"
+          "prefix": "MSF is a well-known ",
+          "suffix": " organization that helps people around the world.",
+          "answer": "humanitarian",
+          "hint": "องค์กรด้านมนุษยธรรม"
         }
       ]
     },
@@ -1937,94 +1916,85 @@ const DEFAULT_EXERCISES = [
       {
         "id": 1,
         "tokens": [
-          "Robin Hood",
-          "was known for",
-          "his generosity",
-          "toward",
-          "people in need."
+          "MSF",
+          "provides emergency medical care",
+          "in areas",
+          "with limited healthcare."
         ],
-        "correct": "Robin Hood was known for his generosity toward people in need."
+        "correct": "MSF provides emergency medical care in areas with limited healthcare."
       },
       {
         "id": 2,
         "tokens": [
-          "He",
-          "refused to accept",
-          "unfair treatment",
-          "from",
-          "bad officials."
+          "They often work",
+          "in places",
+          "affected by",
+          "conflict and natural disasters."
         ],
-        "correct": "He refused to accept unfair treatment from bad officials."
+        "correct": "They often work in places affected by conflict and natural disasters."
       },
       {
         "id": 3,
         "tokens": [
-          "He",
-          "used",
-          "clever strategies",
-          "to avoid",
-          "being captured."
+          "Their doctors",
+          "treat diseases",
+          "like",
+          "malaria and cholera."
         ],
-        "correct": "He used clever strategies to avoid being captured."
+        "correct": "Their doctors treat diseases like malaria and cholera."
       },
       {
         "id": 4,
         "tokens": [
-          "Ordinary people",
-          "admired him",
-          "for",
-          "his bravery."
+          "MSF",
+          "also provides support",
+          "for people",
+          "with trauma."
         ],
-        "correct": "Ordinary people admired him for his bravery."
+        "correct": "MSF also provides support for people with trauma."
       },
       {
         "id": 5,
         "tokens": [
-          "His adventures",
-          "have inspired",
-          "people",
-          "for many",
-          "generations."
+          "The organization",
+          "helps people",
+          "without",
+          "political influence."
         ],
-        "correct": "His adventures have inspired people for many generations."
+        "correct": "The organization helps people without political influence."
       }
     ],
     "review": {
-      "vocab": [
+      "keyVocab": [
         {
-          "word": "Medieval",
+          "word": "emergency",
+          "pos": "n.",
+          "meaning": "เหตุฉุกเฉิน ภาวะเร่งด่วน"
+        },
+        {
+          "word": "outbreaks",
+          "pos": "n.",
+          "meaning": "การระบาดของโรค"
+        },
+        {
+          "word": "humanitarian",
           "pos": "adj.",
-          "meaning": "ยุคกลาง (ศตวรรษที่ 5-15)",
-          "phonetic": "/ˌmed.iˈiː.vəl/"
+          "meaning": "ด้านมนุษยธรรม"
         },
         {
-          "word": "Outlaw",
+          "word": "ethics",
           "pos": "n.",
-          "meaning": "คนนอกกฎหมาย ผู้หลบหนีคดี",
-          "phonetic": "/ˈaʊt.lɔː/"
+          "meaning": "จริยธรรม จรรยาบรรณ"
         },
         {
-          "word": "Archery",
-          "pos": "n.",
-          "meaning": "กีฬายิงธนู การยิงธนู",
-          "phonetic": "/ˈɑː.tʃər.i/"
-        },
-        {
-          "word": "Corrupt",
+          "word": "lifesaving",
           "pos": "adj.",
-          "meaning": "ทุจริต ฉ้อราษฎร์บังหลวง",
-          "phonetic": "/kəˈrʌpt/"
-        },
-        {
-          "word": "Injustice",
-          "pos": "n.",
-          "meaning": "ความอยุติธรรม ความไม่เป็นธรรม",
-          "phonetic": "/ɪnˈdʒʌs.tɪs/"
+          "meaning": "ซึ่งช่วยชีวิต"
         }
       ],
       "grammarTip": {
-        "en": "Defining Relative Clauses with 'Who' and 'Which': Use 'who' for people and 'which' for things (e.g., 'officials who abused their power', 'disguises which deceived the soldiers').",
-        "th": "ประโยคความซ้อนขยายบุคคลและสิ่งของ: ใช้ 'who' ขยายคำนามที่เป็นคน ('officials who abused their power') และ 'which' หรือ 'that' ขยายสิ่งของ"
+        "en": "Prepositional Phrases: 'regardless of' (โดยไม่คำนึงถึง), 'without political influence' (ปราศจากการแทรกแซงทางการเมือง).",
+        "th": "วลีบุพบท (Prepositional Phrases): 'regardless of' ตามด้วยคำนาม เช่น 'regardless of nationality' (โดยไม่คำนึงถึงสัญชาติ)"
       }
     }
   }
