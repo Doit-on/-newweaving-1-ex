@@ -26,8 +26,8 @@ const I18N = {
     },
     hero_subtitle: { th: 'พัฒนาทักษะการอ่านเพื่อความเข้าใจและการจับใจความสำคัญ', en: 'Developing Reading Comprehension and Main Idea Skills' },
     hero_desc: {
-      th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.wav) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
-      en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.wav), 3 rigorous learning parts, and automatic scoring across all devices.'
+      th: 'เว็บแอปพลิเคชันเพื่อการศึกษาบูรณาการ 8 บทเรียนสำคัญ เป็นแบบฝึกหัดเพิ่มเติม เสียงอ่านเจ้าของภาษาแท้ (.mp3) ระบบทดสอบ 3 พาร์ทเข้มข้น และสรุปคะแนนอัตโนมัติ รองรับทุกอุปกรณ์',
+      en: 'Educational web app featuring 8 core units as supplementary exercises, authentic native audio (.mp3), 3 rigorous learning parts, and automatic scoring across all devices.'
     },
     hero_btn_enter: { th: 'เข้าสู่ระบบเพื่อทำแบบฝึกหัด ➔', en: 'Enter Exercises ➔' },
     hero_btn_start: { th: 'เริ่มเรียนรู้ Unit 1', en: 'Start Unit 1' },
@@ -39,7 +39,7 @@ const I18N = {
     stat_parts: { th: '3 พาร์ท / บท', en: '3 Parts / Unit' },
     stat_parts_sub: { th: 'อ่าน • ศัพท์ • โครงสร้าง', en: 'Reading • Vocab • Syntax' },
     stat_audio: { th: 'ระบบเสียงคู่', en: 'Dual Audio' },
-    stat_audio_sub: { th: 'Native WAV + TTS ธรรมชาติ', en: 'Native WAV + Natural TTS' },
+    stat_audio_sub: { th: 'Native MP3 + TTS ธรรมชาติ', en: 'Native MP3 + Natural TTS' },
     stat_offline: { th: 'ออฟไลน์ 100%', en: '100% Offline' },
     stat_offline_sub: { th: 'พร้อมใช้งานทุกเบราว์เซอร์', en: 'Ready on any browser' },
 
@@ -47,7 +47,7 @@ const I18N = {
     section_units_title: { th: 'บทเรียนและแบบฝึกหัด (Exercises 1–8)', en: 'Units & Exercises (1–8)' },
     section_units_sub: { th: 'เลือกบทเรียนที่ต้องการเพื่อฝึกทักษะการอ่าน คำศัพท์ และการเรียงประโยค', en: 'Select a unit to practice reading, vocabulary, and sentence structure' },
     btn_start_unit: { th: 'เข้าสู่บทเรียน ➔', en: 'Start Exercise ➔' },
-    badge_native_audio: { th: '🔊 เสียงจริง .wav', en: '🔊 Native .wav' },
+    badge_native_audio: { th: '🔊 เสียงจริง .mp3', en: '🔊 Native .mp3' },
     badge_tts_audio: { th: '🎙️ เสียงอ่าน TTS', en: '🎙️ Natural TTS' },
 
     // Player Bar

@@ -2000,8 +2000,9 @@ const DEFAULT_EXERCISES = [
   }
 ];
 
+if (typeof window !== 'undefined') {
+  window.DEFAULT_EXERCISES = DEFAULT_EXERCISES;
+}
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { DEFAULT_EXERCISES };
-} else {
-  window.DEFAULT_EXERCISES = DEFAULT_EXERCISES;
 }
