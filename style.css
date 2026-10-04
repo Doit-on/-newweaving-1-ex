@@ -263,7 +263,7 @@ button {
    LANDING PAGE VIEW
    ============================================================ */
 .landing-hero {
-  background: linear-gradient(135deg, #00363d 0%, #005b66 40%, #007a87 75%, #0d9488 100%);
+  background: linear-gradient(135deg, #002d33 0%, #004d56 25%, #006b77 50%, #008b99 75%, #0d9488 100%);
   color: var(--text-light);
   padding: 48px 24px 64px;
   position: relative;
@@ -273,12 +273,12 @@ button {
 .landing-hero::before {
   content: '';
   position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 450px;
-  height: 450px;
+  top: -80px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(0, 122, 135, 0) 70%);
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.35) 0%, rgba(6, 182, 212, 0.15) 45%, rgba(0, 77, 86, 0) 70%);
   pointer-events: none;
 }
 
@@ -1058,7 +1058,7 @@ button {
 .option-btn.wrong {
   border-color: var(--danger);
   background: var(--danger-bg);
-  color: #991b1b;
+  color: #b91c1c;
 }
 
 .option-btn.wrong .option-letter {
@@ -1194,7 +1194,7 @@ button {
 .cloze-blank-slot.wrong {
   border-bottom: 3px solid var(--danger);
   background: var(--danger-bg);
-  color: #991b1b;
+  color: #b91c1c;
 }
 
 .btn-clear-slot {

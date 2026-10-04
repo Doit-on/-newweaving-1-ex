@@ -1,4 +1,4 @@
-const CACHE_NAME = 'new-weaving-1-v3';
+const CACHE_NAME = 'new-weaving-1-v4-ocean-teal';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -46,7 +46,12 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
-        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            console.log('Purging old cache:', key);
+            return caches.delete(key);
+          }
+        })
       );
     }).then(() => self.clients.claim())
   );
